@@ -17,7 +17,7 @@ class CreateTableProducts extends Migration
             $table->increments('id');
             $table->integer('brand_id')->unsigned();
             $table->string('name', 255);
-            $table->text('description')->default('');
+            $table->text('description')->nullable();
             $table->string('part_number', 100);
             $table->string('model', 100);
 

@@ -15,11 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->share('_PAGE_TITLE', 'Still Hope');
-        view()->share('_SYSTEM_NAME', 'Still Hope Panel'); 
+        view()->share('_PAGE_TITLE', 'Refaccionaria Madero');
+        view()->share('_SYSTEM_NAME', 'Refaccionaria Madero Panel'); 
         View()->share('_SYSTEM_FULL_NAME', 'Sistema de Administración Web');
         View()->share('_SYSTEM_DESCRIPTION', 'La forma fácil de administrar el contenido de tu página web.');
-        View()->share('_SYSTEM_VERSION', 'Ver. 0.0.1');
+        View()->share('_SYSTEM_VERSION', 'v1.0');
 
         $colors = array(
             'green'     => array(   'hexadecimal'   => '#40c64b',

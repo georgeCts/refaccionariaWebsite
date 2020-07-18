@@ -33,13 +33,6 @@ Route::group([  'prefix'    => 'panel',
     //DASHBOARD
     Route::get('/', 'Admin\PanelController@index');
 
-    Route::get('publicaciones', 'Admin\PostsController@index');
-    Route::get('publicaciones/publicacion-crear', 'Admin\PostsController@create');
-    Route::post('publicaciones/publicacion-crear', ['as' => 'new-post', 'uses' => 'Admin\PostsController@store']);
-
-    Route::get('publicaciones/publicacion-editar/{pkPost}', 'Admin\PostsController@edit');
-    Route::put('publicaciones/publicacion-editar', ['as' => 'update-post', 'uses' => 'Admin\PostsController@update']);
-
     //SLIDERS
     Route::get('sliders', 'Admin\SlidersController@index');
     Route::get('sliders/slider-crear', 'Admin\SlidersController@create');
@@ -48,11 +41,11 @@ Route::group([  'prefix'    => 'panel',
     Route::get('sliders/slider-editar/{pkSlider}', 'Admin\SlidersController@edit');
     Route::post('sliders/slider-editar', ['as' => 'update-slider', 'uses' => 'Admin\SlidersController@update']);
 
-    //VIDEOS
-    Route::get('videos', 'Admin\VideosController@index');
-    Route::get('videos/video-crear', 'Admin\VideosController@create');
-    Route::post('videos/video-crear', ['as' => 'new-video', 'uses' => 'Admin\VideosController@store']);
+    //MARCAS
+    Route::get('marcas', 'Admin\BrandsController@index');
+    Route::get('marcas/crear', 'Admin\BrandsController@create');
+    Route::post('marcas/crear', ['as' => 'new-brand', 'uses' => 'Admin\BrandsController@store']);
 
-    Route::get('videos/video-editar/{pkVideo}', 'Admin\VideosController@edit');
-    Route::put('videos/video-editar', ['as' => 'update-video', 'uses' => 'Admin\VideosController@update']);
+    Route::get('marcas/editar/{id}', 'Admin\BrandsController@edit');
+    Route::put('marcas/editar', ['as' => 'update-brand', 'uses' => 'Admin\BrandsController@update']);
 });

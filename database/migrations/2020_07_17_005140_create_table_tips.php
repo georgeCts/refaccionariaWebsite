@@ -16,7 +16,7 @@ class CreateTableTips extends Migration
         Schema::create('tips', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 200);
-            $table->text('body')->default('');
+            $table->text('body')->nullable();
             
             $table->integer('created_pk_user')->unsigned();
             $table->datetime('created_at');

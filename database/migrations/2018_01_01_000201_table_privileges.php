@@ -51,18 +51,19 @@ class TablePrivileges extends Migration
             (5, 3, NULL, 'PRODUCTOS', 'Lista de productos',                 1, 1, 'productos', 1),
             (6, 3, NULL, 'PRODUCTOS_CREAR', 'Crear producto',               1, 2, 'productos/crear', 1),
             (7, 3, NULL, 'MARCAS', 'Lista de marcas',                       1, 3, 'marcas', 1),
+            (8, 3, NULL, 'MARCAS_CREAR', 'Crear marca',                     1, 4, 'marcas/crear', 1),
 
-            (8, 4, NULL, 'TIPS', 'Lista de tips',                           1, 1, 'tips', 1),
-            (9, 4, NULL, 'TIPS_CREAR', 'Crear tips',                        1, 2, 'tips/crear', 1),
+            (9, 4, NULL, 'TIPS', 'Lista de tips',                           1, 1, 'tips', 1),
+            (10, 4, NULL, 'TIPS_CREAR', 'Crear tips',                        1, 2, 'tips/crear', 1),
 
-            (10, 5, NULL, 'SUCURSALES', 'Lista de sucursales',               1, 1, 'sucursales', 1),
-            (11, 5, NULL, 'SUCURSALES_CREAR', 'Crear sucursal',              1, 2, 'sucursales/crear', 1),
+            (11, 5, NULL, 'SUCURSALES', 'Lista de sucursales',               1, 1, 'sucursales', 1),
+            (12, 5, NULL, 'SUCURSALES_CREAR', 'Crear sucursal',              1, 2, 'sucursales/crear', 1),
 
-            (12, 6, NULL, 'USUARIOS', 'Consultar',                          1, 1, 'usuarios', 1),
-            (13, 6, NULL, 'USUARIOS_ROLES', 'Roles y Facultades',           1, 3, 'usuarios/roles', 1),
+            (13, 6, NULL, 'USUARIOS', 'Consultar',                          1, 1, 'usuarios', 1),
+            (14, 6, NULL, 'USUARIOS_ROLES', 'Roles y Facultades',           1, 3, 'usuarios/roles', 1),
             
-            (14, 7, NULL, 'BOLSA_TRABAJO', 'Lista de empleos',              1, 1, 'bolsa-trabajo', 1),
-            (15, 7, NULL, 'BOLSA_TRABAJO_CREAR', 'Crear empleo',            1, 2, 'bolsa-trabajo/crear', 1);");
+            (15, 7, NULL, 'BOLSA_TRABAJO', 'Lista de empleos',              1, 1, 'bolsa-trabajo', 1),
+            (16, 7, NULL, 'BOLSA_TRABAJO_CREAR', 'Crear empleo',            1, 2, 'bolsa-trabajo/crear', 1);");
     }
 
     /**

@@ -5,14 +5,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Auth;
 
-class Slider extends Model
+class Brand extends Model
 {
-    protected $table = 'sliders';
-    protected $primaryKey = 'pk_slider';
+    protected $table = 'brands';
 
-    protected $fillable = [
-        'pk_slider', 'title', 'body', 'url_redirect', 'status', 'file', 'created_pk_user', 'created_at', 'updated_pk_user', 'updated_at', 'deleted'
-    ];
+    protected $fillable = ['name', 'created_pk_user', 'created_at', 'updated_pk_user', 'updated_at', 'deleted'];
 
     /* RELATIONSHIPS - BEGIN */
     public function createdUser() {
@@ -25,7 +22,6 @@ class Slider extends Model
     /* RELATIONSHIPS - END */
 
     public function save(array $options = array()) {
-
         $this['updated_pk_user'] = Auth::user()->pk_user;
         $this['updated_at'] = date('Y-m-d H:i:s');
 
@@ -33,7 +29,7 @@ class Slider extends Model
     }
 
     public function create(array $options = array()) {
-        if( $this['pk_slider'] === null) {
+        if( $this['id'] === null) {
             $this['created_pk_user'] = (Auth::check())? Auth::user()->pk_user : 1;
             $this['created_at'] = date('Y-m-d H:i:s');
             $this['updated_pk_user'] = (Auth::check())? Auth::user()->pk_user : 1;

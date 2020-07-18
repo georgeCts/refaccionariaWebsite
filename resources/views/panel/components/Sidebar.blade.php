@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{URL::to('panel/publicaciones/publicacion-crear') }}" class="btn btn-success btn-block">Nuevo Post <i class="mdi mdi-plus"></i></a>
+                    <a href="{{URL::to('panel/productos/crear') }}" class="btn btn-success btn-block">Nuevo Producto <i class="mdi mdi-plus"></i></a>
                 </div>
             </li>
 

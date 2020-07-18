@@ -57,7 +57,7 @@
                         </div>                    
                         
                         <button type="submit" class="btn btn-success mr-2">Guardar</button>
-                        <button class="btn btn-light">Cancelar</button>                    
+                        <button class="btn btn-light">Cancelar</button>
                     </div>
                 </div>
             </div>

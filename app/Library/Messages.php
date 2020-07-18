@@ -33,6 +33,13 @@ class Messages {
 	const VIDEOS_CREATE_MESSAGE = "El nuevo vídeo se agregó exitosamente.";
 	const VIDEOS_EDIT_TITLE = "Vídeo modificado.";
 	const VIDEOS_EDIT_MESSAGE = "El vídeo se modificó exitosamente.";
+
+	//BRANDS
+	const BRANDS_CREATE_TITLE = "Nueva marca agregada.";
+	const BRANDS_CREATE_MESSAGE = "La nueva marca se agregó exitosamente.";
+	const BRANDS_EDIT_TITLE = "Marca modificada";
+	const BRANDS_EDIT_MESSAGE = "La marca se modificó exitosamente.";
+
 }
 
 ?>

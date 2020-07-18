@@ -32,7 +32,7 @@ class Errors {
 
 	/* *********************************************************************
 	 * *************	ERRORES DE LA INTERFAZ DEL PANEL ************
-	 * ****************************************************************** */		
+	 * ****************************************************************** */
 
 
 	// POSTS
@@ -61,7 +61,6 @@ class Errors {
 	const SLIDERS_CREATE_02_ID = "3_0002";
 	const SLIDERS_CREATE_02_TITLE = "Error de nuevo registro.";
 	const SLIDERS_CREATE_02_MESSAGE = "El slider no se pudo registrar. Póngase en contacto con el administrador.";
-
 
 	const SLIDERS_EDIT_01_ID = "3_0003";
 	const SLIDERS_EDIT_01_TITLE = "Error de modificación";
@@ -101,7 +100,6 @@ class Errors {
 	const VIDEOS_EDIT_04_MESSAGE = "El vídeo no se pudo registrar. Póngase en contacto con el administrador.";
 
 
-
 	//USUARIOS
 	const USUARIOS_CREATE_01_ID = "5_0001";
 	const USUARIOS_CREATE_01_TITLE = "Error de nuevo registro.";
@@ -134,6 +132,19 @@ class Errors {
 	const USUARIOS_EDIT_04_ID = "5_0008";
 	const USUARIOS_EDIT_04_TITLE = "Error de modificación.";
 	const USUARIOS_EDIT_04_MESSAGE = "Las contraseñas no coinciden. Verifique la información.";
+
+	//BRANDS
+	const BRANDS_CREATE_01_ID = "6_0001";
+	const BRANDS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const BRANDS_CREATE_01_MESSAGE = "La marca no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const BRANDS_EDIT_01_ID = "6_0002";
+	const BRANDS_EDIT_01_TITLE = "Error de modificación";
+	const BRANDS_EDIT_01_MESSAGE = "No se pudo encontrar la marca a modificar.";	
+
+	const BRANDS_EDIT_02_ID = "6_0003";
+	const BRANDS_EDIT_02_TITLE = "Error de modificación";
+	const BRANDS_EDIT_02_MESSAGE = "La marca no se pudo registrar. Póngase en contacto con el administrador.";
 	
 }
 
