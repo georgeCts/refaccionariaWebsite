@@ -40,6 +40,12 @@ class Messages {
 	const BRANDS_EDIT_TITLE = "Marca modificada";
 	const BRANDS_EDIT_MESSAGE = "La marca se modificó exitosamente.";
 
+	//JOBS
+	const JOBS_CREATE_TITLE = "Nuevo empleo agregado.";
+	const JOBS_CREATE_MESSAGE = "El nuevo empleo se agregó exitosamente.";
+	const JOBS_EDIT_TITLE = "Empleo modificado";
+	const JOBS_EDIT_MESSAGE = "El empleo se modificó exitosamente.";
+
 }
 
 ?>

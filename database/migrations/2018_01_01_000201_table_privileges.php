@@ -62,8 +62,8 @@ class TablePrivileges extends Migration
             (13, 6, NULL, 'USUARIOS', 'Consultar',                          1, 1, 'usuarios', 1),
             (14, 6, NULL, 'USUARIOS_ROLES', 'Roles y Facultades',           1, 3, 'usuarios/roles', 1),
             
-            (15, 7, NULL, 'BOLSA_TRABAJO', 'Lista de empleos',              1, 1, 'bolsa-trabajo', 1),
-            (16, 7, NULL, 'BOLSA_TRABAJO_CREAR', 'Crear empleo',            1, 2, 'bolsa-trabajo/crear', 1);");
+            (15, 7, NULL, 'BOLSA_TRABAJO', 'Lista de empleos',              1, 1, 'bolsa-de-trabajo', 1),
+            (16, 7, NULL, 'BOLSA_TRABAJO_CREAR', 'Crear empleo',            1, 2, 'bolsa-de-trabajo/crear', 1);");
     }
 
     /**

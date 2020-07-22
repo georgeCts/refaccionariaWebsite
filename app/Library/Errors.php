@@ -145,6 +145,11 @@ class Errors {
 	const BRANDS_EDIT_02_ID = "6_0003";
 	const BRANDS_EDIT_02_TITLE = "Error de modificación";
 	const BRANDS_EDIT_02_MESSAGE = "La marca no se pudo registrar. Póngase en contacto con el administrador.";
+
+	//JOBS
+	const JOBS_CREATE_01_ID = "6_0001";
+	const JOBS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const JOBS_CREATE_01_MESSAGE = "El empleo no se pudo registrar. Póngase en contacto con el administrador.";
 	
 }
 

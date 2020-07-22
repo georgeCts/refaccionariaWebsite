@@ -20,6 +20,7 @@ class CreateTableProducts extends Migration
             $table->text('description')->nullable();
             $table->string('part_number', 100);
             $table->string('model', 100);
+            $table->string('file', 128)->nullable();
 
             $table->integer('created_pk_user')->unsigned();
             $table->datetime('created_at');

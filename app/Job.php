@@ -5,10 +5,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Auth;
 
-class Brand extends Model
+class Job extends Model
 {
-    protected $table    = 'brands';
-    protected $fillable = ['name', 'created_pk_user', 'created_at', 'updated_pk_user', 'updated_at', 'deleted'];
+    protected $table = 'jobs';
+
+    protected $fillable = ['title', 'body', 'status', 'slug', 'file', 'created_pk_user', 'created_at', 'updated_pk_user', 'updated_at', 'deleted'];
 
     /* RELATIONSHIPS - BEGIN */
     public function createdUser() {

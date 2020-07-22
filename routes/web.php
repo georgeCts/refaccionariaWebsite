@@ -48,4 +48,12 @@ Route::group([  'prefix'    => 'panel',
 
     Route::get('marcas/editar/{id}', 'Admin\BrandsController@edit');
     Route::put('marcas/editar', ['as' => 'update-brand', 'uses' => 'Admin\BrandsController@update']);
+
+    //BOLSA DE TRABAJO
+    Route::get('bolsa-de-trabajo', 'Admin\JobsController@index');
+    Route::get('bolsa-de-trabajo/crear', 'Admin\JobsController@create');
+    Route::post('bolsa-de-trabajo/crear', ['as' => 'new-job', 'uses' => 'Admin\JobsController@store']);
+
+    Route::get('bolsa-de-trabajo/editar/{id}', 'Admin\JobsController@edit');
+    Route::put('bolsa-de-trabajo/editar', ['as' => 'update-job', 'uses' => 'Admin\JobsController@update']);
 });

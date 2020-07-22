@@ -33,7 +33,7 @@ class BrandsController extends Controller
             if($objBrand->create()) {
                 $objReturn->setResult(true, Messages::BRANDS_CREATE_TITLE, Messages::BRANDS_CREATE_MESSAGE);
             } else {
-                $objReturn->setResult(false, Errors::BRANDS_CREATE_02_TITLE, Errors::BRANDS_CREATE_02_MESSAGE);
+                $objReturn->setResult(false, Errors::BRANDS_CREATE_01_TITLE, Errors::BRANDS_CREATE_01_MESSAGE);
             }
         } catch(Exception $exception) {
             $objReturn->setResult(false, Errors::getErrors($exception->getCode())['title'], Errors::getErrors($exception->getCode())['message']);

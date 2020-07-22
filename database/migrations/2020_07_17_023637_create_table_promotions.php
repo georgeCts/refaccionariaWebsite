@@ -18,7 +18,7 @@ class CreateTablePromotions extends Migration
             $table->string('title', 150);
             $table->text('body')->nullable();
             $table->enum('status', ['PUBLISHED', 'DRAFT'])->default('DRAFT');
-            $table->string('file', 128);
+            $table->string('file', 128)->nullable();
 
             $table->integer('created_pk_user')->unsigned();
             $table->datetime('created_at');
