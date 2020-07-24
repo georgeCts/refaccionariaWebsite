@@ -12,47 +12,40 @@ use Session;
 class User extends Authenticatable
 {
     use Notifiable;
-    protected $table = 'users';
-    protected $primaryKey = 'pk_user';
-
-    protected $fillable = ['pk_user_type', 'name', 'last_name', 'email', 'profile_pic', 'user', 'password', 'access_numb', 'last_access', 'created_pk_user', 'created_at', 'updated_pk_user', 'updated_at', 'deleted'];
-    protected $hidden = ['password', 'remember_token'];
+    protected $table    = 'users';
+    protected $fillable = ['user_type_id', 'name', 'last_name', 'email', 'profile_pic', 'user', 'password', 'access_numb', 'last_access', 'created_user_id', 'created_at', 'updated_user_id', 'updated_at', 'deleted'];
+    protected $hidden   = ['password', 'remember_token'];
 
     /* RELATIONSHIPS - INICIO */
     public function userType() {
-        return $this->belongsTo('App\UserType', 'pk_user_type', 'pk_user_type');
+        return $this->belongsTo('App\UserType', 'user_type_id', 'id');
     }
 
     public function createdUser() {
-        return $this->belongsTo('App\User', 'pk_user', 'created_pk_user');
+        return $this->belongsTo('App\User', 'id', 'created_user_id');
     }
 
     public function updatedUser() {
-        return $this->belongsTo('App\User', 'pk_user', 'updated_pk_user');
+        return $this->belongsTo('App\User', 'id', 'updated_user_id');
     }
 
     public function privileges() {
-        return $this->belongsToMany('App\Privilege', 'users_privileges', 'pk_user', 'pk_privilege');
-    }
-
-    public function posts() {
-        return $this->hasMany(Post::class);
+        return $this->belongsToMany('App\Privilege', 'users_privileges', 'user_id', 'privilege_id');
     }
     /* RELATIONSHIPS - FIN */
 
     public function save(array $options = array()) {
-
-        $this['updated_pk_user'] = Auth::user()->pk_user;
+        $this['updated_user_id'] = Auth::user()->id;
         $this['updated_at'] = date('Y-m-d H:i:s');
 
         return parent::save($options);
     }
 
     public function create(array $options = array()) {
-        if( $this['pk_user'] === null) {
-            $this['created_pk_user'] = (Auth::check())? Auth::user()->pk_user : 1;
+        if( $this['id'] === null) {
+            $this['created_user_id'] = (Auth::check())? Auth::user()->id : 1;
             $this['created_at'] = date('Y-m-d H:i:s');
-            $this['updated_pk_user'] = (Auth::check())? Auth::user()->pk_user : 1;
+            $this['updated_user_id'] = (Auth::check())? Auth::user()->id : 1;
             $this['updated_at'] = date('Y-m-d H:i:s');
             return parent::save($options);
         } else {

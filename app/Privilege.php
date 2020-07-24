@@ -3,36 +3,25 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\PrivilegeCategory;
 use DB;
 use Auth;
 
 class Privilege extends Model
 {
-    protected $table = "privileges";
-    public $timestamps = false;
-    protected $primaryKey = 'pk_privilege';
+    protected $table    = "privileges";
+    public $timestamps  = false;
 
-    protected $fillable = ['pk_privilege_category', 'parent_pk_privilege', 'privilege', 'tag', 'menu', 'menu_order', 'menu_url', 'active'];
+    protected $fillable = ['privilege_category_id', 'parent_privilege_id', 'privilege', 'tag', 'menu', 'menu_order', 'menu_url', 'active'];
 
 
     /* RELATIONSHIPS - INICIO */
     public function privilegeCategory() {
-        return $this->belongsTo('App\PrivilegeCategory', 'pk_privilege_category', 'pk_privilege_category');
+        return $this->belongsTo(PrivilegeCategory::class, 'id', 'privilege_category_id');
     }
     /* RELATIONSHIPS - FIN */
 
-    /*static public function view() {
-        $retorno = DB::table('view_privilegios');
-        return $retorno;
-    }
-
-    static public function viewFind($pk_privilegio) {
-        $retorno = DB::table('view_privilegios');
-        $retorno->where('pk_privilegio', '=', $pk_privilegio);
-        return $retorno->get()->first();
-    }*/
-
-    public function save(array $options = array()) {
+    /* public function save(array $options = array()) {
         $this['updated_pk_user'] = Auth::user()->pk_user;
         $this['updated_at'] = date('Y-m-d H:i:s');
 
@@ -62,5 +51,5 @@ class Privilege extends Model
         } else {
             return false;
         } 
-    }
+    } */
 }

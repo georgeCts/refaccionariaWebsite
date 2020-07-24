@@ -15,11 +15,11 @@ class TableUsersPrivileges extends Migration
     {
         //TABLA PRIVILEGIOS_USUARIOS
         Schema::create('users_privileges', function(Blueprint $table) {
-            $table->primary(['pk_user', 'pk_privilege']);
-            $table->integer('pk_user')->unsigned();
-            $table->integer('pk_privilege')->unsigned();
+            $table->primary(['user_id', 'privilege_id']);
+            $table->integer('user_id')->unsigned();
+            $table->integer('privilege_id')->unsigned();
 
-            $table->integer('created_pk_user')->unsigned();
+            $table->integer('created_user_id')->unsigned();
             $table->datetime('created_at');
         });
 
@@ -27,7 +27,7 @@ class TableUsersPrivileges extends Migration
         DB::statement("INSERT INTO
             users_privileges
         (
-            pk_user, pk_privilege, created_pk_user, created_at
+            user_id, privilege_id, created_user_id, created_at
         )
         VALUES
             (1, 1, 1, '2017-01-01 00:00:00'),

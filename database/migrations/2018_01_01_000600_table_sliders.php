@@ -15,7 +15,7 @@ class TableSliders extends Migration
     {
         Schema::create('sliders', function (Blueprint $table) {
 
-            $table->increments('pk_slider');
+            $table->increments('id');
 
             $table->string('title', 128)->nullable();
             $table->text('body')->nullable();
@@ -24,9 +24,9 @@ class TableSliders extends Migration
 
             $table->string('file', 128);
 
-            $table->integer('created_pk_user')->unsigned();
+            $table->integer('created_user_id')->unsigned();
             $table->datetime('created_at');
-            $table->integer('updated_pk_user')->unsigned();
+            $table->integer('updated_user_id')->unsigned();
             $table->datetime('updated_at');
             
             $table->boolean('deleted')->default(0);
@@ -34,8 +34,8 @@ class TableSliders extends Migration
 
         //FOREIGNS KEYS
         Schema::table('sliders', function($table) {
-            $table->foreign('created_pk_user')->references('pk_user')->on('users');
-            $table->foreign('updated_pk_user')->references('pk_user')->on('users');
+            $table->foreign('created_user_id')->references('id')->on('users');
+            $table->foreign('updated_user_id')->references('id')->on('users');
         });
     }
 
@@ -48,8 +48,8 @@ class TableSliders extends Migration
     {
         //FOREIGNS KEYS
         Schema::table('sliders', function($table) {
-            $table->dropForeign(['created_pk_user']);
-            $table->dropForeign(['updated_pk_user']);
+            $table->dropForeign(['created_user_id']);
+            $table->dropForeign(['updated_user_id']);
         });
 
         Schema::dropIfExists('sliders');

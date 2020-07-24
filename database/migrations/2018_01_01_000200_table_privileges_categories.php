@@ -15,7 +15,7 @@ class TablePrivilegesCategories extends Migration
     {
         //TABLA PRIVILEGIOS_CATEGORIAS
         Schema::create('privileges_categories', function(Blueprint $table) {
-            $table->increments('pk_privilege_category');
+            $table->increments('id');
             $table->string('privilege_category', 80)->unique();
             $table->integer('menu_order')->nullable();
             $table->string('menu_icon', 100)->nullable();
@@ -27,7 +27,7 @@ class TablePrivilegesCategories extends Migration
         DB::statement("INSERT INTO
             privileges_categories
         (
-            pk_privilege_category, privilege_category, menu_order, menu_icon
+            id, privilege_category, menu_order, menu_icon
         )
         VALUES
             (1, 'Sliders', 1, 'mdi-image'),

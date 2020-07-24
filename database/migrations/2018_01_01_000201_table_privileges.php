@@ -15,9 +15,9 @@ class TablePrivileges extends Migration
     {
         //TABLA PRIVILEGIOS_CATEGORIAS
         Schema::create('privileges', function(Blueprint $table) {
-            $table->increments('pk_privilege');
-            $table->integer('pk_privilege_category')->unsigned();
-            $table->integer('parent_pk_privilege')->unsigned()->nullable();
+            $table->increments('id');
+            $table->integer('privilege_category_id')->unsigned();
+            $table->integer('parent_privilege_id')->unsigned()->nullable();
             $table->string('privilege', 150)->unique();
             $table->string('tag', 120);
 
@@ -31,14 +31,14 @@ class TablePrivileges extends Migration
 
         //FOREIGNS KEYS
         Schema::table('privileges', function($table) {
-            $table->foreign('pk_privilege_category')->references('pk_privilege_category')->on('privileges_categories');
+            $table->foreign('privilege_category_id')->references('id')->on('privileges_categories');
         });
 
 
         DB::statement("INSERT INTO
             privileges
         (
-            pk_privilege, pk_privilege_category, parent_pk_privilege, privilege, tag, 
+            id, privilege_category_id, parent_privilege_id, privilege, tag, 
             menu, menu_order, menu_url, active
         )
         VALUES
@@ -74,7 +74,7 @@ class TablePrivileges extends Migration
     public function down()
     {
         Schema::table('privileges', function($table) {
-            $table->dropForeign(['pk_privilege_category']);
+            $table->dropForeign(['privilege_category_id']);
         });
         
         Schema::dropIfExists('privileges');

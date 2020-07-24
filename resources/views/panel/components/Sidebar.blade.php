@@ -29,13 +29,13 @@
 
             @foreach ($_PRIVILEGES_MENU_ as $itemPrivilegeMenu)
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#module{{$itemPrivilegeMenu['category']['pk_privilege_category']}}" aria-expanded="false" aria-controls="module{{$itemPrivilegeMenu['category']['pk_privilege_category']}}">
+                    <a class="nav-link" data-toggle="collapse" href="#module{{$itemPrivilegeMenu['category']['id']}}" aria-expanded="false" aria-controls="module{{$itemPrivilegeMenu['category']['id']}}">
                         <i class="menu-icon mdi {{ $itemPrivilegeMenu['category']['menu_icon'] }}"></i>
                         <span class="menu-title">{{ $itemPrivilegeMenu['category']['privilege_category'] }}</span>
                         <i class="menu-arrow"></i>
                     </a>
                     @if( sizeof($itemPrivilegeMenu['privileges']) > 0 )
-                        <div class="collapse" id="module{{$itemPrivilegeMenu['category']['pk_privilege_category']}}">
+                        <div class="collapse" id="module{{$itemPrivilegeMenu['category']['id']}}">
                             <ul class="nav flex-column sub-menu">
                                 @foreach ($itemPrivilegeMenu['privileges'] as $itemPrivilege)
                                     <li class="nav-item">

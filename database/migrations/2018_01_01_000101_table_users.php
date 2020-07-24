@@ -16,8 +16,8 @@ class TableUsers extends Migration
         //TABLA ADMINISTRADORES
         Schema::create('users', function(Blueprint $table) {
             
-            $table->increments('pk_user');
-            $table->integer('pk_user_type')->unsigned();
+            $table->increments('id');
+            $table->integer('user_type_id')->unsigned();
             $table->string('name', 100);
             $table->string('last_name', 100);
             $table->string('email', 150)->unique()->nullable();
@@ -31,35 +31,35 @@ class TableUsers extends Migration
             $table->integer('access_numb')->default(0);
             $table->datetime('last_access')->nullable();
 
-            $table->integer('created_pk_user')->unsigned();
+            $table->integer('created_user_id')->unsigned();
             $table->datetime('created_at');
 
-            $table->integer('updated_pk_user')->unsigned();
+            $table->integer('updated_user_id')->unsigned();
             $table->datetime('updated_at');
             $table->boolean('deleted')->default(0);
         });
 
         //FOREIGNS KEYS
         Schema::table('users', function($table) {
-            $table->foreign('pk_user_type')->references('pk_user_type')->on('users_types');
-            $table->foreign('created_pk_user')->references('pk_user')->on('users');
-            $table->foreign('updated_pk_user')->references('pk_user')->on('users');
+            $table->foreign('user_type_id')->references('id')->on('users_types');
+            $table->foreign('created_user_id')->references('id')->on('users');
+            $table->foreign('updated_user_id')->references('id')->on('users');
         });
 
         //NEW ROW
         DB::statement("INSERT INTO
                 users
             (
-                pk_user, 
-                pk_user_type, 
+                id, 
+                user_type_id, 
                 name, 
                 last_name, 
                 email,
                 user,
                 password,
-                created_pk_user, 
+                created_user_id, 
                 created_at, 
-                updated_pk_user, 
+                updated_user_id, 
                 updated_at, 
                 deleted
             ) VALUES (
@@ -69,7 +69,7 @@ class TableUsers extends Migration
                 'Cortes', 
                 'georgeluis.idem@gmail.com',
                 'admin',
-                '" . bcrypt('1234567890') . "',
+                '" . bcrypt('123456') . "',
                 1, 
                 NOW(), 
                 1, 
@@ -87,9 +87,9 @@ class TableUsers extends Migration
     {
         //FOREIGNS KEYS
         Schema::table('users', function($table) {
-            $table->dropForeign(['pk_user_type']);
-            $table->dropForeign(['created_pk_user']);
-            $table->dropForeign(['updated_pk_user']);
+            $table->dropForeign(['user_type_id']);
+            $table->dropForeign(['created_user_id']);
+            $table->dropForeign(['updated_user_id']);
         });
 
         Schema::dropIfExists('users');

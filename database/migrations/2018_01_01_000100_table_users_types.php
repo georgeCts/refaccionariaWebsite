@@ -16,13 +16,13 @@ class TableUsersTypes extends Migration
         //USERS TYPES TABLE
         Schema::create('users_types', function (Blueprint $table) {
 
-            $table->increments('pk_user_type');
+            $table->increments('id');
             $table->string('user_type');
             $table->string('description')->default('');
 
-            $table->integer('created_pk_user')->unsigned();
+            $table->integer('created_user_id')->unsigned();
             $table->datetime('created_at');
-            $table->integer('updated_pk_user')->unsigned();
+            $table->integer('updated_user_id')->unsigned();
             $table->datetime('updated_at');
             
             $table->boolean('deleted')->default(0);
@@ -32,7 +32,7 @@ class TableUsersTypes extends Migration
         DB::statement("INSERT INTO
             users_types
         (
-            pk_user_type, user_type, description, created_pk_user, created_at, updated_pk_user, updated_at, deleted
+            id, user_type, description, created_user_id, created_at, updated_user_id, updated_at, deleted
         )
             VALUES
         ( 1, 'Administrador', 'Administradores principales del sistema', 1, NOW(), 1, NOW(), 0), 

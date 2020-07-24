@@ -8,28 +8,25 @@ use Auth;
 
 class UserType extends Model
 {
-    protected $table = "users_types";
-    protected $primaryKey = 'pk_user_type';
-
-    protected $fillable = ['pk_user_type', 'user_type', 'description', 'created_pk_user', 'created_at', 'updated_pk_user', 'updated_at', 'deleted'];
+    protected $table    = "users_types";
+    protected $fillable = ['id', 'user_type', 'description', 'created_user_id', 'created_at', 'updated_user_id', 'updated_at', 'deleted'];
 
     /* RELATIONSHIP - INICIO */
     public function users() {
-        return $this->hasMany('App\User', 'pk_user_type', 'pk_user_type');
+        return $this->hasMany('App\User', 'id', 'user_type_id');
     }
     /* RELATIONSHIP - FIN */
 
     public function save(array $options = array()) {
-
-        $this['updated_pk_user'] = Auth::user()->pk_user;
+        $this['updated_user_id'] = Auth::user()->id;
         $this['updated_at'] = date('Y-m-d H:i:s');
 
         return parent::save($options);
     }
 
     public function create(array $options = array()) {
-        if( $this['pk_user_type'] === null) {
-            $this['created_pk_user'] = Auth::user()->pk_user;
+        if( $this['id'] === null) {
+            $this['created_user_id'] = Auth::user()->id;
             $this['created_at'] = date('Y-m-d H:i:s');
             return save($options);
         } else {
@@ -43,7 +40,7 @@ class UserType extends Model
 
     public function delete() {
         if( $this['deleted'] == 0) {
-            $this['updated_pk_user'] = Auth::user()->pk_user;
+            $this['updated_user_id'] = Auth::user()->pk_user;
             $this['updated_at'] = date('Y-m-d H:i:s');
             $this['deleted'] = 1;
             return save();

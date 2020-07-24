@@ -22,9 +22,9 @@ class CreateTableProducts extends Migration
             $table->string('model', 100);
             $table->string('file', 128)->nullable();
 
-            $table->integer('created_pk_user')->unsigned();
+            $table->integer('created_user_id')->unsigned();
             $table->datetime('created_at');
-            $table->integer('updated_pk_user')->unsigned();
+            $table->integer('updated_user_id')->unsigned();
             $table->datetime('updated_at');
 
             $table->boolean('deleted')->default(0);
@@ -33,8 +33,8 @@ class CreateTableProducts extends Migration
         //FOREIGNS KEYS
         Schema::table('products', function($table) {
             $table->foreign('brand_id')->references('id')->on('brands');
-            $table->foreign('created_pk_user')->references('pk_user')->on('users');
-            $table->foreign('updated_pk_user')->references('pk_user')->on('users');
+            $table->foreign('created_user_id')->references('id')->on('users');
+            $table->foreign('updated_user_id')->references('id')->on('users');
         });
     }
 
