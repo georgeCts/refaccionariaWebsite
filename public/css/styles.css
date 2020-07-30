@@ -1,0 +1,131 @@
+@font-face {
+    font-family: harvestital;
+    src: url('/fonts/harvestitalregular.ttf');
+}
+
+nav.top {
+    background: url('/images/cintillo-superior-fijo/01-cintillo.png') !important;
+    background-repeat: no-repeat;
+    height: 38px;
+}
+
+/*
+* CINTILLO SUPERIOR FIJO 
+*/
+.cintillo-social-icons {
+    width: 30px;
+    height: 30px;
+}
+
+.cintillo-text {
+    font-family: harvestital;
+    color: black;
+}
+
+/*
+*   ENCABEZADO
+*/
+div.encabezado {
+    background: url('/images/encabezado/010-fondo-transparencia.png') !important;
+    background-repeat: no-repeat;
+    height: 106px;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+   /*  height: 2.75rem; */
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: 38px;
+    overflow-x: auto;
+    color: rgba(255, 255, 255, .75);
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.encabezado-logo {
+    height: 58px;
+    margin-top: 6px;
+    padding-left: 105px;
+}
+
+.encabezado-slogan {
+    width: 25%;
+    height: 68%;
+    margin-top: 10px;
+    padding-left: 90px;
+    margin-left: 200px;
+}
+
+.encabezado-icons-container {
+    padding-right: 10px;
+    margin-top: 25px;
+}
+
+.encabezado-icons {
+    width: 30px;
+    height: 30px;
+    margin: 0px 4px;
+}
+
+/*
+*   MENU
+*/
+div.menu {
+    background: url('/images/encabezado/011-menu-flotante.png') !important;
+    background-repeat: no-repeat;
+    margin: 20px auto;
+    height: 58px;
+    width: 60%;
+    z-index: 99;
+    position: relative;
+}
+
+div.menu .menu-items {
+    padding-top: 17px !important;
+}
+
+div.menu .menu-items ul li {
+    font-family: harvestital;
+    font-size: 18px;
+    margin: 0px 7px;
+    color: white;
+}
+
+div.menu .menu-items ul li:hover {
+    font-size: 20px;
+    text-decoration: underline;
+    color: #18FD00;
+}
+
+/*
+*   SLIDERS
+*/
+.content-slider {
+    z-index: -9;
+    margin-top: -170px;
+    position: relative;
+}
+
+.slider.cintillo-blanco {
+    font-family: harvestital;
+    color: black;
+    font-size: 44px;
+}
+
+.slider.cintillo-negro {
+    font-family: Arial;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #18FD00;
+    font-size: 24px;
+}
