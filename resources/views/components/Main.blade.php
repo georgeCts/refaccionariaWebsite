@@ -8,7 +8,7 @@
     @yield('components.Stylesheets')
 </head>
 
-<body style="background-color: cornflowerblue">
+<body style="background-color: black">
     @yield('components.Navbar')
 
     @yield('content', '*** CONTENT ***')
