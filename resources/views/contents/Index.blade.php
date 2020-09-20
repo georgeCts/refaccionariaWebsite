@@ -74,7 +74,7 @@
             </div>
         </section><!-- End Welcome Section -->
 
-        <!-- ======= Welcome Section ======= -->
+        <!-- ======= Products Section ======= -->
         <section id="products" class="products">
             <div class="container">
                 <div class="row">
@@ -111,7 +111,49 @@
                     </div>
                 </div>
             </div>
-        </section><!-- End Welcome Section -->
+
+            <div class="row search">
+                <div class="col-lg-6">
+                    <img class="trucks-picture" src="/images/banner-productos/025-auto-camion.png" alt="Camión" />
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="search-container">
+                        <h3>Búsqueda Avanzada</h3>
+                        <p>
+                            Encuentra las refacciones disponibles para la marca, modelo y versión
+                             de tu vehículo.
+                        </p>
+                        <img src="/images/banner-productos/026-boton-buscar.png" class="search-picture" />
+                    </div>
+
+                    <img class="engine-picture" src="/images/banner-productos/024-motor.png" />
+                </div>
+            </div>
+        </section><!-- End Products Section -->
+
+        <!-- ======= Brands Section ======= -->
+        <section id="brands" class="brands">
+            <div class="container brand-content">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-center" style="float: right; max-width: 500px;">
+                            <h3>Bienvenido</h3>
+                            <p>
+                                Nuestro compromiso es con la calidad, por eso hemos formado grandes alianzas comerciales con las marcas más 
+                                importantes y de más alto prestigio en el mercado nacional e internacional, buscando siempre lo mejor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 text-center mt-4">
+                        <h3>MARCAS DE PRESTIGIO</h3>
+                        <div class="principles-container">
+                            <span>Seguridad, Confianza y Valor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Brands Section -->
     </main><!-- End #main -->
 @endsection
 
