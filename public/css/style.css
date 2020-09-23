@@ -15,7 +15,7 @@
 
 body {
   font-family: harvestital, sans-serif;
-  background: black;
+  background: #171415;
   color: #4d4643;
 }
 
@@ -772,6 +772,12 @@ img.producto-image {
   width: inherit;
 }
 
+@media (max-width: 768px) {
+  .products h2 {
+    font-size: 60px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Search
 --------------------------------------------------------------*/
@@ -810,6 +816,19 @@ img.producto-image {
   text-align: center !important;
 }
 
+@media (max-width: 768px) {
+  .search .trucks-picture,
+  .search .engine-picture {
+    display: none;
+  }
+
+  .search-container {
+    float: none;
+    max-width: none;
+    padding: 0 30px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Brands
@@ -844,6 +863,11 @@ img.producto-image {
   color: black;
   text-align: center !important;
   justify-content: center;
+}
+
+.brands .left-info {
+  float: right;
+  max-width: 500px;
 }
 
 .brands .principles-container {
@@ -890,6 +914,51 @@ img.producto-image {
   -ms-transform: skew(-30deg, 0deg);
   -webkit-transform: skew(-30deg, 0deg);
   transform: skew(-30deg, 0deg);
+}
+
+div.brand-image-container {
+  background: #5C5A5B;
+  margin-top: 20px;
+}
+
+div.brand-image-container > div {
+  padding: 20px 0;
+  background: rgb(240, 240, 240);
+}
+
+div.brand-image-container > div li {
+  width: 33.3%;
+  list-style: none;
+  float: left;
+}
+
+div.brand-image-container img {
+  border: 0 none;
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .brand-content .left-info {
+    float: none;
+    max-width: none;
+    padding: 0 25px;
+  }
+
+  .brands .principles-container span {
+    font-size: 25px;
+  }
+
+  .brands .principles-container::before {
+    position: unset;
+    left: 10px;
+  }
+
+  .brands .principles-container::after {
+    left: -12px;
+  }
 }
 
 

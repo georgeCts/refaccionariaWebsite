@@ -136,7 +136,7 @@
             <div class="container brand-content">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="text-center" style="float: right; max-width: 500px;">
+                        <div class="text-center left-info">
                             <h3>Bienvenido</h3>
                             <p>
                                 Nuestro compromiso es con la calidad, por eso hemos formado grandes alianzas comerciales con las marcas más 
@@ -150,6 +150,33 @@
                         <div class="principles-container">
                             <span>Seguridad, Confianza y Valor</span>
                         </div>
+                    </div>
+                </div>
+
+                <div class="row brand-image-container">
+                    {{-- <div class="col-lg-12 center">
+                        <ul>
+                            <li>
+                                <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
+                            </li>
+                            <li>
+                                <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
+                            </li>
+                            <li>
+                                <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
+                            </li>
+                        </ul>
+                    </div> --}}
+                    <div class="col-md-4 col-sm-4 text-center">
+                        <img src="http://placehold.it/150x100" class="img-responsive" alt="Responsive image" />
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 text-center">
+                        <img src="http://placehold.it/150x100" class="img-responsive" alt="Responsive image" />
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 text-center">
+                        <img src="http://placehold.it/150x100" class="img-responsive" alt="Responsive image" />
                     </div>
                 </div>
             </div>
@@ -166,6 +193,31 @@
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             });
 
         });
