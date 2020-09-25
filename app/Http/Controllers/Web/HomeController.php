@@ -50,6 +50,6 @@ class HomeController extends Controller
                                         'lstLatestPosts'    => $lstLatestPosts,
                                         'lstTags'           => $lstTags]);*/
 
-        return view('contents.Index');                                        
+        return view('contents.Index');
     }
 }

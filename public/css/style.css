@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #topbar {
   background: #18FD00;
+  color: #000;
   padding: 10px 0;
   font-size: 14px;
 }
@@ -83,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 #topbar .contact-info a {
   font-family: harvestital !important;
   line-height: 1;
-  color: #000;
+  color: #000 !important;
   transition: 0.3s;
 }
 
@@ -101,6 +102,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 20px;
   border-left: 1px solid #e9e9e9;
 }
+
+/* #topbar .social-links {
+  position: relative;
+}
+
+#topbar .social-links::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 80px solid #fff;
+  border-right: 80px solid transparent;
+  width: 0;
+} */
 
 #topbar .social-links a {
   color: #000;
@@ -377,7 +392,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 70vh;
+  height: 75vh;
   overflow: hidden;
   position: relative;
   padding: 0;
@@ -483,6 +498,15 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .carousel-indicators li {
   cursor: pointer;
+  width: 70px;
+  border-radius: 2px;
+  border-top: none;
+  border-bottom: none;
+  opacity: 1;
+}
+
+#hero .carousel-indicators li.active {
+  background-color: #18FD00;
 }
 
 @media (min-width: 1024px) {
@@ -917,7 +941,8 @@ img.producto-image {
 }
 
 div.brand-image-container {
-  background: #5C5A5B;
+  background: rgb(240, 240, 240);
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -958,6 +983,141 @@ div.brand-image-container img {
 
   .brands .principles-container::after {
     left: -12px;
+  }
+}
+
+/*--------------------------------------------------------------
+# About us
+--------------------------------------------------------------*/
+.about-us {
+  padding: 0 !important;
+  background: #FFF;
+}
+
+.about-us > .row {
+  background: #1E1C1C;
+  padding: 20px 0;
+}
+
+.about-us h2 {
+  font-size: 90px;
+  color: #FFF;
+  text-align: center;
+}
+
+.about-us > .container {
+  padding: 30px 0;
+}
+
+.about-us h3 {
+  color: black;
+  font-size: 45px;
+}
+
+.about-us p {
+  font-family: Arial;
+  font-size: 19px;
+  font-weight: bold;
+  color: black;
+  text-align: center !important;
+}
+
+.about-us .content-2 p {
+  padding-top: 30px;
+  font-family: Arial;
+  font-size: 19px;
+  font-weight: bold;
+  text-align: justify !important;
+  color: #FFF;
+}
+
+.about-us .content-2 p > span {
+  color: #18FD00;
+}
+
+.about-us .matriz-img {
+  width: 50%;
+}
+
+.about-us .content-3 {
+  padding: 50px;
+}
+
+.about-us .content-3 p {
+  font-family: Arial;
+  font-size: 19px;
+  font-weight: bold;
+  text-align: justify !important;
+  color: #FFF;
+}
+
+.about-us .content-3 p {
+  font-family: Arial;
+  font-size: 19px;
+  font-weight: bold;
+  text-align: justify !important;
+  color: #FFF;
+}
+
+.about-us .content-3 p > span {
+  color: #18FD00;
+}
+
+.about-us .content-3 .img-valores {
+  width: 70%;
+}
+
+.about-us .sucursal-item {
+  width: 100%;
+  height: 110vh;
+  overflow: hidden;
+}
+
+#history {
+  margin-bottom: -100px;
+}
+
+#puntos-clave {
+  margin-bottom: -70px;
+}
+
+#puntos-clave img {
+  margin-top: -30px;
+}
+
+.about-us .cards-container {
+  padding: 30px;
+}
+
+.about-us .card-item {
+  padding: 15px;
+  background-color: #FFF;
+  height: 300px;
+  max-height: 350px;
+}
+
+.about-us .card-item img {
+ width: 50%;
+}
+
+.about-us .card-item p {
+  margin-top: 10px;
+  color: #000;
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  text-align: justify;
+}
+
+@media (max-width: 1024px) {
+  .about-us {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us h2 {
+    margin-top: 20px;
   }
 }
 

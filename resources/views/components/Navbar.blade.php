@@ -9,7 +9,7 @@
                 Contactanos: (999)912 01 00\ ventas@maderorefaccionarias.com.mx
             </div>
             <div class="social-links">
-                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="#" class="whatsapp"><i class="icofont-whatsapp"></i></a>
                 <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
                 <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
             </div>
@@ -27,8 +27,8 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="active"><a href="index.html">INICIO</a></li>
-                    <li><a href="#">CONÓCENOS</a></li>
+                    <li @if (Request::path() == ('/')) {!!'class="active"' !!} @endif><a href="{{URL::to('/') }}">INICIO</a></li>
+                    <li @if (Request::path() == ('nosotros')) {!!'class="active"' !!} @endif><a href="{{URL::to('/nosotros') }}">CONÓCENOS</a></li>
                     <li><a href="#">PRODUCTOS</a></li>
                     <li><a href="#">PROMOCIONES</a></li>
                     <li><a href="#">EXPERT TIPS</a></li>

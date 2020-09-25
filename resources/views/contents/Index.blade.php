@@ -87,27 +87,27 @@
             <div class="productos-container">
                 <div class="slider-productos">
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-1.jpg" class="producto-image" />
+                        <img src="/images/banner-productos/slide-1.png" class="producto-image" />
                     </div>
         
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-2.jpg" class="producto-image" />
+                        <img src="/images/banner-productos/slide-2.png" class="producto-image" />
                     </div>
         
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-3.jpg" class="producto-image" />
+                        <img src="/images/banner-productos/slide-3.png" class="producto-image" />
                     </div>
     
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-4.jpg" class="producto-image" />
+                        <img src="/images/banner-productos/slide-4.png" class="producto-image" />
                     </div>
         
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-5.jpg" class="producto-image" />
+                        <img src="/images/banner-productos/slide-5.png" class="producto-image" />
                     </div>
         
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-6.jpg" class="producto-image" />
+                        <img src="/images/banner-productos/slide-6.png" class="producto-image" />
                     </div>
                 </div>
             </div>
@@ -154,29 +154,16 @@
                 </div>
 
                 <div class="row brand-image-container">
-                    {{-- <div class="col-lg-12 center">
-                        <ul>
-                            <li>
-                                <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
-                            </li>
-                        </ul>
-                    </div> --}}
                     <div class="col-md-4 col-sm-4 text-center">
-                        <img src="http://placehold.it/150x100" class="img-responsive" alt="Responsive image" />
+                        <img src="/images/proveedores/namcco.png" class="img-responsive" alt="Responsive image" />
                     </div>
 
                     <div class="col-md-4 col-sm-4 text-center">
-                        <img src="http://placehold.it/150x100" class="img-responsive" alt="Responsive image" />
+                        <img src="/images/proveedores/gonher.png" class="img-responsive" alt="Responsive image" />
                     </div>
 
                     <div class="col-md-4 col-sm-4 text-center">
-                        <img src="http://placehold.it/150x100" class="img-responsive" alt="Responsive image" />
+                        <img src="/images/proveedores/soportes-star.png" class="img-responsive" alt="Responsive image" />
                     </div>
                 </div>
             </div>

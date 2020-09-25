@@ -15,13 +15,16 @@ Route::get('/', function () {
     return view('contents.Index');
 });
 
+Route::get('/nosotros', function () {
+    return view('contents.Nosotros');
+});
+
 Route::get('/', 'Web\HomeController@index');
 
 Route::get('/login-panel', 'Admin\LoginController@index');
 Route::post('/login-panel', ['as' => 'login-panel', 'uses' => 'Admin\LoginController@access']);
 Route::get('/logout-panel', 'Admin\LoginController@logout');
 
-Route::get('/nosotros', 'Web\NavigationController@company');
 Route::get('/servicios', 'Web\NavigationController@services');
 Route::get('/contacto', 'Web\NavigationController@contact');
 
