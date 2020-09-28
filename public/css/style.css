@@ -392,7 +392,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 75vh;
+  height: 164vh;
   overflow: hidden;
   position: relative;
   padding: 0;
@@ -509,18 +509,78 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #18FD00;
 }
 
+#hero .banners .carousel-item.slide-1 {
+  background-image: url(/images/slide/Banner-1.png);
+}
+#hero .banners .carousel-item.slide-2 {
+  background-image: url(/images/slide/Banner-2.png);
+}
+#hero .banners .carousel-item.slide-3 {
+  background-image: url(/images/slide/Banner-3.png);
+}
+#hero .banners .carousel-item.slide-4 {
+  background-image: url(/images/slide/Banner-4.png);
+}
+#hero .banners .carousel-item.slide-5 {
+  background-image: url(/images/slide/Banner-5.png);
+}
+#hero .banners .carousel-item.slide-6 {
+  background-image: url(/images/slide/Banner-6.png);
+}
+#hero .banners .carousel-item.slide-7 {
+  background-image: url(/images/slide/Banner-7.png);
+}
+#hero .banners .carousel-item.slide-8 {
+  background-image: url(/images/slide/Banner-8.png);
+}
+#hero .banners .carousel-item.slide-9 {
+  background-image: url(/images/slide/Banner-9.png);
+}
+
 @media (min-width: 1024px) {
+  #hero {
+    height: 116vh;
+  }
+
   #hero .carousel-content {
     width: 60%;
   }
   #hero .carousel-control-prev, #hero .carousel-control-next {
     width: 5%;
   }
+
+  #hero .banners .carousel-item.slide-1 {
+    background-image: url(/images/slide/Banner-1-1024.png);
+  }
+  #hero .banners .carousel-item.slide-2 {
+    background-image: url(/images/slide/Banner-2-1024.png);
+  }
+  #hero .banners .carousel-item.slide-3 {
+    background-image: url(/images/slide/Banner-3-1024.png);
+  }
+  #hero .banners .carousel-item.slide-4 {
+    background-image: url(/images/slide/Banner-4-1024.png);
+  }
+  #hero .banners .carousel-item.slide-5 {
+    background-image: url(/images/slide/Banner-5-1024.png);
+  }
+  #hero .banners .carousel-item.slide-6 {
+    background-image: url(/images/slide/Banner-6-1024.png);
+  }
+  #hero .banners .carousel-item.slide-7 {
+    background-image: url(/images/slide/Banner-7-1024.png);
+  }
+  #hero .banners .carousel-item.slide-8 {
+    background-image: url(/images/slide/Banner-8-1024.png);
+  }
+  #hero .banners .carousel-item.slide-9 {
+    background-image: url(/images/slide/Banner-9-1024.png);
+  }
 }
 
 @media (max-width: 992px) {
   #hero {
-    height: calc(100vh - 70px);
+    height: calc(70vh - 70px);
   }
   #hero .carousel-content h2 {
     margin-bottom: 15px;
@@ -529,11 +589,39 @@ h1, h2, h3, h4, h5, h6 {
   #hero .carousel-content p {
     font-size: 15px;
   }
+
+  #hero .banners .carousel-item.slide-1 {
+    background-image: url(/images/slide/Banner-1-425.png);
+  }
+  #hero .banners .carousel-item.slide-2 {
+    background-image: url(/images/slide/Banner-2-425.png);
+  }
+  #hero .banners .carousel-item.slide-3 {
+    background-image: url(/images/slide/Banner-3-425.png);
+  }
+  #hero .banners .carousel-item.slide-4 {
+    background-image: url(/images/slide/Banner-4-425.png);
+  }
+  #hero .banners .carousel-item.slide-5 {
+    background-image: url(/images/slide/Banner-5-425.png);
+  }
+  #hero .banners .carousel-item.slide-6 {
+    background-image: url(/images/slide/Banner-6-425.png);
+  }
+  #hero .banners .carousel-item.slide-7 {
+    background-image: url(/images/slide/Banner-7-425.png);
+  }
+  #hero .banners .carousel-item.slide-8 {
+    background-image: url(/images/slide/Banner-8-425.png);
+  }
+  #hero .banners .carousel-item.slide-9 {
+    background-image: url(/images/slide/Banner-9-425.png);
+  }
 }
 
-@media (max-height: 500px) {
+@media (max-width: 500px) {
   #hero {
-    height: 120vh;
+    height: 44vh;
   }
 }
 
@@ -1005,6 +1093,10 @@ div.brand-image-container img {
   text-align: center;
 }
 
+.about-us .logo {
+  width: 80%;
+}
+
 .about-us > .container {
   padding: 30px 0;
 }
@@ -1077,6 +1169,31 @@ div.brand-image-container img {
   margin-bottom: -100px;
 }
 
+#history img {
+  width: 80%;
+  margin-top: -100px;
+}
+
+.about-us #hero {
+  height: 78vh;
+}
+
+.about-us .carousel .carousel-item.slide-1 {
+  background-image: url(/images/nosotros/sucursal-slider/52-slide-matriz.png);
+}
+
+.about-us .carousel .carousel-item.slide-2 {
+  background-image: url(/images/nosotros/sucursal-slider/53-slide-kanasin.png);
+}
+
+.about-us .carousel .carousel-item.slide-3 {
+  background-image: url(/images/nosotros/sucursal-slider/54-slide-centro.png);
+}
+
+.about-us .carousel .carousel-item.slide-4 {
+  background-image: url(/images/nosotros/sucursal-slider/55-slide-macro.png);
+}
+
 #puntos-clave {
   margin-bottom: -70px;
 }
@@ -1090,14 +1207,21 @@ div.brand-image-container img {
 }
 
 .about-us .card-item {
+  margin: 15px;
   padding: 15px;
   background-color: #FFF;
-  height: 300px;
-  max-height: 350px;
+  height: 350px;
 }
 
 .about-us .card-item img {
- width: 50%;
+ width: 80px;
+}
+
+.about-us .card-item span {
+  font-family: harvestital;
+  font-size: 30px;
+  color: #000 !important;
+  text-align: center;
 }
 
 .about-us .card-item p {
@@ -1113,11 +1237,121 @@ div.brand-image-container img {
   .about-us {
     background-attachment: scroll;
   }
+
+  .about-us h2 {
+    font-size: 65px;
+  }
+
+  .about-us #hero {
+    height: 63vh;
+  }
+
+  .about-us .carousel .carousel-item.slide-1 {
+    background-image: url(/images/nosotros/sucursal-slider/52-slide-matriz-1024.png);
+  }
+
+  .about-us .carousel .carousel-item.slide-2 {
+    background-image: url(/images/nosotros/sucursal-slider/53-slide-kanasin-1024.png);
+  }
+
+  .about-us .carousel .carousel-item.slide-3 {
+    background-image: url(/images/nosotros/sucursal-slider/54-slide-centro-1024.png);
+  }
+
+  .about-us .carousel .carousel-item.slide-4 {
+    background-image: url(/images/nosotros/sucursal-slider/55-slide-macro-1024.png);
+  }
+
+  #puntos-clave {
+    margin-bottom: -10px;
+  }
+  
+  #puntos-clave img {
+    margin-top: 0px;
+  }
+
+  .about-us .card-item {
+    height: 470px;
+  }
+
+  .about-us .card-item img {
+    width: 65px;
+  }
+   
+  .about-us .card-item span {
+    font-size: 27px;
+  }
 }
 
 @media (max-width: 768px) {
   .about-us h2 {
-    margin-top: 20px;
+    font-size: 55px;
+  }
+
+  .about-us .logo {
+    width: 250px;
+    margin-bottom: 30px;
+  }
+
+  .about-us .content-3 .img-valores {
+    width: 200px;
+  }
+
+  .about-us .content-3 .img-valores.last {
+    display: none;
+  }
+
+  #history img {
+    width: 400px;
+    margin-top: -100px;
+    margin-bottom: -60px;
+  }
+
+  .about-us #hero {
+    height: 48vh;
+  }
+
+  .about-us .carousel .carousel-item.slide-1 {
+    background-image: url(/images/nosotros/sucursal-slider/52-slide-matriz-425.png);
+  }
+
+  .about-us .carousel .carousel-item.slide-2 {
+    background-image: url(/images/nosotros/sucursal-slider/53-slide-kanasin-425.png);
+  }
+
+  .about-us .carousel .carousel-item.slide-3 {
+    background-image: url(/images/nosotros/sucursal-slider/54-slide-centro-425.png);
+  }
+
+  .about-us .carousel .carousel-item.slide-4 {
+    background-image: url(/images/nosotros/sucursal-slider/55-slide-macro-425.png);
+  }
+
+  .about-us .card-item {
+    height: 400px;
+  }
+
+  .about-us .card-item img {
+    width: 55px;
+  }
+
+  .about-us .card-item span {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-us h2 {
+    font-size: 40px;
+  }
+
+  .about-us .content-3 .img-valores {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+
+  .about-us #hero {
+    height: 38vh;
   }
 }
 

@@ -29,9 +29,9 @@
                 <ul>
                     <li @if (Request::path() == ('/')) {!!'class="active"' !!} @endif><a href="{{URL::to('/') }}">INICIO</a></li>
                     <li @if (Request::path() == ('nosotros')) {!!'class="active"' !!} @endif><a href="{{URL::to('/nosotros') }}">CONÓCENOS</a></li>
-                    <li><a href="#">PRODUCTOS</a></li>
-                    <li><a href="#">PROMOCIONES</a></li>
-                    <li><a href="#">EXPERT TIPS</a></li>
+                    <li @if (Request::path() == ('productos')) {!!'class="active"' !!} @endif><a href="{{URL::to('/productos') }}">PRODUCTOS</a></li>
+                    <li @if (Request::path() == ('promociones')) {!!'class="active"' !!} @endif><a href="{{URL::to('/promociones') }}">PROMOCIONES</a></li>
+                    <li @if (Request::path() == ('expert-tips')) {!!'class="active"' !!} @endif><a href="{{URL::to('/expert-tips') }}">EXPERT TIPS</a></li>
                     <li><a href="#">CONTÁCTANOS</a></li>
                 </ul>
             </nav><!-- .nav-menu -->

@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center">
-                    <img src="/images/banner-bienvenido/022-logo-slogan.png" style="width: 80%;" />
+                    <img src="/images/banner-bienvenido/022-logo-slogan.png" class="logo" />
                 </div>
 
                 <div class="col-lg-6 text-center">
@@ -31,18 +31,20 @@
         </div>
 
         <div class="row justify-content-center content-2">
-            <div class="col-8">
-                <p>
-                    Somos una empresa yucateca líder en la comercialización de Refacciones Automotrices para vehículos ligeros y de carga pesada, 
-                    que bajo las mejores prácticas comerciales genera soluciones seguras, rápidas pero sobre todo eficientes, brindándoles siempre 
-                    productos nacionales e importados de gran tecnología y alta calidad a nuestros clientes.
-
-                    Respaldados por 40 años de experiencia en la industria y más de 30 años de presencia en el mercado, somos especialistas en el 
-                    <span>Automotive Aftermarket</span> (Mercado Postventa Automotriz) y por ello buscamos satisfacer las necesidades de nuestros consumidores con 
-                    gran calidad y calidez humana.
-
-                    El trato amable, el precio justo y una actitud de servicio total nos <span>define</span>.
-                </p>
+            <div class="container">
+                <div class="col-lg-12">
+                    <p>
+                        Somos una empresa yucateca líder en la comercialización de Refacciones Automotrices para vehículos ligeros y de carga pesada, 
+                        que bajo las mejores prácticas comerciales genera soluciones seguras, rápidas pero sobre todo eficientes, brindándoles siempre 
+                        productos nacionales e importados de gran tecnología y alta calidad a nuestros clientes.
+    
+                        Respaldados por 40 años de experiencia en la industria y más de 30 años de presencia en el mercado, somos especialistas en el 
+                        <span>Automotive Aftermarket</span> (Mercado Postventa Automotriz) y por ello buscamos satisfacer las necesidades de nuestros consumidores con 
+                        gran calidad y calidez humana.
+    
+                        El trato amable, el precio justo y una actitud de servicio total nos <span>define</span>.
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -60,11 +62,11 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 text-center">
+                <div class="col-sm-12 col-lg-6 text-center">
                     <img src="/images/nosotros/44-personal.png" style="width: 80%;" />
                 </div>
 
-                <div class="col-lg-6 text-center">
+                <div class="col-sm-12 col-lg-6 text-center">
                     <h3>Filosofía</h3>
                     <p>
                         Creemos en una serie de fundamentos que norman nuestro actuar diario y que principalmente se 
@@ -76,10 +78,10 @@
         </div>
 
         <div class="row content-3">
-            <div class="col-2">
+            <div class="col-md-4 col-lg-2 text-center">
                 <img src="/images/nosotros/45-mision.png" class="img-valores" alt="Misión" />
             </div>
-            <div class="col-6">
+            <div class="col-md-8 col-lg-6">
                 <p>
                     Somos una empresa comprometida con nuestros clientes que además de vender refacciones les ofrecemos soluciones a través de proporcionarles productos 
                     y servicios que garanticen la permanencia y crecimiento constante de la empresa, logrando una utilidad que les permita a todos los miembros de la 
@@ -87,16 +89,16 @@
                     un mejor nivel de vida a nuestros colaboradores.
                 </p>
             </div>
-            <div class="col-4 text-center">
-                <img src="/images/nosotros/48-imagen-1.png" class="img-valores" />
+            <div class="col-lg-4 text-center">
+                <img src="/images/nosotros/48-imagen-1.png" class="img-valores last" />
             </div>
         </div>
 
         <div class="row content-3">
-            <div class="col-2">
+            <div class="col-md-4 col-lg-2 text-center">
                 <img src="/images/nosotros/46-vision.png" class="img-valores" alt="Visión" />
             </div>
-            <div class="col-6">
+            <div class="col-md-8 col-lg-6">
                 <p>
                     Ser una de las empresas lideres en el mercado de partes y refacciones para auto y camión, mecánicas y 
                     eléctricas en el sureste de México, ofreciendo productos de excelente calidad así como un amplio surtido 
@@ -105,16 +107,16 @@
                     consumidores, procurando que siempre se vayan satisfechos después realizar su compra.
                 </p>
             </div>
-            <div class="col-4 text-center">
-                <img src="/images/nosotros/49-imagen-2.png" class="img-valores" />
+            <div class="col-lg-4 text-center">
+                <img src="/images/nosotros/49-imagen-2.png" class="img-valores last" />
             </div>
         </div>
 
         <div class="row content-3">
-            <div class="col-2">
+            <div class="col-md-4 col-lg-2 text-center">
                 <img src="/images/nosotros/47-valores.png" class="img-valores" alt="Valores" />
             </div>
-            <div class="col-6">
+            <div class="col-md-8 col-lg-6">
                 <p>
                     <span>Honrados:</span>
                     <br />
@@ -151,8 +153,8 @@
                     Persona que cumple con sus obligaciones, con aquello que se ha propuesto o que se ha sido encomendado.
                 </p>
             </div>
-            <div class="col-4 text-center">
-                <img src="/images/nosotros/50-imagen-3.png" class="img-valores" />
+            <div class="col-lg-4 text-center">
+                <img src="/images/nosotros/50-imagen-3.png" class="img-valores last" />
             </div>
         </div>
 
@@ -165,7 +167,7 @@
         <div id="history" class="container">
             <div class="row">
                 <div class="col-lg-6 text-center">
-                    <img src="/images/nosotros/51-kia.png" style="width: 80%; margin-top: -100px;" />
+                    <img src="/images/nosotros/51-kia.png" />
                 </div>
                 <div class="col-lg-6 text-center">
                     <h3>40 AÑOS</h3>
@@ -181,16 +183,16 @@
             <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <!-- Slide 1 -->
-                    <div class="carousel-item active" style="background-image: url(/images/nosotros/52-slide-matriz.png);"></div>
+                    <div class="carousel-item slide-1 active"></div>
     
                     <!-- Slide 2 -->
-                    <div class="carousel-item" style="background-image: url(/images/nosotros/53-slide-kanasin.png);"></div>
+                    <div class="carousel-item slide-2"></div>
     
                     <!-- Slide 3 -->
-                    <div class="carousel-item" style="background-image: url(/images/nosotros/54-slide-centro.png);"></div>
+                    <div class="carousel-item slide-3"></div>
     
                     <!-- Slide 4 -->
-                    <div class="carousel-item" style="background-image: url(/images/nosotros/55-slide-macro.png);"></div>
+                    <div class="carousel-item slide-4"></div>
                 </div>
     
                 <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
@@ -215,11 +217,11 @@
 
         <div id="puntos-clave" class="container">
             <div class="row">
-                <div class="col-lg-6 text-center">
+                <div class="col-sm-12 col-md-6 text-center">
                     <img src="/images/nosotros/56-sierra.png" style="width: 90%;" />
                 </div>
 
-                <div class="col-lg-6 text-center">
+                <div class="col-sm-12 col-md-6 text-center">
                     <h3>Puntos Clave</h3>
                     <p>
                         Perseverancia, honestidad y pasión son los elementos claves que nos han permitido posicionarnos en el gusto
@@ -230,9 +232,11 @@
         </div>
 
         <div class="row text-center cards-container">
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card-item">
-                    <img src="/images/nosotros/57-mejor-precio.png" />
+                    <img src="/images/nosotros/valores/57.png" />
+                    <br />
+                    <span>Mejor Precio</span>
                     <p>
                         Cuidamos la economía de nuestros clientes con una estrategia de precios basada principalmente en los consumidores, 
                         garantizando que podemos brindarle toda la calidad de un producto a un precio altamente competitivo, acompañado de 
@@ -240,30 +244,34 @@
                     </p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card-item">
-                    <img src="/images/nosotros/58-amplio-surtido.png" />
+                    <img src="/images/nosotros/valores/58.png" />
+                    <br />
+                    <span>Amplio Surtido</span>
                     <p>
                         Disponemos de uno de los inventarios más amplios del sureste, teniendo todo a la mano y rápido es como ayudamos a 
                         nuestros clientes a que puedan invertir mejor su tiempo y sus recursos.
                     </p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card-item">
-                    <img src="/images/nosotros/59-asesoria-profesional.png" />
+                    <img src="/images/nosotros/valores/59.png" />
+                    <br />
+                    <span>Asesoría Profesional</span>
                     <p>
                         Ofrecemos una atención integral por parte de nuestros asesores de ventas que continuamente se preparan en cursos, 
                         conferencias, capacitaciones y practicas, para poder orientar profesionalmente desde una ama de casa hasta los expertos mecánicos.
                     </p>
                 </div>
             </div>
-        </div>
 
-        <div class="row text-center cards-container">
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card-item">
-                    <img src="/images/nosotros/60-entrega-domicilio.png" />
+                    <img src="/images/nosotros/valores/60.png" />
+                    <br />
+                    <span>Entrega a Domicilio</span>
                     <p>
                         Para nosotros el tiempo de los consumidores vale oro por lo que entregar sus refacciones hasta la puerta de su taller o 
                         domicilio de manera rápida y segura es una forma en la que cuidamos su salud financiera y priorizamos sus actividades tanto 
@@ -271,18 +279,22 @@
                     </p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card-item">
-                    <img src="/images/nosotros/61-cobertura.png" />
+                    <img src="/images/nosotros/valores/61.png" />
+                    <br />
+                    <span>Cobertura Nivel Sureste</span>
                     <p>
                         Desarrollamos una amplia red de comercio en todo el sureste mexicano, con envíos express en transporte terrestre, al interior 
                         del estado al igual que a los estados de Campeche, Tabasco y Quintana Roo.
                     </p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card-item">
-                    <img src="/images/nosotros/62-planes-credito.png" />
+                    <img src="/images/nosotros/valores/62.png" />
+                    <br />
+                    <span>Planes de Crédito</span>
                     <p>
                         Es una opción financiera que le otorga a nuestros clientes la oportunidad de obtener nuestros productos y refacciones sin tener 
                         que pagarlas en el momento, .planes accesibles con grandes beneficios que no generan intereses, con pagos flexibles y disponible 
@@ -290,12 +302,12 @@
                     </p>
                 </div>
             </div>
-        </div>
-        
-        <div class="row text-center cards-container">
-            <div class="col-4">
+
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card-item">
-                    <img src="/images/nosotros/63-prestigio-comercial.png" />
+                    <img src="/images/nosotros/valores/63.png" />
+                    <br />
+                    <span>Prestigio Comercial</span>
                     <p>
                         Enfocados en generar confianza y seguridad para nuestros clientes, hemos entablado alianzas comerciales con las marcas 
                         más prestigiosas en el mercado de refacciones, reconocidas a nivel mundial pioneras en el diseño, tecnología y calidad, 
@@ -303,18 +315,22 @@
                     </p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card-item">
-                    <img src="/images/nosotros/64-responsabilidad-social.png" />
+                    <img src="/images/nosotros/valores/64.png" />
+                    <br />
+                    <span>Responsabilidad Social</span>
                     <p>
                         Sustentada en valores éticos y expresada en un conjunto integral de políticas, practicas, campañas así como programas que 
                         contribuyen a la mejora laboral, económica y social de nuestra gente en nuestra comunidad.
                     </p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card-item">
-                    <img src="/images/nosotros/65-responsabilidad-ambiental.png" />
+                    <img src="/images/nosotros/valores/65.png" />
+                    <br />
+                    <span>Responsabilidad Ambiental</span>
                     <p>
                         Comprometidos con la preservación del medio ambiente, creamos programas y campañas tanto internos como externos que promueven 
                         una cultura ecologista la cual implementamos separando y reciclando el 100% de nuestro papel, cartón y PET, excluimos bolsas 

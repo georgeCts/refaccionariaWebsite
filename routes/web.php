@@ -19,6 +19,14 @@ Route::get('/nosotros', function () {
     return view('contents.Nosotros');
 });
 
+Route::get('/promociones', function () {
+    return view('contents.Promociones');
+});
+
+Route::get('/expert-tips', function () {
+    return view('contents.ExpertTips');
+});
+
 Route::get('/', 'Web\HomeController@index');
 
 Route::get('/login-panel', 'Admin\LoginController@index');

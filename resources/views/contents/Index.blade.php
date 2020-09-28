@@ -8,13 +8,17 @@
 @section('content')
     <!-- ======= Hero Section ======= -->
     <section id="hero">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div id="heroCarousel" class="carousel banners slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
-                <!-- Slide 1 -->
-                <div class="carousel-item active" style="background-image: url(/images/slide/slide-1.jpg);"></div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url(/images/slide/slide-2.jpg);"></div>
+                <div class="carousel-item slide-1 active"></div>
+                <div class="carousel-item slide-2"></div>
+                <div class="carousel-item slide-3"></div>
+                <div class="carousel-item slide-4"></div>
+                <div class="carousel-item slide-5"></div>
+                <div class="carousel-item slide-6"></div>
+                <div class="carousel-item slide-7"></div>
+                <div class="carousel-item slide-8"></div>
+                <div class="carousel-item slide-9"></div>
             </div>
 
             <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
@@ -206,7 +210,6 @@
                     }
                 ]
             });
-
         });
     </script>
 @endsection
