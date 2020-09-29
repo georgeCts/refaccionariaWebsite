@@ -6,7 +6,7 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>Refaccionaria Madero</h3>
+                        <h3>Madero Refacciones</h3>
                         <p>
                             Calle 31 No.168-E por 14 y 100
                             Francisco I. Madero<br>
@@ -48,7 +48,7 @@
         <div class="container d-md-flex py-4">
             <div class="mr-md-auto text-center text-md-left">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>Refaccionaria Madero</span></strong>. All Rights Reserved
+                    &copy; Copyright <strong><span>Madero Refacciones</span></strong>. All Rights Reserved
                 </div>
                 <div class="credits">
                     Diseñado por <a href="https://kubux.mx/">Kubuk</a>
