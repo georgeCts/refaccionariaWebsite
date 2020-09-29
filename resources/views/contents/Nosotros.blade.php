@@ -365,6 +365,7 @@
 
 @include('components.Navbar')
 @include('components.Footer')
+@include('components.PreFooter')
 @include('components.Scripts')
 @include('components.Stylesheets')
 

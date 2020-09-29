@@ -123,8 +123,10 @@
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
+      $('.floating-whatsapp').css('bottom', '60px');
     } else {
       $('.back-to-top').fadeOut('slow');
+      $('.floating-whatsapp').css('bottom', '15px');
     }
   });
 

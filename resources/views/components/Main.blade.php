@@ -19,10 +19,14 @@
     @yield('components.Navbar')
 
     @yield('content', '*** CONTENT ***')
-        
+
+    @yield('components.PreFooter')
+
     @yield('components.Footer')
 
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <a href="#" class="floating-whatsapp"><img src="/images/78-icono-whatsapp.png" /></a>
 
     @yield('components.Scripts')
 </body>

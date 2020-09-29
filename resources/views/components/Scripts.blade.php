@@ -29,4 +29,5 @@
     <!--End of Tawk.to Script-->
 
     @yield('scripts')
+    @yield('scripts-prefooter')
 @endsection

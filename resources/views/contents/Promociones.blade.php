@@ -27,6 +27,18 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class="slider-productos">
+                <div class="producto-item">
+                    <img src="/images/promociones/117-mobil.png" class="producto-image" />
+                </div>
+    
+                <div class="producto-item">
+                    <img src="/images/promociones/118-thre-five.png" class="producto-image" />
+                </div>
+            </div>
+        </div>
     </section><!-- End Promociones Section -->
 
 @endsection
@@ -53,6 +65,7 @@
 
 @include('components.Navbar')
 @include('components.Footer')
+@include('components.PreFooter')
 @include('components.Scripts')
 @include('components.Stylesheets')
 
