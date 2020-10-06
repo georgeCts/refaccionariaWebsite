@@ -1411,6 +1411,28 @@ div.brand-image-container img {
 }
 
 /*--------------------------------------------------------------
+# Bolsa Trabajo
+--------------------------------------------------------------*/
+.bolsa-trabajo h2{
+  font-family: harvestital;
+  font-size: 90px;
+  color: #FFF;
+  text-align: center !important;
+}
+
+.bolsa-trabajo p {
+  font-family: Arial;
+  font-size: 14px;
+  text-align: left;
+  color: #18FD00 !important;
+  padding: 10px 15px;
+}
+
+.bolsa-trabajo p > span {
+  color: #FFF !important;
+}
+
+/*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact .info-wrap {

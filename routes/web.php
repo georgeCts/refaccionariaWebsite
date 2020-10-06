@@ -27,6 +27,10 @@ Route::get('/expert-tips', function () {
     return view('contents.ExpertTips');
 });
 
+Route::get('/bolsa-trabajo', function () {
+    return view('contents.BolsaTrabajo');
+});
+
 Route::get('/', 'Web\HomeController@index');
 
 Route::get('/login-panel', 'Admin\LoginController@index');
