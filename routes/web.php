@@ -31,16 +31,11 @@ Route::get('/bolsa-trabajo', function () {
     return view('contents.BolsaTrabajo');
 });
 
-Route::get('/', 'Web\HomeController@index');
+Route::get('/contacto', 'Web\ContactController@index');
 
 Route::get('/login-panel', 'Admin\LoginController@index');
 Route::post('/login-panel', ['as' => 'login-panel', 'uses' => 'Admin\LoginController@access']);
 Route::get('/logout-panel', 'Admin\LoginController@logout');
-
-Route::get('/servicios', 'Web\NavigationController@services');
-Route::get('/contacto', 'Web\NavigationController@contact');
-
-Route::get('/post/{slug}', 'Web\PostsController@show');
 
 Route::group([  'prefix'    => 'panel',
                 'middleware'=> 'panel.auth'], function() {
@@ -56,6 +51,14 @@ Route::group([  'prefix'    => 'panel',
     Route::get('sliders/slider-editar/{pkSlider}', 'Admin\SlidersController@edit');
     Route::post('sliders/slider-editar', ['as' => 'update-slider', 'uses' => 'Admin\SlidersController@update']);
 
+    //SUCURSALES
+    Route::get('sucursales', 'Admin\LocationsController@index');
+    Route::get('sucursales/sucursal-crear', 'Admin\LocationsController@create');
+    Route::post('sucursales/sucursal-crear', ['as' => 'new-location', 'uses' => 'Admin\LocationsController@store']);
+
+    Route::get('sucursales/sucursal-editar/{id}', 'Admin\LocationsController@edit');
+    Route::put('sucursales/sucursal-editar', ['as' => 'update-location', 'uses' => 'Admin\LocationsController@update']);
+
     //MARCAS
     Route::get('marcas', 'Admin\BrandsController@index');
     Route::get('marcas/crear', 'Admin\BrandsController@create');
@@ -65,10 +68,10 @@ Route::group([  'prefix'    => 'panel',
     Route::put('marcas/editar', ['as' => 'update-brand', 'uses' => 'Admin\BrandsController@update']);
 
     //BOLSA DE TRABAJO
-    Route::get('bolsa-de-trabajo', 'Admin\JobsController@index');
-    Route::get('bolsa-de-trabajo/crear', 'Admin\JobsController@create');
-    Route::post('bolsa-de-trabajo/crear', ['as' => 'new-job', 'uses' => 'Admin\JobsController@store']);
+    Route::get('bolsa-trabajo', 'Admin\JobsController@index');
+    Route::get('bolsa-trabajo/crear', 'Admin\JobsController@create');
+    Route::post('bolsa-trabajo/crear', ['as' => 'new-job', 'uses' => 'Admin\JobsController@store']);
 
-    Route::get('bolsa-de-trabajo/editar/{id}', 'Admin\JobsController@edit');
-    Route::put('bolsa-de-trabajo/editar', ['as' => 'update-job', 'uses' => 'Admin\JobsController@update']);
+    Route::get('bolsa-trabajo/editar/{id}', 'Admin\JobsController@edit');
+    Route::put('bolsa-trabajo/editar', ['as' => 'update-job', 'uses' => 'Admin\JobsController@update']);
 });

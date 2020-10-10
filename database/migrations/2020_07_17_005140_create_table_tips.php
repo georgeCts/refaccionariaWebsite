@@ -17,19 +17,10 @@ class CreateTableTips extends Migration
             $table->increments('id');
             $table->string('title', 200);
             $table->text('body')->nullable();
-            
-            $table->integer('created_user_id')->unsigned();
-            $table->datetime('created_at');
-            $table->integer('updated_user_id')->unsigned();
-            $table->datetime('updated_at');
+            $table->string('file', 128);
 
+            $table->timestamps();
             $table->boolean('deleted')->default(0);
-        });
-
-        //FOREIGNS KEYS
-        Schema::table('tips', function($table) {
-            $table->foreign('created_user_id')->references('id')->on('users');
-            $table->foreign('updated_user_id')->references('id')->on('users');
         });
     }
 

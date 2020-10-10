@@ -19,20 +19,13 @@ class CreateTableLocations extends Migration
             $table->text('address')->nullable();
             $table->string('latitude', 20)->nullable();
             $table->string('longitude', 20)->nullable();
+            $table->string('phone', 25)->nullable();
+            $table->string('whatsapp1', 20)->nullable();
+            $table->string('whatsapp2', 20)->nullable();
             $table->text('more_info')->nullable();
 
-            $table->integer('created_user_id')->unsigned();
-            $table->datetime('created_at');
-            $table->integer('updated_user_id')->unsigned();
-            $table->datetime('updated_at');
-
+            $table->timestamps();
             $table->boolean('deleted')->default(0);
-        });
-
-        //FOREIGNS KEYS
-        Schema::table('locations', function($table) {
-            $table->foreign('created_user_id')->references('id')->on('users');
-            $table->foreign('updated_user_id')->references('id')->on('users');
         });
     }
 

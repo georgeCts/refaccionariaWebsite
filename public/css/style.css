@@ -1435,22 +1435,33 @@ div.brand-image-container img {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .info-wrap {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+section.contact {
   padding: 30px;
 }
 
+.contact h2{
+  font-family: harvestital;
+  font-size: 90px;
+  color: #FFF;
+  text-align: center !important;
+}
+
+.contact .info-wrap {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 0 30px;
+}
+
 .contact .info {
-  background: #fff;
+  background: none;
 }
 
 .contact .info i {
   font-size: 20px;
-  color: #f03c02;
+  color: #171415;
   float: left;
   width: 44px;
   height: 44px;
-  background: #ffeee8;
+  background: #18FD00;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1458,23 +1469,23 @@ div.brand-image-container img {
   transition: all 0.3s ease-in-out;
 }
 
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
+.contact .info-wrap h3 {
+  font-family: Arial !important;
+  font-size: 32px !important;
   margin-bottom: 5px;
-  color: #2b2320;
+  color: #18FD00 !important;
 }
 
 .contact .info p {
+  font-family: Arial !important;
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #65534c;
+  color: #fff;
 }
 
 .contact .info:hover i {
-  background: #f03c02;
+  background: #18FD00;
   color: #fff;
 }
 
@@ -1554,10 +1565,10 @@ div.brand-image-container img {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #f03c02;
+  background: #18FD00;
   border: 0;
   padding: 10px 24px;
-  color: #fff;
+  color: #171415;
   transition: 0.4s;
   border-radius: 4px;
 }
