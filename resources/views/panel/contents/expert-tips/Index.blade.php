@@ -1,4 +1,4 @@
-@section('title', 'Bolsa de trabajo')
+@section('title', 'Expert Tips')
 
 @section('content')
     @if(Session::has('success_message'))
@@ -19,8 +19,8 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Bolsa de trabajo</h4>
-                    <p class="card-description">Lista de empleos para publicar en el sitio web.</p>
+                    <h4 class="card-title">Expert tips</h4>
+                    <p class="card-description">Lista de tips para publicar en el sitio web.</p>
                     
                     <div class="table-responsive">
                         <table class="table table-striped">
@@ -28,28 +28,20 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Título</th>
-                                    <th>Sucursal</th>
-                                    <th>Estatus</th>
+                                    <th>Descripción</th>
                                     <th>Fecha</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($lstJobs as $item)
+                                @foreach($lstTips as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td>{{ $item->job }}</td>
-                                        <td>{{ $item->location->name }}</td>
-                                        <td>
-                                            @if($item->status != 'PUBLISHED')
-                                                <label class="badge badge-info">{{ $item->status }}</label>
-                                            @else
-                                                <label class="badge badge-success">{{ $item->status }}</label>
-                                            @endif
-                                        </td>
+                                        <td>{{ $item->title }}</td>
+                                        <td>{{ $item->body }}</td>
                                         <td>{{ $item->created_at }}</td>
                                         <td>
-                                            <a href="/panel/bolsa-trabajo/trabajo-editar/{{ $item->id }}" class="btn btn-sm btn-warning">Editar</a>
+                                            <a href="/panel/tips/tip-editar/{{ $item->id }}" class="btn btn-sm btn-warning">Editar</a>
                                         </td>
                                     </tr>
                                 @endforeach

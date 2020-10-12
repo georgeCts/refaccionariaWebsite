@@ -1,4 +1,4 @@
-@section('title', 'Bolsa de trabajo')
+@section('title', 'Promociones/Ofertas')
 
 @section('content')
     @if(Session::has('error_message'))
@@ -15,56 +15,28 @@
         </div>
     @endif
 
-    {!! Form::open(['route' => 'update-job', 'method' => 'PUT', 'files' => true]) !!}
-        <input type="hidden" name="hddIdJob" value="{{$objJob->id}}" />
+    {!! Form::open(['route' => 'update-promotion', 'method' => 'PUT', 'files' => true]) !!}
+        <input type="hidden" name="hddIdPromotion" value="{{$objPromotion->id}}" />
 
         <div class="row">
             <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Modificar Empleo</h4>
+                        <h4 class="card-title">Modificar promoción/oferta</h4>
                         <p class="card-description">Información General</p>
                         
                         <div class="form-group">
-                            <label for="job">Título</label>
-                            <input type="text" class="form-control" id="job" name="job" placeholder="Título del empleo" value="{{$objJob->job}}" required />
-                        </div>
-                    
-                        <div class="form-group">
-                            <label for="location_id">Sucursal</label>
-                            <select class="form-control form-control-sm" id="location_id" name="location_id">
-                                @foreach ($lstLocations as $item)
-                                    @if ($item->id == $objJob->location_id)
-                                        <option value="{{$item->id}}" selected>{{$item->name}}</option>
-                                    @else
-                                        <option value="{{$item->id}}">{{$item->name}}</option>
-                                    @endif
-                                @endforeach
-                            </select>
+                            <label for="title">Título</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Título de la promoción u oferta" value="{{$objPromotion->title}}" required />
                         </div>
 
                         <div class="form-group">
-                            <label for="requirement">Requisitos</label>
-                            <textarea class="form-control" id="requirement" name="requirement" rows="5">{{$objJob->requirement}}</textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="offer">Ofrecemos</label>
-                            <textarea class="form-control" id="offer" name="offer" rows="5">{{$objJob->offer}}</textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="apply">Postularse</label>
-                            <textarea class="form-control" id="apply" name="apply" rows="5">{{$objJob->apply}}</textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contact">Contacto</label>
-                            <textarea class="form-control" id="contact" name="contact" rows="5">{{$objJob->contact}}</textarea>
+                            <label for="body">Descripción</label>
+                            <textarea class="form-control" id="body" name="body" rows="5">{{$objPromotion->body}}</textarea>
                         </div>
 
                         <button type="submit" class="btn btn-success mr-2">Guardar</button>
-                        <a href="/panel/bolsa-trabajo" role="button" class="btn btn-light">Cancelar</a>
+                        <a href="/panel/promociones" role="button" class="btn btn-light">Cancelar</a>
                     </div>
                 </div>
             </div>
@@ -74,8 +46,8 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Imagen de la oferta laboral</h4>
-                                <p class="card-description">La imagen deben ser (400 x 400)</p>
+                                <h4 class="card-title">Imagen de la oferta/promoción</h4>
+                                <p class="card-description">La imagen deben ser (1600 x 900)</p>
                                 <div class="form-group">
                                     <label>Imágen</label>
                                     <input type="file" name="image" class="form-control" />
@@ -84,12 +56,12 @@
                                 <hr />
 
                                 <h4 class="card-title">Estatus</h4>
-                                <p class="card-description">Selecciona el estatus que tendrá el empleo al ser creado.</p>
+                                <p class="card-description">Selecciona el estatus que tendrá la publicación.</p>
 
                                 <div class="form-group">
                                     <div class="form-radio">
                                         <label class="form-check-label">
-                                            @if($objJob->status == 'PUBLISHED')
+                                            @if($objPromotion->status == 'PUBLISHED')
                                                 <input type="radio" class="form-check-input" name="status" value="PUBLISHED" checked> Publicado
                                             @else
                                                 <input type="radio" class="form-check-input" name="status" value="PUBLISHED"> Publicado
@@ -98,10 +70,36 @@
                                     </div>
                                     <div class="form-radio">
                                         <label class="form-check-label">
-                                            @if($objJob->status == 'DRAFT')
+                                            @if($objPromotion->status == 'DRAFT')
                                                 <input type="radio" class="form-check-input" name="status" value="DRAFT" checked> Borrador
                                             @else
                                                 <input type="radio" class="form-check-input" name="status" value="DRAFT"> Borrador
+                                            @endif
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <hr />
+
+                                <h4 class="card-title">Tipo</h4>
+                                <p class="card-description">Selecciona el tipo de publicación.</p>
+
+                                <div class="form-group">
+                                    <div class="form-radio">
+                                        <label class="form-check-label">
+                                            @if($objPromotion->is_promotion)
+                                                <input type="radio" class="form-check-input" name="is_promotion" value="true" checked> Promoción
+                                            @else
+                                                <input type="radio" class="form-check-input" name="is_promotion" value="true"> Promoción
+                                            @endif
+                                        </label>
+                                    </div>
+                                    <div class="form-radio">
+                                        <label class="form-check-label">
+                                            @if(!$objPromotion->is_promotion)
+                                                <input type="radio" class="form-check-input" name="is_promotion" value="false" checked> Oferta
+                                            @else
+                                                <input type="radio" class="form-check-input" name="is_promotion" value="false"> Oferta
                                             @endif
                                         </label>
                                     </div>

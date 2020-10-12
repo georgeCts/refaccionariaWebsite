@@ -69,9 +69,25 @@ Route::group([  'prefix'    => 'panel',
 
     //BOLSA DE TRABAJO
     Route::get('bolsa-trabajo', 'Admin\JobsController@index');
-    Route::get('bolsa-trabajo/crear', 'Admin\JobsController@create');
-    Route::post('bolsa-trabajo/crear', ['as' => 'new-job', 'uses' => 'Admin\JobsController@store']);
+    Route::get('bolsa-trabajo/trabajo-crear', 'Admin\JobsController@create');
+    Route::post('bolsa-trabajo/trabajo-crear', ['as' => 'new-job', 'uses' => 'Admin\JobsController@store']);
 
-    Route::get('bolsa-trabajo/editar/{id}', 'Admin\JobsController@edit');
-    Route::put('bolsa-trabajo/editar', ['as' => 'update-job', 'uses' => 'Admin\JobsController@update']);
+    Route::get('bolsa-trabajo/trabajo-editar/{id}', 'Admin\JobsController@edit');
+    Route::put('bolsa-trabajo/trabajo-editar', ['as' => 'update-job', 'uses' => 'Admin\JobsController@update']);
+
+    //EXPERT TIPS
+    Route::get('tips', 'Admin\TipsController@index');
+    Route::get('tips/tip-crear', 'Admin\TipsController@create');
+    Route::post('tips/tip-crear', ['as' => 'new-tip', 'uses' => 'Admin\TipsController@store']);
+
+    Route::get('tips/tip-editar/{id}', 'Admin\TipsController@edit');
+    Route::put('tips/tip-editar', ['as' => 'update-tip', 'uses' => 'Admin\TipsController@update']);
+
+    //PROMOCIONES
+    Route::get('promociones', 'Admin\PromotionsController@index');
+    Route::get('promociones/promocion-crear', 'Admin\PromotionsController@create');
+    Route::post('promociones/promocion-crear', ['as' => 'new-promotion', 'uses' => 'Admin\PromotionsController@store']);
+
+    Route::get('promociones/promocion-editar/{id}', 'Admin\PromotionsController@edit');
+    Route::put('promociones/promocion-editar', ['as' => 'update-promotion', 'uses' => 'Admin\PromotionsController@update']);
 });

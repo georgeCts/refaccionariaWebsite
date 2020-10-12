@@ -9,25 +9,23 @@ use App\Library\Errors;
 use App\Library\FormatValidation;
 use App\Library\Returns\ActionReturn;
 use App\Library\Returns\AjaxReturn;
-use App\Job;
-use App\Location;
+use App\Promotion;
 
-class JobsController extends Controller
+class PromotionsController extends Controller
 {
     public function index() {
-        $lstJobs = Job::where('deleted', 0)->orderBy('created_at', 'DESC')->get();
-        return view('panel.contents.jobs.Index', ['lstJobs' => $lstJobs]);
+        $lstPromotions = Promotion::where('deleted', 0)->orderBy('created_at', 'DESC')->get();
+        return view('panel.contents.promotions.Index', ['lstPromotions' => $lstPromotions]);
     }
 
     public function create() {
-        $lstLocations = Location::where('deleted', false)->orderBy('id', 'DESC')->get();
-        return view('panel.contents.jobs.Create', ['lstLocations' => $lstLocations]);
+        return view('panel.contents.promotions.Create');
     }
 
     public function store(Request $request) {
-        $objReturn = new ActionReturn('panel/bolsa-trabajo/trabajo-crear', 'panel/bolsa-trabajo');
+        $objReturn = new ActionReturn('panel/promociones/promocion-crear', 'panel/promociones');
 
-        $objJob = new Job();
+        /* $objJob = new Job();
         $objJob->title      = $request['txtTitle'];
         $objJob->slug       = $request['txtSlug'];
         $objJob->body       = $request['txtBody'];
@@ -41,29 +39,28 @@ class JobsController extends Controller
             }
         } catch(Exception $exception) {
             $objReturn->setResult(false, Errors::getErrors($exception->getCode())['title'], Errors::getErrors($exception->getCode())['message']);
-        }
+        } */
 
         return $objReturn->getRedirectPath();
     }
 
     public function edit($id) {
-        $return = redirect('panel/bolsa-trabajo');
-        $objJob = Job::where('id', $id)->first();
+        $return = redirect('panel/promociones');
+        $objPromotion = Promotion::where('id', $id)->first();
 
-        if($objJob != null) {
-            $lstLocations = Location::where('deleted', false)->orderBy('id', 'DESC')->get();
-            $return = view('panel.contents.jobs.Edit', ['objJob' => $objJob, 'lstLocations' => $lstLocations]);
+        if($objPromotion != null) {
+            $return = view('panel.contents.promotions.Edit', ['objPromotion' => $objPromotion]);
         }
 
         return $return;
     }
 
     public function update(Request $request) {
-        $objReturn = new ActionReturn('panel/bolsa-trabajo/trabajo-editar/'.$request['hddIdJob'], 'panel/bolsa-trabajo');
+        $objReturn = new ActionReturn('panel/promociones/promocion-editar/'.$request['hddIdJob'], 'panel/promociones');
 
-        $objJob = Job::where('id', $request['hddIdJob'])->first();
+        /* $objTip = Tip::where('id', $request['hddIdPromotion'])->first();
 
-        if($objJob != null) {
+        if($objTip != null) {
             $objJob->title      = $request['txtTitle'];
             $objJob->slug       = $request['txtSlug'];
             $objJob->body       = $request['txtBody'];
@@ -80,7 +77,7 @@ class JobsController extends Controller
             }
         } else {
             $objReturn->setResult(false, Errors::JOBS_EDIT_01_TITLE, Errors::JOBS_EDIT_01_MESSAGE);
-        }
+        } */
 
         return $objReturn->getRedirectPath();
     }

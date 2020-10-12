@@ -10,7 +10,6 @@
       var $this = $(this);
       if (current === "panel") {
         //for root url
-
         var sideBarHref = $this.attr('href');
         if ($this.attr('href').indexOf("panel/") === -1 && sideBarHref.includes("panel") === true) {
           $(this).parents('.nav-item').last().addClass('active');
@@ -19,7 +18,7 @@
             $(this).addClass('active');
           }
         }
-      } else {
+      } else if(isNaN(current)) {
         //for other url
         if ($this.attr('href').indexOf(current) !== -1) {
           $(this).parents('.nav-item').last().addClass('active');

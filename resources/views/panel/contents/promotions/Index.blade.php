@@ -1,4 +1,4 @@
-@section('title', 'Bolsa de trabajo')
+@section('title', 'Promociones')
 
 @section('content')
     @if(Session::has('success_message'))
@@ -19,8 +19,8 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Bolsa de trabajo</h4>
-                    <p class="card-description">Lista de empleos para publicar en el sitio web.</p>
+                    <h4 class="card-title">Promociones/Ofertas</h4>
+                    <p class="card-description">Lista de promociones para publicar en el sitio web.</p>
                     
                     <div class="table-responsive">
                         <table class="table table-striped">
@@ -28,18 +28,17 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Título</th>
-                                    <th>Sucursal</th>
                                     <th>Estatus</th>
+                                    <th>Tipo</th>
                                     <th>Fecha</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($lstJobs as $item)
+                                @foreach($lstPromotions as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td>{{ $item->job }}</td>
-                                        <td>{{ $item->location->name }}</td>
+                                        <td>{{ $item->title }}</td>
                                         <td>
                                             @if($item->status != 'PUBLISHED')
                                                 <label class="badge badge-info">{{ $item->status }}</label>
@@ -47,9 +46,16 @@
                                                 <label class="badge badge-success">{{ $item->status }}</label>
                                             @endif
                                         </td>
+                                        <td>
+                                            @if($item->is_promotion)
+                                                <label class="badge badge-warning">Promoción</label>
+                                            @else
+                                                <label class="badge badge-danger">Oferta</label>
+                                            @endif
+                                        </td>
                                         <td>{{ $item->created_at }}</td>
                                         <td>
-                                            <a href="/panel/bolsa-trabajo/trabajo-editar/{{ $item->id }}" class="btn btn-sm btn-warning">Editar</a>
+                                            <a href="/panel/promociones/promocion-editar/{{ $item->id }}" class="btn btn-sm btn-warning">Editar</a>
                                         </td>
                                     </tr>
                                 @endforeach
