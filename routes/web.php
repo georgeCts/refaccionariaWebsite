@@ -90,4 +90,12 @@ Route::group([  'prefix'    => 'panel',
 
     Route::get('promociones/promocion-editar/{id}', 'Admin\PromotionsController@edit');
     Route::put('promociones/promocion-editar', ['as' => 'update-promotion', 'uses' => 'Admin\PromotionsController@update']);
+
+    //MARCAS DE PRESTIGIO
+    Route::get('marcas-prestigio', 'Admin\PrestigeBrandsController@index');
+    Route::get('marcas-prestigio/prestigio-crear', 'Admin\PrestigeBrandsController@create');
+    Route::post('marcas-prestigio/prestigio-crear', ['as' => 'new-prestige-brand', 'uses' => 'Admin\PrestigeBrandsController@store']);
+
+    Route::get('marcas-prestigio/prestigio-editar/{id}', 'Admin\PrestigeBrandsController@edit');
+    Route::put('marcas-prestigio/prestigio-editar', ['as' => 'update-prestige-brand', 'uses' => 'Admin\PrestigeBrandsController@update']);
 });

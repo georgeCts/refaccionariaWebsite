@@ -122,6 +122,22 @@
                     </ul>
                 </div>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#module6" aria-expanded="false" aria-controls="module5">
+                    <i class="menu-icon mdi mdi-briefcase"></i>
+                    <span class="menu-title">Marcas de Prestigio</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="module6">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{URL::to('panel/marcas-prestigio') }}">Lista</a>
+                            <a class="nav-link" href="{{URL::to('panel/marcas-prestigio/prestigio-crear') }}">Nueva marca</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </nav>
     <!-- partial -->
