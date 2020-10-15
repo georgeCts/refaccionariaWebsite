@@ -11,6 +11,7 @@ use App\Library\Returns\ActionReturn;
 use App\Library\Returns\AjaxReturn;
 use App\Job;
 use App\Location;
+use Storage;
 
 class JobsController extends Controller
 {
@@ -27,13 +28,27 @@ class JobsController extends Controller
     public function store(Request $request) {
         $objReturn = new ActionReturn('panel/bolsa-trabajo/trabajo-crear', 'panel/bolsa-trabajo');
 
-        $objJob = new Job();
-        $objJob->title      = $request['txtTitle'];
-        $objJob->slug       = $request['txtSlug'];
-        $objJob->body       = $request['txtBody'];
-        $objJob->status     = $request['rdEstatus'];
-
         try {
+            $objJob                 = new Job();
+            $objJob->job            = $request->job;
+            $objJob->location_id    = $request->location_id;
+            $objJob->requirement    = $request->requirement;
+            $objJob->offer          = $request->offer;
+            $objJob->apply          = $request->apply;
+            $objJob->contact        = $request->contact;
+            $objJob->status         = $request->status;
+
+            if($request->file('image')) {
+                $file       = $request->file('image');
+                $extension  = $file->getClientOriginalExtension();
+                $fileName   = time() . '_image_job.' . $extension;
+                $url        = '/jobs/' . $fileName;
+
+                $request->image->storeAs('jobs', $fileName);
+
+                $objJob->file     = $url;
+            }
+
             if($objJob->save()) {
                 $objReturn->setResult(true, Messages::JOBS_CREATE_TITLE, Messages::JOBS_CREATE_MESSAGE);
             } else {
@@ -64,13 +79,30 @@ class JobsController extends Controller
         $objJob = Job::where('id', $request['hddIdJob'])->first();
 
         if($objJob != null) {
-            $objJob->title      = $request['txtTitle'];
-            $objJob->slug       = $request['txtSlug'];
-            $objJob->body       = $request['txtBody'];
-            $objJob->status     = $request['rdEstatus'];
-
             try {
-                if($objJob->update()) {
+                $objJob->job            = $request->job;
+                $objJob->location_id    = $request->location_id;
+                $objJob->requirement    = $request->requirement;
+                $objJob->offer          = $request->offer;
+                $objJob->apply          = $request->apply;
+                $objJob->contact        = $request->contact;
+                $objJob->status         = $request->status;
+    
+                if($request->file('image')) {
+                    if($objJob->file != null)
+                        Storage::delete($objJob->file);
+
+                    $file       = $request->file('image');
+                    $extension  = $file->getClientOriginalExtension();
+                    $fileName   = time() . '_image_job.' . $extension;
+                    $url        = '/jobs/' . $fileName;
+    
+                    $request->image->storeAs('jobs', $fileName);
+    
+                    $objJob->file     = $url;
+                }
+    
+                if($objJob->save()) {
                     $objReturn->setResult(true, Messages::JOBS_EDIT_TITLE, Messages::JOBS_EDIT_MESSAGE);
                 } else {
                     $objReturn->setResult(false, Errors::JOBS_EDIT_02_TITLE, Errors::JOBS_EDIT_02_MESSAGE);

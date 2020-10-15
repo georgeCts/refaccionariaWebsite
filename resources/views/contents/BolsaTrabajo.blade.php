@@ -9,37 +9,29 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-lg-8">
-                    <p>
-                        <span>Puesto</span><br />
-                        AUXILIAR DE ALMACÉN.<br />
-                        <span>Sucursal</span><br />
-                        Kanasín<br />
-                        <span>Requisitos</span><br />
-                        - Disponibilidad de Horario<br />
-                        - Acostumbrado al trabajo físico<br />
-                        - Solicitud de empleo elaborada<br />
-                        <span>Ofrecemos</span><br />
-                        - Atractivo sueldo base (semanal)<br />
-                        - Prestaciones de Ley<br />
-                        - Comedor gratuito (Almuerzo)<br />
-                        - IMSS desde el primer día<br />
-                        - Seguro de vida<br />
-                        - Uniformes gratuitos<br />
-                        - Capacitación entre otros beneficios internos.<br />
-                        <span>Postularse</span><br />
-                        Interesados acudir a las oficinas ubicadas con solicitud elaborada a la Calle 31 n° 168 X 14 Y 100 Col. Francisco I. Madero CP. 97240 Mérida, Yucatán.<br />
-                        <span>Contacto</span><br />
-                        Conmutador Dep. R.H. (999) 912 01 00 extensión 119
-                        Celular Dep. R.H. (999) 949 28 94 Llamadas y WhatsApp
-                        Email Dep. R.H. rhumanos@maderorefaccionarias.com.mx
-                    </p>
+            @foreach ($lstJobs as $item)
+                <div class="row">
+                    <div class="col-lg-8">
+                        <p>
+                            <span>Puesto</span><br />
+                            {{$item->job}}<br />
+                            <span>Sucursal</span><br />
+                            {{$item->location->name}}<br />
+                            <span>Requisitos</span><br />
+                            {{$item->requirement}}<br />
+                            <span>Ofrecemos</span><br />
+                            {{$item->offer}}<br />
+                            <span>Postularse</span><br />
+                            {{$item->apply}}<br />
+                            <span>Contacto</span><br />
+                            {{$item->contact}}
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="{{Storage::url($item->file)}}" alt="trabajo" style="width: 400px;" />
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <img src="https://via.placeholder.com/400/24f355" alt="trabajo">
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
 

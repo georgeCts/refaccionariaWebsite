@@ -75,6 +75,9 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Imagen de la oferta laboral</h4>
+                                @if ($objJob->file != null)
+                                    <img src="{{Storage::url($objJob->file)}}" alt="Oferta laboral" style="width: 250px;" />
+                                @endif
                                 <p class="card-description">La imagen deben ser (400 x 400)</p>
                                 <div class="form-group">
                                     <label>Imágen</label>

@@ -24,11 +24,7 @@ Route::get('/promociones', function () {
 });
 
 Route::get('/expert-tips', 'Web\ExpertTipsController@index');
-
-Route::get('/bolsa-trabajo', function () {
-    return view('contents.BolsaTrabajo');
-});
-
+Route::get('/bolsa-trabajo', 'Web\JobsController@index');
 Route::get('/contacto', 'Web\ContactController@index');
 
 Route::get('/login-panel', 'Admin\LoginController@index');
