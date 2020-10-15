@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Schema;
+use App\PrestigeBrand;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -39,6 +40,9 @@ class AppServiceProvider extends ServiceProvider
             'white'     => array(   'hexadecimal'   => '#ffffff',
                                     'rgb'           =>  array( 'r' => 255, 'g' => 255, 'b' => 255))
         );
+
+        $lstBrands = PrestigeBrand::where('deleted', false)->where('status', 'PUBLISHED')->orderBy('created_at', 'DESC')->get();
+        View()->share('_BRANDS', $lstBrands);
 
         View()->share('_COLORS', $colors);
 

@@ -158,17 +158,11 @@
                 </div>
 
                 <div class="row brand-image-container">
-                    <div class="col-md-4 col-sm-4 text-center">
-                        <img src="/images/proveedores/namcco.png" class="img-responsive" alt="Responsive image" />
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 text-center">
-                        <img src="/images/proveedores/gonher.png" class="img-responsive" alt="Responsive image" />
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 text-center">
-                        <img src="/images/proveedores/soportes-star.png" class="img-responsive" alt="Responsive image" />
-                    </div>
+                    @for ($i = 0; $i < 3; $i++)
+                        <div class="col-md-4 col-sm-4 text-center">
+                            <img src="{{Storage::url($_BRANDS[$i]->file)}}" class="img-responsive" alt="Responsive image" />
+                        </div>
+                    @endfor
                 </div>
             </div>
         </section><!-- End Brands Section -->

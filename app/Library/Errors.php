@@ -144,12 +144,29 @@ class Errors {
 
 	const BRANDS_EDIT_02_ID = "6_0003";
 	const BRANDS_EDIT_02_TITLE = "Error de modificación";
-	const BRANDS_EDIT_02_MESSAGE = "La marca no se pudo registrar. Póngase en contacto con el administrador.";
+	const BRANDS_EDIT_02_MESSAGE = "La marca no se pudo modificar. Póngase en contacto con el administrador.";
 
 	//JOBS
 	const JOBS_CREATE_01_ID = "6_0001";
 	const JOBS_CREATE_01_TITLE = "Error de nuevo registro.";
 	const JOBS_CREATE_01_MESSAGE = "El empleo no se pudo registrar. Póngase en contacto con el administrador.";
+
+	//EXPERT TIPS
+	const TIPS_CREATE_01_ID = "7_0001";
+	const TIPS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const TIPS_CREATE_01_MESSAGE = "No se adjuntó una imagen en el formulario.";
+
+	const TIPS_CREATE_02_ID = "7_0002";
+	const TIPS_CREATE_02_TITLE = "Error de nuevo registro.";
+	const TIPS_CREATE_02_MESSAGE = "El tip no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const TIPS_EDIT_01_ID = "7_0003";
+	const TIPS_EDIT_01_TITLE = "Error de modificación";
+	const TIPS_EDIT_01_MESSAGE = "No se pudo encontrar el tip a modificar.";	
+
+	const TIPS_EDIT_02_ID = "7_0004";
+	const TIPS_EDIT_02_TITLE = "Error de modificación";
+	const TIPS_EDIT_02_MESSAGE = "El tip no se pudo modificar. Póngase en contacto con el administrador.";
 	
 }
 

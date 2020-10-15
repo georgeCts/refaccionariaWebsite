@@ -48,7 +48,7 @@
                                 <p class="card-description">La imagen deben ser (700 x 700)</p>
                                 <div class="form-group">
                                     <label>Imágen</label>
-                                    <input type="file" name="image" class="form-control" />
+                                    <input type="file" name="image" class="form-control" required />
                                 </div>
                             </div>
                         </div>

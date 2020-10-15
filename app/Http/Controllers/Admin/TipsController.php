@@ -10,6 +10,7 @@ use App\Library\FormatValidation;
 use App\Library\Returns\ActionReturn;
 use App\Library\Returns\AjaxReturn;
 use App\Tip;
+use Storage;
 
 class TipsController extends Controller
 {
@@ -25,21 +26,30 @@ class TipsController extends Controller
     public function store(Request $request) {
         $objReturn = new ActionReturn('panel/tips/tip-crear', 'panel/tips');
 
-        /* $objJob = new Job();
-        $objJob->title      = $request['txtTitle'];
-        $objJob->slug       = $request['txtSlug'];
-        $objJob->body       = $request['txtBody'];
-        $objJob->status     = $request['rdEstatus'];
+        if($request->file('image')) {
+            $file       = $request->file('image');
+            $extension  = $file->getClientOriginalExtension();
+            $fileName   = time() . '_image_tip.' . $extension;
+            $url        = '/tips/' . $fileName;
 
-        try {
-            if($objJob->save()) {
-                $objReturn->setResult(true, Messages::JOBS_CREATE_TITLE, Messages::JOBS_CREATE_MESSAGE);
-            } else {
-                $objReturn->setResult(false, Errors::JOBS_CREATE_01_TITLE, Errors::JOBS_CREATE_01_MESSAGE);
+            try {
+                if($request->image->storeAs('tips', $fileName)) {
+                    $objTip             = new Tip();
+                    $objTip->title    = $request->title;
+                    $objTip->body     = $request->body;
+                    $objTip->file     = $url;
+                    $objTip->save();
+
+                    $objReturn->setResult(true, Messages::TIPS_CREATE_TITLE, Messages::TIPS_CREATE_MESSAGE);
+                } else {
+                    $objReturn->setResult(false, Errors::TIPS_CREATE_02_TITLE, Errors::TIPS_CREATE_02_MESSAGE);
+                }
+            } catch(Exception $exception) {
+                $objReturn->setResult(false, Errors::getErrors($exception->getCode())['title'], Errors::getErrors($exception->getCode())['message']);
             }
-        } catch(Exception $exception) {
-            $objReturn->setResult(false, Errors::getErrors($exception->getCode())['title'], Errors::getErrors($exception->getCode())['message']);
-        } */
+        } else {
+            $objReturn->setResult(false, Errors::TIPS_CREATE_01_TITLE, Errors::TIPS_CREATE_01_MESSAGE);
+        }
 
         return $objReturn->getRedirectPath();
     }
@@ -56,28 +66,39 @@ class TipsController extends Controller
     }
 
     public function update(Request $request) {
-        $objReturn = new ActionReturn('panel/tips/tip-editar/'.$request['hddIdJob'], 'panel/tips');
-
-        /* $objTip = Tip::where('id', $request['hddIdTip'])->first();
+        $objReturn  = new ActionReturn('panel/tips/tip-editar/'.$request['hddIdTip'], 'panel/tips');
+        $objTip     = Tip::where('id', $request['hddIdTip'])->first();
 
         if($objTip != null) {
-            $objJob->title      = $request['txtTitle'];
-            $objJob->slug       = $request['txtSlug'];
-            $objJob->body       = $request['txtBody'];
-            $objJob->status     = $request['rdEstatus'];
-
             try {
-                if($objJob->update()) {
-                    $objReturn->setResult(true, Messages::JOBS_EDIT_TITLE, Messages::JOBS_EDIT_MESSAGE);
+                $objTip->title  = $request->title;
+                $objTip->body   = $request->body;
+
+                if($request->file('image')) {
+                    if($objTip->file != null)
+                        Storage::delete($objTip->file);
+
+                    $file       = $request->file('image');
+                    $extension  = $file->getClientOriginalExtension();
+                    $fileName   = time() . '_image_tip.' . $extension;
+                    $url        = '/tips/' . $fileName;
+
+                    $request->image->storeAs('tips', $fileName);
+
+                    $objTip->file = $url;
+                }
+
+                if($objTip->save()) {
+                    $objReturn->setResult(true, Messages::TIPS_EDIT_TITLE, Messages::TIPS_EDIT_MESSAGE);
                 } else {
-                    $objReturn->setResult(false, Errors::JOBS_EDIT_02_TITLE, Errors::JOBS_EDIT_02_MESSAGE);
+                    $objReturn->setResult(false, Errors::TIPS_EDIT_02_TITLE, Errors::TIPS_EDIT_02_MESSAGE);
                 }
             } catch(Exception $exception) {
                 $objReturn->setResult(false, Errors::getErrors($exception->getCode())['title'], Errors::getErrors($exception->getCode())['message']);
             }
         } else {
-            $objReturn->setResult(false, Errors::JOBS_EDIT_01_TITLE, Errors::JOBS_EDIT_01_MESSAGE);
-        } */
+            $objReturn->setResult(false, Errors::TIPS_EDIT_01_TITLE, Errors::TIPS_EDIT_01_MESSAGE);
+        }
 
         return $objReturn->getRedirectPath();
     }

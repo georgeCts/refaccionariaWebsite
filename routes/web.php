@@ -23,9 +23,7 @@ Route::get('/promociones', function () {
     return view('contents.Promociones');
 });
 
-Route::get('/expert-tips', function () {
-    return view('contents.ExpertTips');
-});
+Route::get('/expert-tips', 'Web\ExpertTipsController@index');
 
 Route::get('/bolsa-trabajo', function () {
     return view('contents.BolsaTrabajo');

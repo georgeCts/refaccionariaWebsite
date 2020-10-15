@@ -1,4 +1,4 @@
-@section('title', 'Sliders')
+@section('title', 'Marcas de prestigio')
 
 @section('content')
     <div class="row">
@@ -14,23 +14,73 @@
         </div>
     </div>
 
-    {!! Form::open(['route' => 'update-brand', 'method' => 'PUT']) !!}
+    {!! Form::open(['route' => 'update-prestige-brand', 'method' => 'PUT', 'files' => true]) !!}
         <input type="hidden" name="hddIdBrand" value="{{$objBrand->id}}" />
 
         <div class="row">
             <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Modificar Marca</h4>
-                        <p class="card-description">La marca modificada se mostrará en el catálogo principal de la página web</p>
+                        <h4 class="card-title">Modificar marca de prestigio</h4>
+                        <p class="card-description">La marca de prestigio modificada se mostrará en el slider de marcas de la página web</p>
                         
                         <div class="form-group">
-                            <label for="txtTitle">Título</label>
-                            <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Título del slider" value="{{ $objBrand->name }}" />
+                            <label for="name">Nombre</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre de la marca" value="{{$objBrand->name}}" />
                         </div>
 
                         <button type="submit" class="btn btn-success mr-2">Guardar</button>
-                        <a href="/panel/marcas" role="button" class="btn btn-light">Cancelar</a>
+                        <a href="/panel/marcas-prestigio" role="button" class="btn btn-light">Cancelar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex align-items-stretch grid-margin">
+                <div class="row flex-grow">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Imagen de la marca</h4>
+                                @if ($objBrand->file != null)
+                                    <img src="{{Storage::url($objBrand->file)}}" alt="proveedor" style="width: 250px;" />
+                                @endif
+                                <p class="card-description">La imagen deben ser (250 x 80)</p>
+                                <div class="form-group">
+                                    <label>Imágen</label>
+                                    <input type="file" name="image" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Estatus</h4>
+                                <p class="card-description">Selecciona el estatus que tendrá la marca al ser modificada</p>
+
+                                <div class="form-group">
+                                    <div class="form-radio">
+                                        <label class="form-check-label">
+                                            @if($objBrand->status == 'PUBLISHED')
+                                                <input type="radio" class="form-check-input" name="status" value="PUBLISHED" checked> Publicado
+                                            @else
+                                                <input type="radio" class="form-check-input" name="status" value="PUBLISHED"> Publicado
+                                            @endif
+                                        </label>
+                                    </div>
+                                    <div class="form-radio">
+                                        <label class="form-check-label">
+                                            @if($objBrand->status == 'DRAFT')
+                                                <input type="radio" class="form-check-input" name="status" value="DRAFT" checked> Borrador
+                                            @else
+                                                <input type="radio" class="form-check-input" name="status" value="DRAFT"> Borrador
+                                            @endif
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

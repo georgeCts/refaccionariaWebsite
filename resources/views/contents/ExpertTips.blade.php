@@ -13,45 +13,16 @@
 
         <div class="container expert-tips">
             <div class="row">
-                <div class="col-lg-6 text-center">
-                    <img src="/images/tips/124.png" />
-                    <div class="info">
-                        <p>
-                            Recuerda que... Si aceleras justo después de prender tu auto, estás provocando un deterioro innecesario en el motor.
-                            #MasterRide #TipMasterRide #Motor
-                        </p>
+                @foreach ($lstTips as $item)
+                    <div class="col-lg-6 text-center">
+                        @if ($item->file != null)
+                            <img src="{{Storage::url($item->file)}}" alt="{{$item->title}}" />
+                        @endif
+                        <div class="info">
+                            <p>{{$item->body}}</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-6 text-center">
-                    <img src="/images/tips/125.png" />
-                    <div class="info">
-                        <p>
-                            ¡Revisar el nivel de aceite en tu auto nunca fue tan fácil! Sigue estos pasos para hacerlo desde tu hogar:
-                            #Castrol #TipCastrol # Cuidados #Motor
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 text-center">
-                    <img src="/images/tips/126.png" />
-                    <div class="info">
-                        <p>
-                            ¡Revisar el nivel de aceite en tu auto nunca fue tan fácil! Sigue estos pasos para hacerlo desde tu hogar:
-                            #Castrol #TipCastrol # Cuidados #Motor
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 text-center">
-                    <img src="/images/tips/127.png" />
-                    <div class="info">
-                        <p>
-                            ¡Revisar el nivel de aceite en tu auto nunca fue tan fácil! Sigue estos pasos para hacerlo desde tu hogar:
-                            #Castrol #TipCastrol # Cuidados #Motor
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section><!-- End Promociones Section -->

@@ -1,4 +1,4 @@
-@section('title', 'Sliders')
+@section('title', 'Marcas de prestigio')
 
 @section('content')
     <div class="row">
@@ -28,7 +28,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-success mr-2">Guardar</button>
-                        <a href="/panel/marcas" role="button" class="btn btn-light">Cancelar</a>
+                        <a href="/panel/marcas-prestigio" role="button" class="btn btn-light">Cancelar</a>
                     </div>
                 </div>
             </div>
@@ -42,8 +42,8 @@
                                 <p class="card-description">La imagen deben ser (250 x 80)</p>
                                 <div class="form-group">
                                     <label>Imágen</label>
-                                    <input type="file" name="image" class="form-control" />
-                                </div>                                    
+                                    <input type="file" name="image" class="form-control" required />
+                                </div>
                             </div>
                         </div>
                     </div>

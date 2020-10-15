@@ -47,6 +47,9 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Imagen del tip</h4>
+                                @if ($objTip->file != null)
+                                    <img src="{{Storage::url($objTip->file)}}" alt="Tip" style="width: 250px;" />
+                                @endif
                                 <p class="card-description">La imagen deben ser (700 x 700)</p>
                                 <div class="form-group">
                                     <label>Imágen</label>

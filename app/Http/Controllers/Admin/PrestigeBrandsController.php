@@ -10,6 +10,7 @@ use App\Library\FormatValidation;
 use App\Library\Returns\ActionReturn;
 use App\Library\Returns\AjaxReturn;
 use App\PrestigeBrand;
+use Storage;
 
 class PrestigeBrandsController extends Controller
 {
@@ -27,13 +28,12 @@ class PrestigeBrandsController extends Controller
 
         if($request->file('image')) {
             $file       = $request->file('image');
-            $path       = storage_path() . '/imagenes/proveedores';
             $extension  = $file->getClientOriginalExtension();
             $fileName   = time() . '_image_prov.' . $extension;
-            $url        = '/imagenes/proveedores/' . $fileName;
+            $url        = '/proveedores/' . $fileName;
 
             try {
-                if($file->move($path, $fileName)) {
+                if($request->image->storeAs('proveedores', $fileName)) {
                     $objBrand           = new PrestigeBrand();
                     $objBrand->name     = $request->name;
                     $objBrand->status   = $request->status;
@@ -55,10 +55,8 @@ class PrestigeBrandsController extends Controller
     }
 
     public function edit($id) {
-
-        $return = redirect('panel/marcas-prestigio');
-
-        $objBrand = PrestigeBrand::where('id', $id)->first();
+        $return     = redirect('panel/marcas-prestigio');
+        $objBrand   = PrestigeBrand::where('id', $id)->first();
 
         if($objBrand != null) {
             $return = view('panel.contents.prestige-brands.Edit', ['objBrand' => $objBrand]);
@@ -68,15 +66,28 @@ class PrestigeBrandsController extends Controller
     }
 
     public function update(Request $request) {
-        $objReturn = new ActionReturn('panel/marcas-prestigio/prestigio-editar/'.$request['hddIdBrand'], 'panel/marcas-prestigio');
-
-        $objBrand = PrestigeBrand::where('id', $request['hddIdBrand'])->first();
+        $objReturn  = new ActionReturn('panel/marcas-prestigio/prestigio-editar/'.$request['hddIdBrand'], 'panel/marcas-prestigio');
+        $objBrand   = PrestigeBrand::where('id', $request['hddIdBrand'])->first();
 
         if($objBrand != null) {
-            $objBrand->name        = $request['txtName'];
-
             try {
-                if($objBrand->update()) {
+                $objBrand->name     = $request->name;
+                $objBrand->status   = $request->status;
+
+                if($request->file('image')) {
+                    Storage::delete($objBrand->file);
+
+                    $file       = $request->file('image');
+                    $extension  = $file->getClientOriginalExtension();
+                    $fileName   = time() . '_image_prov.' . $extension;
+                    $url        = '/proveedores/' . $fileName;
+
+                    $request->image->storeAs('proveedores', $fileName);
+
+                    $objBrand->file = $url;
+                }
+
+                if($objBrand->save()) {
                     $objReturn->setResult(true, Messages::BRANDS_EDIT_TITLE, Messages::BRANDS_EDIT_MESSAGE);
                 } else {
                     $objReturn->setResult(false, Errors::BRANDS_EDIT_02_TITLE, Errors::BRANDS_EDIT_02_MESSAGE);

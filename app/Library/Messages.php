@@ -46,6 +46,12 @@ class Messages {
 	const JOBS_EDIT_TITLE = "Empleo modificado";
 	const JOBS_EDIT_MESSAGE = "El empleo se modificó exitosamente.";
 
+	//JOBS
+	const TIPS_CREATE_TITLE = "Nuevo tip agregado.";
+	const TIPS_CREATE_MESSAGE = "El nuevo tip se agregó exitosamente.";
+	const TIPS_EDIT_TITLE = "Tip modificado";
+	const TIPS_EDIT_MESSAGE = "El tip se modificó exitosamente.";
+
 }
 
 ?>

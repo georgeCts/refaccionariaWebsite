@@ -14,69 +14,11 @@
         </div>
 
         <div class="slider-proveedores">
-            <div class="proveedor-item">
-                <img src="/images/proveedores/67-kem.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/68-dc.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/69-castrol.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/70-luk.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/113-bosch.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/114-motorcraft.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/115-champion.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/116-ngk.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/120-canabrake.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/121-injetech.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/122-bagle.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/123-blatt.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/129-skf.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/130-gabriel.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/131-knadian.png" class="proveedor-image" />
-            </div>
-
-            <div class="proveedor-item">
-                <img src="/images/proveedores/132-casul.png" class="proveedor-image" />
-            </div>
+            @foreach ($_BRANDS as $item)
+                <div class="proveedor-item">
+                    <img src="{{Storage::url($item->file)}}" class="proveedor-image" alt="{{$item->title}}" />
+                </div>
+            @endforeach
         </div>
 
         <div class="row suscripcion">
