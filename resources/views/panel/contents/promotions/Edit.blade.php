@@ -47,6 +47,9 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Imagen de la oferta/promoción</h4>
+                                @if ($objPromotion->file != null)
+                                    <img src="{{Storage::url($objPromotion->file)}}" alt="imagen" style="width: 250px;" />
+                                @endif
                                 <p class="card-description">La imagen deben ser (1600 x 900)</p>
                                 <div class="form-group">
                                     <label>Imágen</label>

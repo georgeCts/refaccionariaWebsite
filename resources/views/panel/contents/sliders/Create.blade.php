@@ -23,22 +23,22 @@
                     <p class="card-description">La imágen cargada se mostrará en el slider principal de la página web</p>
                     
                     <div class="form-group">
-                        <label for="txtTitle">Título</label>
-                        <input type="text" class="form-control" id="txtTitle" name="txtTitle" placeholder="Título del slider" />
+                        <label for="title">Título</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Título del slider" />
                     </div>
                 
                     <div class="form-group">
-                        <label for="txtBody">Contenido</label>
-                        <textarea class="form-control" id="txtBody" name="txtBody" rows="2"></textarea>
+                        <label for="body">Contenido</label>
+                        <textarea class="form-control" id="body" name="body" rows="2"></textarea>
                     </div>
                     
                     <div class="form-group">
-                        <label for="txtUrl">URL (Opcional)</label>
-                        <input class="form-control" id="txtUrl" name="txtUrl" placeholder="http://www.dominio.com/ejemplo" />
+                        <label for="url_redirect">URL (Opcional)</label>
+                        <input class="form-control" id="url_redirect" name="url_redirect" placeholder="http://www.dominio.com/ejemplo" />
                     </div>
                     
                     <button type="submit" class="btn btn-success mr-2">Guardar</button>
-                    <button class="btn btn-light">Cancelar</button>                    
+                    <button class="btn btn-light">Cancelar</button>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
                                 <label>Imágen</label>
                                 <input type="file" name="image" class="form-control" required />
                             </div> 
-                            
+
                             <hr />
 
                             <h4 class="card-title">Estatus</h4>
@@ -63,12 +63,12 @@
                             <div class="form-group">
                                 <div class="form-radio">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="rdEstatus" id="rdEstatus1" value="PUBLISHED" checked> Publicado
+                                        <input type="radio" class="form-check-input" name="status" value="PUBLISHED" checked> Publicado
                                     </label>
                                 </div>
                                 <div class="form-radio">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="rdEstatus" id="rdEstatus2" value="DRAFT"> Borrador
+                                        <input type="radio" class="form-check-input" name="status" value="DRAFT"> Borrador
                                     </label>
                                 </div>
                             </div>
@@ -79,14 +79,6 @@
         </div>
     </div>
 {!! Form::close() !!}
-@endsection
-
-@section('scripts')
-    <script>
-        $(document).ready(function() {
-
-        });        
-    </script>
 @endsection
 
 @include('panel.components.Navbar')

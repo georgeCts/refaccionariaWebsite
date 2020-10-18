@@ -11,18 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('contents.Index');
-});
-
+Route::get('/', 'Web\HomeController@index');
 Route::get('/nosotros', function () {
     return view('contents.Nosotros');
 });
-
-Route::get('/promociones', function () {
-    return view('contents.Promociones');
-});
-
+Route::get('/promociones', 'Web\PromotionsController@index');
 Route::get('/expert-tips', 'Web\ExpertTipsController@index');
 Route::get('/bolsa-trabajo', 'Web\JobsController@index');
 Route::get('/contacto', 'Web\ContactController@index');
@@ -42,7 +35,7 @@ Route::group([  'prefix'    => 'panel',
     Route::get('sliders/slider-crear', 'Admin\SlidersController@create');
     Route::post('sliders/slider-crear', ['as' => 'new-slider', 'uses' => 'Admin\SlidersController@store']);
 
-    Route::get('sliders/slider-editar/{pkSlider}', 'Admin\SlidersController@edit');
+    Route::get('sliders/slider-editar/{id}', 'Admin\SlidersController@edit');
     Route::post('sliders/slider-editar', ['as' => 'update-slider', 'uses' => 'Admin\SlidersController@update']);
 
     //SUCURSALES

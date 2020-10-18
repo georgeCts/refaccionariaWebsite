@@ -125,7 +125,7 @@
 
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#module6" aria-expanded="false" aria-controls="module5">
-                    <i class="menu-icon mdi mdi-briefcase"></i>
+                    <i class="menu-icon mdi mdi-watermark"></i>
                     <span class="menu-title">Marcas de Prestigio</span>
                     <i class="menu-arrow"></i>
                 </a>

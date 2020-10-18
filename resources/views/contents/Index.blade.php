@@ -7,31 +7,11 @@
 
 @section('content')
     <!-- ======= Hero Section ======= -->
-    <section id="hero">
-        <div id="heroCarousel" class="carousel banners slide carousel-fade" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item slide-1 active"></div>
-                <div class="carousel-item slide-2"></div>
-                <div class="carousel-item slide-3"></div>
-                <div class="carousel-item slide-4"></div>
-                <div class="carousel-item slide-5"></div>
-                <div class="carousel-item slide-6"></div>
-                <div class="carousel-item slide-7"></div>
-                <div class="carousel-item slide-8"></div>
-                <div class="carousel-item slide-9"></div>
-            </div>
-
-            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon bx bx-left-arrow" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-
-            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon bx bx-right-arrow" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-
-            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+    <section id="hero" class="initial">
+        <div class="initial-slider">
+            @foreach ($lstSliders as $item)
+                <img src="{{Storage::url($item->file)}}" alt="{{$item->title}}" />
+            @endforeach
         </div>
     </section><!-- End Hero -->
 
@@ -203,6 +183,15 @@
                         }
                     }
                 ]
+            });
+
+            $('.initial-slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+                autoplay: true,
             });
         });
     </script>

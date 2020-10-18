@@ -18,25 +18,21 @@
 
         <div class="container">
             <div class="slider-productos">
-                <div class="producto-item">
-                    <img src="/images/promociones/117-mobil.png" class="producto-image" />
-                </div>
-    
-                <div class="producto-item">
-                    <img src="/images/promociones/118-thre-five.png" class="producto-image" />
-                </div>
+                @foreach ($lstPromotions as $item)
+                    <div class="producto-item">
+                        <img src="{{Storage::url($item->file)}}" class="producto-image" />
+                    </div>
+                @endforeach
             </div>
         </div>
 
         <div class="container">
             <div class="slider-productos">
-                <div class="producto-item">
-                    <img src="/images/promociones/117-mobil.png" class="producto-image" />
-                </div>
-    
-                <div class="producto-item">
-                    <img src="/images/promociones/118-thre-five.png" class="producto-image" />
-                </div>
+                @foreach ($lstOffers as $item)
+                    <div class="producto-item">
+                        <img src="{{Storage::url($item->file)}}" class="producto-image" />
+                    </div>
+                @endforeach
             </div>
         </div>
     </section><!-- End Promociones Section -->

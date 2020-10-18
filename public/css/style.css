@@ -416,6 +416,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+#hero.initial{
+  height: 95vh !important;
+}
+
 #hero .carousel, #hero .carousel-inner, #hero .carousel-item, #hero .carousel-item::before {
   background-size: cover;
   background-position: center;
@@ -527,37 +531,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #18FD00;
 }
 
-#hero .banners .carousel-item.slide-1 {
-  background-image: url(/images/slide/Banner-1.png);
-}
-#hero .banners .carousel-item.slide-2 {
-  background-image: url(/images/slide/Banner-2.png);
-}
-#hero .banners .carousel-item.slide-3 {
-  background-image: url(/images/slide/Banner-3.png);
-}
-#hero .banners .carousel-item.slide-4 {
-  background-image: url(/images/slide/Banner-4.png);
-}
-#hero .banners .carousel-item.slide-5 {
-  background-image: url(/images/slide/Banner-5.png);
-}
-#hero .banners .carousel-item.slide-6 {
-  background-image: url(/images/slide/Banner-6.png);
-}
-#hero .banners .carousel-item.slide-7 {
-  background-image: url(/images/slide/Banner-7.png);
-}
-#hero .banners .carousel-item.slide-8 {
-  background-image: url(/images/slide/Banner-8.png);
-}
-#hero .banners .carousel-item.slide-9 {
-  background-image: url(/images/slide/Banner-9.png);
-}
-
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   #hero {
     height: 116vh;
+  }
+
+  #hero.initial{
+    height: 65vh !important;
   }
 
   #hero .carousel-content {
@@ -600,6 +580,11 @@ h1, h2, h3, h4, h5, h6 {
   #hero {
     height: calc(70vh - 70px);
   }
+
+  #hero.initial{
+    height: calc(58vh - 70px);
+  }
+
   #hero .carousel-content h2 {
     margin-bottom: 15px;
     font-size: 22px;
@@ -640,6 +625,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 500px) {
   #hero {
     height: 44vh;
+  }
+
+  #hero.initial{
+    height: 27vh !important;
   }
 }
 

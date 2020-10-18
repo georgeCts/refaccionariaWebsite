@@ -151,6 +151,14 @@ class Errors {
 	const JOBS_CREATE_01_TITLE = "Error de nuevo registro.";
 	const JOBS_CREATE_01_MESSAGE = "El empleo no se pudo registrar. Póngase en contacto con el administrador.";
 
+	const JOBS_EDIT_01_ID = "6_0002";
+	const JOBS_EDIT_01_TITLE = "Error de modificación";
+	const JOBS_EDIT_01_MESSAGE = "No se pudo encontrar el empleo a modificar.";	
+
+	const JOBS_EDIT_02_ID = "6_0003";
+	const JOBS_EDIT_02_TITLE = "Error de modificación";
+	const JOBS_EDIT_02_MESSAGE = "El empleo no se pudo modificar. Póngase en contacto con el administrador.";
+
 	//EXPERT TIPS
 	const TIPS_CREATE_01_ID = "7_0001";
 	const TIPS_CREATE_01_TITLE = "Error de nuevo registro.";
@@ -167,6 +175,23 @@ class Errors {
 	const TIPS_EDIT_02_ID = "7_0004";
 	const TIPS_EDIT_02_TITLE = "Error de modificación";
 	const TIPS_EDIT_02_MESSAGE = "El tip no se pudo modificar. Póngase en contacto con el administrador.";
+
+	//PROMOCIONES
+	const PROMOTIONS_CREATE_01_ID = "7_0001";
+	const PROMOTIONS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const PROMOTIONS_CREATE_01_MESSAGE = "No se adjuntó una imagen en el formulario.";
+
+	const PROMOTIONS_CREATE_02_ID = "7_0002";
+	const PROMOTIONS_CREATE_02_TITLE = "Error de nuevo registro.";
+	const PROMOTIONS_CREATE_02_MESSAGE = "La promoción/oferta no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const PROMOTIONS_EDIT_01_ID = "7_0003";
+	const PROMOTIONS_EDIT_01_TITLE = "Error de modificación";
+	const PROMOTIONS_EDIT_01_MESSAGE = "No se pudo encontrar la promoción/oferta a modificar.";	
+
+	const PROMOTIONS_EDIT_02_ID = "7_0004";
+	const PROMOTIONS_EDIT_02_TITLE = "Error de modificación";
+	const PROMOTIONS_EDIT_02_MESSAGE = "La promoción/oferta no se pudo modificar. Póngase en contacto con el administrador.";
 	
 }
 

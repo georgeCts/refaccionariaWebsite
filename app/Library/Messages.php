@@ -46,11 +46,17 @@ class Messages {
 	const JOBS_EDIT_TITLE = "Empleo modificado";
 	const JOBS_EDIT_MESSAGE = "El empleo se modificó exitosamente.";
 
-	//JOBS
+	//EXPER TIPS
 	const TIPS_CREATE_TITLE = "Nuevo tip agregado.";
 	const TIPS_CREATE_MESSAGE = "El nuevo tip se agregó exitosamente.";
 	const TIPS_EDIT_TITLE = "Tip modificado";
 	const TIPS_EDIT_MESSAGE = "El tip se modificó exitosamente.";
+
+	//PROMOTIONS
+	const PROMOTIONS_CREATE_TITLE = "Nueva promoción/oferta agregado.";
+	const PROMOTIONS_CREATE_MESSAGE = "La nueva promoción/oferta se agregó exitosamente.";
+	const PROMOTIONS_EDIT_TITLE = "Promoción/Oferta modificado";
+	const PROMOTIONS_EDIT_MESSAGE = "La promoción/oferta se modificó exitosamente.";
 
 }
 
