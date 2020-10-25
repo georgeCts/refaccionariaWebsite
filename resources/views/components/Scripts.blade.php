@@ -14,6 +14,9 @@
     <!-- Template Main JS File -->
     <script src="{{ asset('js/main.js') }}"></script>
 
+    <!-- Template Vue JS File -->
+    <script src="{{ asset('js/app.js') }}"></script>
+
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

@@ -16,23 +16,17 @@ class Messages {
 	const USUARIOS_DELETE_TITLE = "Usuario eliminado.";
 	const USUARIOS_DELETE_MESSAGE = "El usuario se eliminó exitosamente.";
 
-	//POSTS
-	const POSTS_CREATE_TITLE = "Nuevo post creado.";
-	const POSTS_CREATE_MESSAGE = "El nuevo post se creó exitosamente.";
-	const POSTS_EDIT_TITLE = "Post modificado.";
-	const POSTS_EDIT_MESSAGE = "El post se modificó exitosamente.";
-
 	//SLIDERS
 	const SLIDERS_CREATE_TITLE = "Nuevo slider creado.";
 	const SLIDERS_CREATE_MESSAGE = "El nuevo slider se creó exitosamente.";
 	const SLIDERS_EDIT_TITLE = "Slider modificado";
 	const SLIDERS_EDIT_MESSAGE = "El slider se modificó exitosamente.";
 
-	//VIDEOS
-	const VIDEOS_CREATE_TITLE = "Nuevo vídeo agregado.";
-	const VIDEOS_CREATE_MESSAGE = "El nuevo vídeo se agregó exitosamente.";
-	const VIDEOS_EDIT_TITLE = "Vídeo modificado.";
-	const VIDEOS_EDIT_MESSAGE = "El vídeo se modificó exitosamente.";
+	//PRODUCTS
+	const PRODUCTS_CREATE_TITLE = "Nuevo producto agregado.";
+	const PRODUCTS_CREATE_MESSAGE = "El nuevo producto se agregó exitosamente.";
+	const PRODUCTS_EDIT_TITLE = "Producto modificado.";
+	const PRODUCTS_EDIT_MESSAGE = "El producto se modificó exitosamente.";
 
 	//BRANDS
 	const BRANDS_CREATE_TITLE = "Nueva marca agregada.";

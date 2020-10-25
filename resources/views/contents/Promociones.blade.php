@@ -1,4 +1,4 @@
-@section('title', 'Nosotros')
+@section('title', 'Promociones y ofertas')
 
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />

@@ -71,33 +71,29 @@ class Errors {
 	const SLIDERS_EDIT_02_MESSAGE = "El slider no se pudo registrar. Póngase en contacto con el administrador.";
 
 	//VIDEOS
-	const VIDEOS_CREATE_01_ID = "4_0001";
-	const VIDEOS_CREATE_01_TITLE = "Error de nuevo registro.";
-	const VIDEOS_CREATE_01_MESSAGE = "No se ingresaron todos los campos requeridos. Verifique la información ingresada.";
+	const PRODUCTS_CREATE_01_ID = "4_0001";
+	const PRODUCTS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const PRODUCTS_CREATE_01_MESSAGE = "No se adjuntó la imagen para el producto.";
 
-	const VIDEOS_CREATE_02_ID = "4_0002";
-	const VIDEOS_CREATE_02_TITLE = "Error de nuevo registro.";
-	const VIDEOS_CREATE_02_MESSAGE = "Actualmente existe un registro con estatus (PUBLISHED). Solamente puede existir un vídeo activo.";
+	const PRODUCTS_CREATE_02_ID = "4_0002";
+	const PRODUCTS_CREATE_02_TITLE = "Error de nuevo registro.";
+	const PRODUCTS_CREATE_02_MESSAGE = "El número de parte ingresado ya se encuentra registrado en otro producto.";
 
-	const VIDEOS_CREATE_03_ID = "4_0003";
-	const VIDEOS_CREATE_03_TITLE = "Error de nuevo registro.";
-	const VIDEOS_CREATE_03_MESSAGE = "El vídeo no se pudo registrar. Póngase en contacto con el administrador.";
+	const PRODUCTS_CREATE_03_ID = "4_0003";
+	const PRODUCTS_CREATE_03_TITLE = "Error de nuevo registro.";
+	const PRODUCTS_CREATE_03_MESSAGE = "El producto no se pudo registrar. Póngase en contacto con el administrador.";
 
-	const VIDEOS_EDIT_01_ID = "4_0004";
-	const VIDEOS_EDIT_01_TITLE = "Error de modificación.";
-	const VIDEOS_EDIT_01_MESSAGE = "No se pudo encontrar el vídeo a modificar. Verifique la información ingresada.";
+	const PRODUCTS_EDIT_01_ID = "4_0004";
+	const PRODUCTS_EDIT_01_TITLE = "Error de modificación.";
+	const PRODUCTS_EDIT_01_MESSAGE = "No se pudo encontrar el producto a modificar. Verifique la información ingresada.";
 
-	const VIDEOS_EDIT_02_ID = "4_0005";
-	const VIDEOS_EDIT_02_TITLE = "Error de modificación.";
-	const VIDEOS_EDIT_02_MESSAGE = "No se ingresaron todos los campos requeridos. Verifique la información ingresada.";
+	const PRODUCTS_EDIT_02_ID = "4_0005";
+	const PRODUCTS_EDIT_02_TITLE = "Error de modificación.";
+	const PRODUCTS_EDIT_02_MESSAGE = "Actualmente existe un producto con el Número de parte ingresado.";
 
-	const VIDEOS_EDIT_03_ID = "4_0006";
-	const VIDEOS_EDIT_03_TITLE = "Error de modificación.";
-	const VIDEOS_EDIT_03_MESSAGE = "Actualmente existe un registro con estatus (PUBLISHED). Solamente puede existir un vídeo activo.";
-
-	const VIDEOS_EDIT_04_ID = "4_0007";
-	const VIDEOS_EDIT_04_TITLE = "Error de nuevo registro.";
-	const VIDEOS_EDIT_04_MESSAGE = "El vídeo no se pudo registrar. Póngase en contacto con el administrador.";
+	const PRODUCTS_EDIT_03_ID = "4_0006";
+	const PRODUCTS_EDIT_03_TITLE = "Error de nuevo registro.";
+	const PRODUCTS_EDIT_03_MESSAGE = "El producto no se pudo registrar. Póngase en contacto con el administrador.";
 
 
 	//USUARIOS

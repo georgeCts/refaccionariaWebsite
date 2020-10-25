@@ -16,6 +16,7 @@ Route::get('/nosotros', function () {
     return view('contents.Nosotros');
 });
 Route::get('/promociones', 'Web\PromotionsController@index');
+Route::get('/productos', 'Web\ProductsController@index');
 Route::get('/expert-tips', 'Web\ExpertTipsController@index');
 Route::get('/bolsa-trabajo', 'Web\JobsController@index');
 Route::get('/contacto', 'Web\ContactController@index');
@@ -29,6 +30,14 @@ Route::group([  'prefix'    => 'panel',
     
     //DASHBOARD
     Route::get('/', 'Admin\PanelController@index');
+
+    //PRODUCTOS
+    Route::get('productos', 'Admin\ProductsController@index');
+    Route::get('productos/producto-crear', 'Admin\ProductsController@create');
+    Route::post('productos/producto-crear', ['as' => 'new-product', 'uses' => 'Admin\ProductsController@store']);
+
+    Route::get('productos/producto-editar/{id}', 'Admin\ProductsController@edit');
+    Route::put('productos/producto-editar', ['as' => 'update-product', 'uses' => 'Admin\ProductsController@update']);
 
     //SLIDERS
     Route::get('sliders', 'Admin\SlidersController@index');

@@ -17,7 +17,7 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('products-component', require('./components/ProductsViewer.vue'));
 
 // const files = require.context('./', true, /\.vue$/i)
 
@@ -31,6 +31,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app'
-});
+if(document.getElementById('product-app')) {
+    const app = new Vue({
+        el: '#product-app'
+    });
+}
