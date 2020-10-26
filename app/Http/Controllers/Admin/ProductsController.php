@@ -4,16 +4,26 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProductValidator;
 use App\Library\Messages;
 use App\Library\Errors;
 use App\Library\FormatValidation;
 use App\Library\Returns\ActionReturn;
 use App\Library\Returns\AjaxReturn;
+use App\Services\ImportProduct;
 use App\Product;
 use Storage;
 
 class ProductsController extends Controller
 {
+    protected $validaciones;
+    protected $importar;
+
+    public function __construct(ProductValidator $validaciones, ImportProduct $importar) {
+        $this->validaciones = $validaciones;
+        $this->importar     = $importar;
+    }
+
     public function index() {
         $lstProducts = Product::where('deleted', false)->orderBy('created_at', 'DESC')->get();
         return view('panel.contents.products.Index', ['lstProducts' => $lstProducts]);
@@ -118,5 +128,21 @@ class ProductsController extends Controller
         }
 
         return $objReturn->getRedirectPath();
+    }
+
+    public function import(Request $request){
+        $validacion  = $this->validaciones->importData($request);
+        if( $validacion  !== true)
+            return response()->json(['error'=> $validacion->original], 403);
+
+        $respuesta = $this->importar->importProducts($request);
+
+        if($respuesta['response'] == true) {
+            if(sizeof($respuesta['errors']) > 0) {
+                return response()->json(['message' => 'Algunos datos no se pudieron guardar, probablemente ya se encuentren registrados.', 'type' => 'warning'], 202);
+            } else {
+                return response()->json(['message' => 'Datos guardados correctamente.', 'type' => 'success'], 202);
+            }
+        }
     }
 }

@@ -20,6 +20,7 @@ Route::get('/productos', 'Web\ProductsController@index');
 Route::get('/expert-tips', 'Web\ExpertTipsController@index');
 Route::get('/bolsa-trabajo', 'Web\JobsController@index');
 Route::get('/contacto', 'Web\ContactController@index');
+Route::post('/contacto-mail', 'Web\ContactController@sendMail');
 
 Route::get('/login-panel', 'Admin\LoginController@index');
 Route::post('/login-panel', ['as' => 'login-panel', 'uses' => 'Admin\LoginController@access']);
@@ -38,6 +39,8 @@ Route::group([  'prefix'    => 'panel',
 
     Route::get('productos/producto-editar/{id}', 'Admin\ProductsController@edit');
     Route::put('productos/producto-editar', ['as' => 'update-product', 'uses' => 'Admin\ProductsController@update']);
+
+    Route::post('productos/importar', 'Admin\ProductsController@import');
 
     //SLIDERS
     Route::get('sliders', 'Admin\SlidersController@index');
