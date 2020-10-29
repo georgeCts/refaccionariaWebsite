@@ -107,7 +107,9 @@
                             Encuentra las refacciones disponibles para la marca, modelo y versión
                              de tu vehículo.
                         </p>
-                        <img src="/images/banner-productos/026-boton-buscar.png" class="search-picture" />
+                        <a href="{{URL::to('/productos') }}">
+                            <img src="/images/banner-productos/026-boton-buscar.png" class="search-picture" />
+                        </a>
                     </div>
 
                     <img class="engine-picture" src="/images/banner-productos/024-motor.png" />
