@@ -138,10 +138,12 @@
                 </div>
 
                 <div class="row brand-image-container">
+                    @php $count = 0; @endphp
                     @foreach($_BRANDS as $item)
                         <div class="col-md-4 col-sm-4 text-center">
-                            @if($loop->count <= 3)
+                            @if($count <= 3)
                                 <img src="{{Storage::url($item->file)}}" class="img-responsive" alt="Responsive image" />
+                                @php $count++; @endphp
                             @endif
                         </div>
                     @endforeach
