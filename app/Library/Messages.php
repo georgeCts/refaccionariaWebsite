@@ -52,6 +52,12 @@ class Messages {
 	const PROMOTIONS_EDIT_TITLE = "Promoción/Oferta modificado";
 	const PROMOTIONS_EDIT_MESSAGE = "La promoción/oferta se modificó exitosamente.";
 
+	//LOCATIONS
+	const LOCATIONS_CREATE_TITLE = "Nueva sucursal agregada.";
+	const LOCATIONS_CREATE_MESSAGE = "La nueva sucursal se agregó exitosamente.";
+	const LOCATIONS_EDIT_TITLE = "Sucursal modificada";
+	const LOCATIONS_EDIT_MESSAGE = "La sucursal se modificó exitosamente.";
+
 }
 
 ?>

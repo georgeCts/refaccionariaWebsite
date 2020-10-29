@@ -173,21 +173,34 @@ class Errors {
 	const TIPS_EDIT_02_MESSAGE = "El tip no se pudo modificar. Póngase en contacto con el administrador.";
 
 	//PROMOCIONES
-	const PROMOTIONS_CREATE_01_ID = "7_0001";
+	const PROMOTIONS_CREATE_01_ID = "8_0001";
 	const PROMOTIONS_CREATE_01_TITLE = "Error de nuevo registro.";
 	const PROMOTIONS_CREATE_01_MESSAGE = "No se adjuntó una imagen en el formulario.";
 
-	const PROMOTIONS_CREATE_02_ID = "7_0002";
+	const PROMOTIONS_CREATE_02_ID = "8_0002";
 	const PROMOTIONS_CREATE_02_TITLE = "Error de nuevo registro.";
 	const PROMOTIONS_CREATE_02_MESSAGE = "La promoción/oferta no se pudo registrar. Póngase en contacto con el administrador.";
 
-	const PROMOTIONS_EDIT_01_ID = "7_0003";
+	const PROMOTIONS_EDIT_01_ID = "8_0003";
 	const PROMOTIONS_EDIT_01_TITLE = "Error de modificación";
 	const PROMOTIONS_EDIT_01_MESSAGE = "No se pudo encontrar la promoción/oferta a modificar.";	
 
-	const PROMOTIONS_EDIT_02_ID = "7_0004";
+	const PROMOTIONS_EDIT_02_ID = "8_0004";
 	const PROMOTIONS_EDIT_02_TITLE = "Error de modificación";
 	const PROMOTIONS_EDIT_02_MESSAGE = "La promoción/oferta no se pudo modificar. Póngase en contacto con el administrador.";
+
+	//LOCATIONS
+	const LOCATIONS_CREATE_01_ID = "9_0001";
+	const LOCATIONS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const LOCATIONS_CREATE_01_MESSAGE = "La sucursal no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const LOCATIONS_EDIT_01_ID = "9_0002";
+	const LOCATIONS_EDIT_01_TITLE = "Error de modificación";
+	const LOCATIONS_EDIT_01_MESSAGE = "No se pudo encontrar la sucursal a modificar.";	
+
+	const LOCATIONS_EDIT_02_ID = "9_0003";
+	const LOCATIONS_EDIT_02_TITLE = "Error de modificación";
+	const LOCATIONS_EDIT_02_MESSAGE = "La sucursal no se pudo modificar. Póngase en contacto con el administrador.";
 	
 }
 

@@ -15,6 +15,7 @@
     </div>
 
     {!! Form::open(['route' => 'update-location', 'method' => 'PUT']) !!}
+        <input type="hidden" name="hddIdLocation" value="{{$objLocation->id}}" />
         <div class="row">
             <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
