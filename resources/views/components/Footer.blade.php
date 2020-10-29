@@ -35,7 +35,7 @@
 
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Únete a nuestro boletín de noticias</h4>
-                        <form action="#" method="post">
+                        <form>
                             <input type="email" name="email">
                             <input type="submit" value="Subscribe" />
                         </form>
