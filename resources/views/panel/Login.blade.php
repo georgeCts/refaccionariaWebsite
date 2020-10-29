@@ -24,6 +24,20 @@
     <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper auth-page">
             <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
+                @if(Session::has('login_error_message'))
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <h4 class="alert-heading">{{ Session::get('login_error_title' )}}</h4>
+                                <p>{{ Session::get('login_error_message' )}}</p>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
                 <div class="row w-100">
                     <div class="col-lg-4 mx-auto">
                         <div class="auto-form-wrapper">
@@ -63,12 +77,12 @@
                                         </label>
                                     </div>
                   
-                                    <a href="#" class="text-small forgot-password text-black">Olvid&eacute; mi contraseña</a>
+                                    {{-- <a href="#" class="text-small forgot-password text-black">Olvid&eacute; mi contraseña</a> --}}
                                 </div>
                             {!! Form::close() !!}
                         </div>
                         
-                        <p class="footer-text text-center">copyright © 2018 Bootstrapdash. All rights reserved.</p>
+                        <p class="footer-text text-center">copyright © 2020 Madero Refacciones. All rights reserved.</p>
                     </div>
                 </div>
             </div>
