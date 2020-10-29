@@ -53409,7 +53409,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             filters: {
                 search: ''
             },
-            server: 'http://' + window.location.host
+            server: 'http://' + window.location.host + '/'
         };
     },
 
