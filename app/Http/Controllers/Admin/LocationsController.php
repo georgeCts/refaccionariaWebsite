@@ -23,7 +23,7 @@ class LocationsController extends Controller
         return View::make('panel.contents.locations.Create');
     }
 
-    public function store() {
+    public function store(Request $request) {
         $objReturn = new ActionReturn('panel/sucursales/sucursal-crear', 'panel/sucursales');
 
         try {
