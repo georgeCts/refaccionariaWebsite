@@ -87,7 +87,7 @@
                 filters: {
                     search: '',
                 },
-                server: 'http://localhost:8000/'
+                server: `http://${window.location.host}`,
             }
         },
         watch: {
