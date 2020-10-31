@@ -26,7 +26,7 @@
 
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
-    <a href="https://api.whatsapp.com/send?phone=529993135534&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%20M%C3%A9xico%2C%20deseo%20recibir%20atenci%C3%B3n%20personalizada." class="floating-whatsapp"><img src="/images/78-icono-whatsapp.png" /></a>
+    <a href="https://api.whatsapp.com/send?phone=529993135534&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%2C%20deseo%20recibir%20atenci%C3%B3n%20personalizada." class="floating-whatsapp"><img src="/images/78-icono-whatsapp.png" /></a>
 
     @yield('components.Scripts')
 </body>
