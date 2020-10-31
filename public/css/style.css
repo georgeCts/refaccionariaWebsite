@@ -899,6 +899,10 @@ img.producto-image {
   width: 350px !important;
 }
 
+img.producto-image.promos {
+  width: inherit !important;
+}
+
 @media (max-width: 768px) {
   .products h2 {
     font-size: 60px;

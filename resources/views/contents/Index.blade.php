@@ -23,7 +23,7 @@
                     <div class="col-lg-8 text-center text-lg-left">
                         <h3>Nosotros si la tenemos</h3>
                         <p>
-                            Contamos con un inventario que supera los <span>149,000</span> productos siendo unos de de los 
+                            Contamos con un inventario que supera los <span>149,000</span> productos siendo unos de los 
                             más amplios del sureste, estamos seguros que nosotros <span>si</span> tenemos la refacción
                             que tu auto o camión necesita.
                         </p>

@@ -20,7 +20,7 @@
             <div class="slider-productos">
                 @foreach ($lstPromotions as $item)
                     <div class="producto-item">
-                        <img src="{{Storage::url($item->file)}}" class="producto-image" />
+                        <img src="{{Storage::url($item->file)}}" class="producto-image promos" />
                     </div>
                 @endforeach
             </div>
@@ -30,7 +30,7 @@
             <div class="slider-productos">
                 @foreach ($lstOffers as $item)
                     <div class="producto-item">
-                        <img src="{{Storage::url($item->file)}}" class="producto-image" />
+                        <img src="{{Storage::url($item->file)}}" class="producto-image promos" />
                     </div>
                 @endforeach
             </div>
