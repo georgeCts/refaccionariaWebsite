@@ -34,9 +34,10 @@ class TipsController extends Controller
 
             try {
                 if($request->image->storeAs('tips', $fileName)) {
-                    $objTip             = new Tip();
+                    $objTip           = new Tip();
                     $objTip->title    = $request->title;
                     $objTip->body     = $request->body;
+                    $objTip->status   = $request->status;
                     $objTip->file     = $url;
                     $objTip->save();
 
@@ -73,6 +74,7 @@ class TipsController extends Controller
             try {
                 $objTip->title  = $request->title;
                 $objTip->body   = $request->body;
+                $objTip->status = $request->status;
 
                 if($request->file('image')) {
                     if($objTip->file != null)

@@ -150,3 +150,49 @@ if(document.getElementById('contact-app')) {
         }
     });
 }
+
+if(document.getElementById('subscribe-app')) {
+    new Vue({
+        el: '#subscribe-app',
+        data: {
+            email: '',
+            success: false,
+        },
+        methods: {
+            subscribe() {
+                var baseUrl     = `http://${window.location.host}`;
+
+                if(this.email.trim() != '' && !this.success) {
+                    this.success    = true
+                    this.email      = "";
+                    Swal.fire("Suscripción", "Te has suscrito exitosamente!", "success");
+                    /* let params = {
+                        nombre : this.name,
+                        email : this.email,
+                        asunto : this.subject,
+                        mensaje : this.message,
+                        _token : window.CSRF_TOKEN
+                    };
+
+                    axios.post(baseUrl + '/contacto-mail', params)
+                        .then(response => {
+                            this.name       = '';
+                            this.email      = '';
+                            this.subject    = '';
+                            this.message    = '';
+                            this.loading    = false;
+                            this.success    = true;
+                        })
+                        .catch(error => {
+                            this.loading = false;
+                            this.error = true;
+                            this.errorMessage = "Ocurrió un error al intentar mandar tu mensaje."
+                            console.error(error);
+                        }) */
+                } else {
+                    this.errorMessage   = 'Faltan campos por rellenar en el formulario.'
+                }
+            }
+        }
+    });
+}

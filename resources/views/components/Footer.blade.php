@@ -33,14 +33,13 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <div id="subscribe-app" class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Únete a nuestro boletín de noticias</h4>
-                        <form>
-                            <input type="email" name="email">
-                            <input type="submit" value="Subscribe" />
+                        <form @submit.prevent="subscribe">
+                            <input type="email" v-model="email">
+                            <input type="submit" value="Suscríbete" />
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -49,9 +48,6 @@
             <div class="mr-md-auto text-center text-md-left">
                 <div class="copyright">
                     &copy; Copyright <strong><span>Madero Refacciones</span></strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-                    Diseñado por <a href="https://kubux.mx/">Kubuk</a>
                 </div>
             </div>
 

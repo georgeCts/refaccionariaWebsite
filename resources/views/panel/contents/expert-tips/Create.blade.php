@@ -50,6 +50,24 @@
                                     <label>Imágen</label>
                                     <input type="file" name="image" class="form-control" required />
                                 </div>
+
+                                <hr />
+
+                                <h4 class="card-title">Estatus</h4>
+                                <p class="card-description">Selecciona el estatus que tendrá el tip al ser creado.</p>
+
+                                <div class="form-group">
+                                    <div class="form-radio">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="status" value="PUBLISHED" checked> Publicado
+                                        </label>
+                                    </div>
+                                    <div class="form-radio">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="status" value="DRAFT"> Borrador
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

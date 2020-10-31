@@ -23,7 +23,7 @@
                     <div class="col-lg-8 text-center text-lg-left">
                         <h3>Nosotros si la tenemos</h3>
                         <p>
-                            Contamos con un inventario que supera los <span>149,000</span> productos siendo unos de de los más
+                            Contamos con un inventario que supera los <span>149,000</span> productos siendo unos de de los 
                             más amplios del sureste, estamos seguros que nosotros <span>si</span> tenemos la refacción
                             que tu auto o camión necesita.
                         </p>
@@ -71,27 +71,39 @@
             <div class="productos-container">
                 <div class="slider-productos">
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-1.png" class="producto-image" />
+                        <a href="{{URL::to('/productos') }}">
+                            <img src="/images/banner-productos/slide-1.png" class="producto-image" />
+                        </a>
                     </div>
         
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-2.png" class="producto-image" />
+                        <a href="{{URL::to('/productos') }}">
+                            <img src="/images/banner-productos/slide-2.png" class="producto-image" />
+                        </a>
                     </div>
         
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-3.png" class="producto-image" />
+                        <a href="{{URL::to('/productos') }}">
+                            <img src="/images/banner-productos/slide-3.png" class="producto-image" />
+                        </a>
                     </div>
     
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-4.png" class="producto-image" />
+                        <a href="{{URL::to('/productos') }}">
+                            <img src="/images/banner-productos/slide-4.png" class="producto-image" />
+                        </a>
                     </div>
         
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-5.png" class="producto-image" />
+                        <a href="{{URL::to('/productos') }}">
+                            <img src="/images/banner-productos/slide-5.png" class="producto-image" />
+                        </a>
                     </div>
         
                     <div class="producto-item">
-                        <img src="/images/banner-productos/slide-6.png" class="producto-image" />
+                        <a href="{{URL::to('/productos') }}">
+                            <img src="/images/banner-productos/slide-6.png" class="producto-image" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -142,12 +154,12 @@
                 <div class="row brand-image-container">
                     @php $count = 0; @endphp
                     @foreach($_BRANDS as $item)
-                        <div class="col-md-4 col-sm-4 text-center">
-                            @if($count <= 2)
+                        @if($count <= 2)
+                            <div class="col-md-4 col-sm-4 text-center">
                                 <img src="{{Storage::url($item->file)}}" class="img-responsive" alt="Responsive image" />
                                 @php $count++; @endphp
-                            @endif
-                        </div>
+                            </div>
+                        @endif
                     @endforeach
                 </div>
             </div>

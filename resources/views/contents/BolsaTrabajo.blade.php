@@ -28,7 +28,7 @@
                         </p>
                     </div>
                     <div class="col-lg-4">
-                        <img src="{{Storage::url($item->file)}}" alt="trabajo" style="width: 400px;" />
+                        <img src="{{Storage::url($item->file)}}" alt="trabajo" style="width: 400px; padding-top: 40px;" />
                     </div>
                 </div>
             @endforeach

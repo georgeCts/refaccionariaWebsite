@@ -10,7 +10,7 @@ use View;
 class ExpertTipsController extends Controller
 {
     public function index() {
-        $lstTips = Tip::where('deleted', false)->orderBy('created_at', 'DESC')->get();
+        $lstTips = Tip::where('deleted', false)->where('status', 'PUBLISHED')->orderBy('created_at', 'DESC')->get();
         return View::make('contents.ExpertTips', ['lstTips' => $lstTips]);
     }
 }

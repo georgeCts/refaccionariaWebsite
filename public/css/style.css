@@ -96,7 +96,8 @@ h1, h2, h3, h4, h5, h6 {
   background: #18FD00;
   color: #000;
   padding: 10px 0;
-  font-size: 14px;
+  font-size: 16px;
+  height: 50px;
 }
 
 #topbar .contact-info a {
@@ -137,6 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #topbar .social-links a {
   color: #000;
+  font-size: 19px;
   padding: 4px 0 4px 20px;
   display: inline-block;
   line-height: 1px;
@@ -894,7 +896,7 @@ div.producto-item {
 }
 
 img.producto-image {
-  width: inherit;
+  width: 350px;
 }
 
 @media (max-width: 768px) {
@@ -1207,6 +1209,18 @@ div.brand-image-container img {
   background-image: url(/images/nosotros/sucursal-slider/55-slide-macro.png);
 }
 
+.about-us .responsive-sucursal-info {
+  display: none;
+}
+
+.about-us .accordion .btn-link {
+  color: #1f1d1d !important;
+}
+
+.about-us .accordion .card-body {
+  font-family: Arial;
+}
+
 #puntos-clave {
   margin-bottom: -70px;
 }
@@ -1314,6 +1328,10 @@ div.brand-image-container img {
     display: none;
   }
 
+  #history {
+    margin-bottom: 0px;
+  }
+
   #history img {
     width: 400px;
     margin-top: -100px;
@@ -1321,23 +1339,11 @@ div.brand-image-container img {
   }
 
   .about-us #hero {
-    height: 48vh;
+    display: none;
   }
 
-  .about-us .carousel .carousel-item.slide-1 {
-    background-image: url(/images/nosotros/sucursal-slider/52-slide-matriz-425.png);
-  }
-
-  .about-us .carousel .carousel-item.slide-2 {
-    background-image: url(/images/nosotros/sucursal-slider/53-slide-kanasin-425.png);
-  }
-
-  .about-us .carousel .carousel-item.slide-3 {
-    background-image: url(/images/nosotros/sucursal-slider/54-slide-centro-425.png);
-  }
-
-  .about-us .carousel .carousel-item.slide-4 {
-    background-image: url(/images/nosotros/sucursal-slider/55-slide-macro-425.png);
+  .about-us .responsive-sucursal-info {
+    display: block;
   }
 
   .about-us .card-item {
@@ -1363,8 +1369,16 @@ div.brand-image-container img {
     margin-bottom: 20px;
   }
 
+  #history {
+    margin-bottom: 0px;
+  }
+
   .about-us #hero {
-    height: 38vh;
+    display: none;
+  }
+
+  .about-us .responsive-sucursal-info {
+    display: block;
   }
 }
 
@@ -1640,6 +1654,7 @@ section.contact {
 #footer {
   color: #b4aca8;
   font-size: 14px;
+  font-family: Arial !important;
   background: #14100f;
 }
 
@@ -1654,20 +1669,25 @@ section.contact {
 
 #footer .footer-top .footer-contact h3 {
   font-size: 22px;
+  font-family: Arial !important;
   margin: 0 0 10px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
   font-weight: 500;
   letter-spacing: 1px;
-  text-transform: uppercase;
   color: #fff;
+}
+
+#footer .footer-top .footer-links h4,
+#footer .footer-top .footer-newsletter h4 {
+  font-family: Arial !important;
 }
 
 #footer .footer-top .footer-contact p {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Muli", sans-serif;
+  font-family: "Arial";
   color: #b4aca8;
 }
 

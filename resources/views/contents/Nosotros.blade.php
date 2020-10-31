@@ -63,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-lg-6 text-center">
-                    <img src="/images/nosotros/44-personal.png" style="width: 80%;" />
+                    <img src="/images/slide/banner-3-1024.png" style="width: 80%;" />
                 </div>
 
                 <div class="col-sm-12 col-lg-6 text-center">
@@ -194,20 +194,78 @@
                     <!-- Slide 4 -->
                     <div class="carousel-item slide-4"></div>
                 </div>
-    
-                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon bx bx-left-arrow" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-    
-                <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon bx bx-right-arrow" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-    
+
                 <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
             </div>
         </section><!-- End Hero -->
+
+        <div class="row content-3 responsive-sucursal-info">
+            <div class="col-lg-12">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Sucursal Matriz
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Entendiendo las necesidades del mercado y su acelerado desarrollo, vemos nacer en 1991, la base de operaciones Madero Matriz ubicada al poniente de la ciudad de Mérida en el estado de Yucatán para ser exactos en la calle 31 #168 E por 14 y 100 de la colonia Francisco I. Madero, justo sobre la Avenida Circuito Colonias.
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Sucursal Kanasín
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                En el año 1996 se inaugura Madero Refaccionarias Sucursal Kanasín, ubicada en la calle 19 No. 209 O por 32 y 34 de la Colonia Pablo Moreno de este famoso municipio al oriente de la ciudad de Mérida Yucatán, que para esos años se notaba claramente su gran potencial y futuro desarrollo, lo que le permitió a esta nueva sucursal convertirse en una de las más importantes para el mercado local y elemento clave para trazar nuevos objetivos. 
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Sucursal Centro
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Transcurría ya el año de 1998 cuando inicia operaciones en el primer cuadro de la ciudad de Mérida, Madero Refaccionarias Sucursal Centro, erguida muy cerca de uno de los suburbios más conocidos y representativos como lo es el barrio de San Sebastián y al igual muy cerca de la icónica Ermita de Santa Isabel, exactamente en la calle 66 No. 643-G entre 85 y 87 de la Colonia Centro, esta se convirtió muy rápidamente en una referente para el gran mercado yucateco.  
+                                <br />
+                                En el año 2019 después de realizar una notable expansión de sus instalaciones y modernización en sus tecnologías se reinaugura con el objetivo de mejorar la calidad del servicio y aumentar el inventario disponible y con ello satisfacer de la manera más eficiente las necesidades de los consumidores. 
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Sucursal Macroplaza
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Llega el año 2012 en el cual abre sus puertas la cuarta sede de Madero Refaccionarias Sucursal Macroplaza, llamada así por su cercanía a esta famosa plaza comercial de la ciudad, ubicada con exactitud frente a la S.C.T. (Secretaria de Comunicaciones y Transportes) en la calle 35 No. 463 x 46 B y 48 de la Colonia Nueva Yucatán, esta sucursal nace Con una mentalidad positiva, una cultura enfocada a otorgar un servicio humano de calidad y con calidez, siempre con el propósito de generar soluciones eficientes para los consumidores.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-lg-12 text-center">
