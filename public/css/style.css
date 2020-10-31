@@ -896,7 +896,7 @@ div.producto-item {
 }
 
 img.producto-image {
-  width: 350px;
+  width: 350px !important;
 }
 
 @media (max-width: 768px) {
