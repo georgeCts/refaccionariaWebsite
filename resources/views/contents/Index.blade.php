@@ -13,6 +13,8 @@
                 <img src="{{Storage::url($item->file)}}" alt="{{$item->title}}" />
             @endforeach
         </div>
+
+        <img src="/images/sparkie.png" class="sparkie-image" />
     </section><!-- End Hero -->
 
     <main id="main">
