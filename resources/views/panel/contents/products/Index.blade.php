@@ -38,8 +38,10 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Nombre</th>
                                     <th>SKU</th>
-                                    <th>Descripción</th>
+                                    <th>Marca</th>
+                                    <th>Modelo</th>
                                     <th>Fecha</th>
                                     <th>Acciones</th>
                                 </tr>
@@ -48,8 +50,10 @@
                                 @foreach($lstProducts as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
+                                        <td>{{ $item->name }}</td>
                                         <td>{{ $item->part_number }}</td>
-                                        <td>{{ $item->description }}</td>
+                                        <td>{{ $item->brand }}</td>
+                                        <td>{{ $item->model }}</td>
                                         <td>{{ $item->created_at }}</td>
                                         <td>
                                             <a href="/panel/productos/producto-editar/{{ $item->id }}" class="btn btn-sm btn-warning">Editar</a>

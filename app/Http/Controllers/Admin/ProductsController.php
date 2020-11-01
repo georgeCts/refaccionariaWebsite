@@ -52,6 +52,9 @@ class ProductsController extends Controller
                         $objProduct->description    = $request->description;
                         $objProduct->model          = $request->model;
                         $objProduct->part_number    = $request->part_number;
+                        $objProduct->brand          = $request->brand;
+                        $objProduct->year           = $request->year;
+                        $objProduct->engine         = $request->engine;
                         $objProduct->file           = $url;
                         $objProduct->save();
     
@@ -98,6 +101,9 @@ class ProductsController extends Controller
                     $objProduct->description    = $request->description;
                     $objProduct->model          = $request->model;
                     $objProduct->part_number    = $request->part_number;
+                    $objProduct->brand          = $request->brand;
+                    $objProduct->year           = $request->year;
+                    $objProduct->engine         = $request->engine;
     
                     if($request->file('image')) {
                         Storage::delete($objProduct->file);

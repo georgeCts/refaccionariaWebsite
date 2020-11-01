@@ -24,7 +24,7 @@
         <div class="row suscripcion">
             <div class="col-lg-12 text-center">
                 <h3>SUSCRIBETE AHORA</h3>
-                <span>CONSEGUIRÁS DESCUENTOS Y PROMOCIONES EXCLUSIVAS</span>
+                <span>OBTENDRÁS DESCUENTOS Y PROMOCIONES EXCLUSIVAS</span>
             </div>
 
             <div class="col-lg-8 text-right mt-4">

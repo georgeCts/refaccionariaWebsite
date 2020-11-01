@@ -1,7 +1,38 @@
 <template>
     <div class="products-viewer">
         <div id="init" class="row">
-            <div class="col-lg-12 text-right mb-2">
+            <div class="col-lg-6">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <select class="form-control" v-model="filters.brand">
+                            <option value="" selected>Marca</option>
+                            <option v-for="(item, index) in brandsComp" :key="index" :value="item.brand">{{item.brand}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col">
+                        <select class="form-control" v-model="filters.model">
+                            <option value="" selected>Modelo</option>
+                            <option v-for="(item, index) in modelsComp" :key="index" :value="item.model">{{item.model}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col">
+                        <select class="form-control" v-model="filters.year">
+                            <option value="" selected>Año</option>
+                            <option v-for="(item, index) in yearsComp" :key="index" :value="item.year">{{item.year}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col">
+                        <select class="form-control" v-model="filters.engine">
+                            <option value="" selected>Motor</option>
+                            <option v-for="(item, index) in engineComp" :key="index" :value="item.engine">{{item.engine}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-right mb-2">
                 <input type="text" v-model.lazy="filters.search" placeholder=" Descripción, Modelo o Nº de Parte" />
             </div>
 
@@ -22,22 +53,7 @@
         <div class="row">
             <template v-for="(item, index) in products">
                 <div class="col-lg-3 col-md-4 col-sm-6 product-item" :key="index">
-                    <div class="product-card">
-                        <div class="card-body">
-                            <img :src="`${server}storage${item.file}`" :alt="item.name" />
-                            <div class="info">
-                                <span class="product-name">{{ item.name }}</span>
-                                <br />
-                                <span class="product-sku">SKU: {{item.part_number}}</span>
-                            </div>
-                            <div class="actions">
-                                <div class="details">
-                                    Detalles
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer"></div>
-                    </div>
+                    <product-item :server="server" :item="item" />
                 </div>
             </template>
         </div>
@@ -73,21 +89,29 @@
         props: ['token'],
         data() {
             return {
-                products: [],
-                pagination: {
-                    prev_page: null,
-                    next_page: null,
-                    per_page: 0,
-                    to: 0,
-                    total: 0,
+                products    : [],
+                pagination  : {
+                    prev_page   : null,
+                    next_page   : null,
+                    per_page    : 0,
+                    to          : 0,
+                    total       : 0,
                     current_page: 1,
-                    last_page: 1,
-                    page: null,
+                    last_page   : 1,
+                    page        : null,
                 },
-                filters: {
-                    search: '',
+                brands  : [],
+                models  : [],
+                years   : [],
+                engine  : [],
+                filters : {
+                    search  : '',
+                    brand   : '',
+                    model   : '',
+                    engine  : '',
+                    year    : '',
                 },
-                server: `http://${window.location.host}/`,
+                server  : `http://${window.location.host}/`,
             }
         },
         watch: {
@@ -95,7 +119,27 @@
                 if(newValue.trim() != oldValue.trim()) {
                     this.getData(`${this.server}api/products`);
                 }
-            }
+            },
+            'filters.brand': function(newValue, oldValue) {
+                if(newValue.trim() != oldValue.trim()) {
+                    this.getData(`${this.server}api/products`);
+                }
+            },
+            'filters.model': function(newValue, oldValue) {
+                if(newValue.trim() != oldValue.trim()) {
+                    this.getData(`${this.server}api/products`);
+                }
+            },
+            'filters.year': function(newValue, oldValue) {
+                if(newValue.trim() != oldValue.trim()) {
+                    this.getData(`${this.server}api/products`);
+                }
+            },
+            'filters.engine': function(newValue, oldValue) {
+                if(newValue.trim() != oldValue.trim()) {
+                    this.getData(`${this.server}api/products`);
+                }
+            },
         },
         computed: {
             totalFormat() {
@@ -123,6 +167,18 @@
 
                 return output
             },
+            brandsComp() {
+                return this.brands.filter(item => item.brand != '');
+            },
+            modelsComp() {
+                return this.models.filter(item => item.model != '');
+            },
+            yearsComp() {
+                return this.years.filter(item => item.year != '');
+            },
+            engineComp() {
+                return this.engine.filter(item => item.engine != '');
+            },
         },
         methods: {
             goNext() {
@@ -141,7 +197,11 @@
             },
             getData(url) {
                 let params = {
-                    search  : this.filters.search,
+                    search  : this.filters.search.trim() != '' ? this.filters.search.trim() : null,
+                    brand   : this.filters.brand.trim() != '' ? this.filters.brand : null,
+                    model   : this.filters.model.trim() != '' ? this.filters.model : null,
+                    year    : this.filters.year.trim() != '' ? this.filters.year : null,
+                    engine  : this.filters.engine.trim() != '' ? this.filters.engine : null,
                     _token  : this.token
                 };
 
@@ -159,10 +219,21 @@
                         this.pagination.page            = null;
                     })
                     .catch(error => console.error(error));
+            },
+            getFilters() {
+                axios.get(`${this.server}api/products/filters`)
+                    .then(result => {
+                        this.brands = result.data.brands;
+                        this.models = result.data.models;
+                        this.years  = result.data.years;
+                        this.engine = result.data.engine;
+                    })
+                    .catch(error => console.error(error));
             }
         },
-        mounted() {
-            this.getData(`${this.server}api/products`);
+        async mounted() {
+            await this.getFilters();
+            await this.getData(`${this.server}api/products`);
         }
     }
 </script>
@@ -199,52 +270,6 @@
 
     div.product-item {
         margin-bottom: 30px;
-    }
-
-    div.product-card {
-        max-height: 550px;
-        width: 250px;
-        max-width: 300px;
-
-        background-color: #FFF;
-    }
-
-    .product-card .card-body {
-        padding: 15px;
-        text-align: center;
-    }
-
-    .product-card .card-body img {
-        width: 220px;
-    }
-
-    .card-body .info {
-        text-align: left !important;
-    }
-
-    .info .product-name {
-        font-family: Arial;
-        font-weight: 600;
-        font-size: 14px;
-        color: #000;
-    }
-
-    .info .product-sku {
-        font-family: Arial;
-        font-size: 14px;
-        color: #000;
-    }
-
-    .actions .details {
-        width: 60px;
-        border: 1px solid #000;
-        display: inline-block;
-        margin-top: 25px;
-        cursor: pointer;
-
-        font-family: Arial;
-        font-size: 14px;
-        color: #000;
     }
 
     .page-link {

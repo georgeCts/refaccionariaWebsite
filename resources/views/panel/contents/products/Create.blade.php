@@ -24,17 +24,32 @@
                         
                         <div class="form-group">
                             <label for="name">Nombre</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre del producto" />
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre del producto" required />
                         </div>
 
                         <div class="form-group">
                             <label for="part_number">SKU</label>
-                            <input type="text" class="form-control" id="part_number" name="part_number" placeholder="Número de parte" />
+                            <input type="text" class="form-control" id="part_number" name="part_number" placeholder="Número de parte" required />
                         </div>
 
                         <div class="form-group">
                             <label for="model">Modelo</label>
                             <input type="text" class="form-control" id="model" name="model" placeholder="Modelo del producto" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="brand">Marca</label>
+                            <input type="text" class="form-control" id="brand" name="brand" placeholder="Marca del producto" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="year">Año</label>
+                            <input type="text" class="form-control" id="year" name="year" placeholder="Año compatible" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="engine">Motor</label>
+                            <input type="text" class="form-control" id="engine" name="engine" placeholder="Motor compatible" />
                         </div>
 
                         <div class="form-group">

@@ -37,11 +37,15 @@ class ImportProduct {
         $objProduct = Product::where('part_number', $excel["numero_parte"])->where('deleted', false)->first();
         if($objProduct == null) {
             try {
+                //dd($excel);
                 $response = DB::table("products")->insert([
                     'name'              => $excel["nombre"] == null ? '' : $excel["nombre"],
                     'description'       => $excel["descripcion"],
                     'part_number'       => $excel["numero_parte"],
                     'model'             => $excel["modelo"] == null ? '' : $excel["modelo"],
+                    'brand'             => $excel["marca"],
+                    'year'              => $excel["ano"] == null ? '' : $excel["ano"],
+                    'engine'            => $excel["motor"] == null ? '' : $excel["motor"],
                     'created_at'        => now(),
                     'updated_at'        => now(),
                     'deleted'           => false

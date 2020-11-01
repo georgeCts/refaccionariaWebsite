@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 Route::get('/products', 'Web\ProductsController@find');
+Route::get('/products/filters', 'Web\ProductsController@getFilters');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

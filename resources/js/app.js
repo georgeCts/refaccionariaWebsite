@@ -19,6 +19,7 @@ const Swal = require('sweetalert2')
  */
 
 Vue.component('products-component', require('./components/ProductsViewer.vue'));
+Vue.component('product-item', require('./components/ProductItem.vue'));
 
 // const files = require.context('./', true, /\.vue$/i)
 
