@@ -50,9 +50,9 @@ class ProductsController extends Controller
                         $objProduct                 = new Product();
                         $objProduct->name           = $request->name;
                         $objProduct->description    = $request->description;
-                        $objProduct->model          = $request->model;
+                        $objProduct->model          = $request->model != '' ? $request->model : '';
                         $objProduct->part_number    = $request->part_number;
-                        $objProduct->brand          = $request->brand;
+                        $objProduct->brand          = $request->brand != '' ? $request->brand : '';
                         $objProduct->year           = $request->year;
                         $objProduct->engine         = $request->engine;
                         $objProduct->file           = $url;
@@ -99,9 +99,9 @@ class ProductsController extends Controller
                 try {
                     $objProduct->name           = $request->name;
                     $objProduct->description    = $request->description;
-                    $objProduct->model          = $request->model;
+                    $objProduct->model          = $request->model != '' ? $request->model : '';
                     $objProduct->part_number    = $request->part_number;
-                    $objProduct->brand          = $request->brand;
+                    $objProduct->brand          = $request->brand != '' ? $request->brand : '';
                     $objProduct->year           = $request->year;
                     $objProduct->engine         = $request->engine;
     
