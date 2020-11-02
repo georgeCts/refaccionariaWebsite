@@ -73,39 +73,27 @@
             <div class="productos-container">
                 <div class="slider-productos">
                     <div class="producto-item">
-                        <a href="{{URL::to('/productos') }}">
-                            <img src="/images/banner-productos/slide-1.png" class="producto-image" />
-                        </a>
+                        <img src="/images/banner-productos/slide-1.png" class="producto-image product-link" />
                     </div>
         
                     <div class="producto-item">
-                        <a href="{{URL::to('/productos') }}">
-                            <img src="/images/banner-productos/slide-2.png" class="producto-image" />
-                        </a>
+                        <img src="/images/banner-productos/slide-2.png" class="producto-image product-link" />
                     </div>
         
                     <div class="producto-item">
-                        <a href="{{URL::to('/productos') }}">
-                            <img src="/images/banner-productos/slide-3.png" class="producto-image" />
-                        </a>
+                        <img src="/images/banner-productos/slide-3.png" class="producto-image product-link" />
                     </div>
     
                     <div class="producto-item">
-                        <a href="{{URL::to('/productos') }}">
-                            <img src="/images/banner-productos/slide-4.png" class="producto-image" />
-                        </a>
+                        <img src="/images/banner-productos/slide-4.png" class="producto-image product-link" />
                     </div>
         
                     <div class="producto-item">
-                        <a href="{{URL::to('/productos') }}">
-                            <img src="/images/banner-productos/slide-5.png" class="producto-image" />
-                        </a>
+                        <img src="/images/banner-productos/slide-5.png" class="producto-image product-link" />
                     </div>
         
                     <div class="producto-item">
-                        <a href="{{URL::to('/productos') }}">
-                            <img src="/images/banner-productos/slide-6.png" class="producto-image" />
-                        </a>
+                        <img src="/images/banner-productos/slide-6.png" class="producto-image product-link" />
                     </div>
                 </div>
             </div>
@@ -154,14 +142,10 @@
                 </div>
 
                 <div class="row brand-image-container">
-                    @php $count = 0; @endphp
                     @foreach($_BRANDS as $item)
-                        @if($count <= 2)
-                            <div class="col-md-4 col-sm-4 text-center">
-                                <img src="{{Storage::url($item->file)}}" class="img-responsive" alt="Responsive image" />
-                                @php $count++; @endphp
-                            </div>
-                        @endif
+                        <div class="col-md-4 col-sm-4 text-center">
+                            <img src="{{Storage::url($item->file)}}" class="img-responsive" alt="Responsive image" />
+                        </div>
                     @endforeach
                 </div>
             </div>
@@ -174,18 +158,56 @@
     <script>
         $( document ).ready(function() {
             $('.slider-productos').slick({
-                infinite: true,
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 arrows: true,
+                infinite: false,
                 responsive: [
                     {
                         breakpoint: 1024,
                         settings: {
                             slidesToShow: 3,
                             slidesToScroll: 3,
-                            infinite: true,
-                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
+            });
+
+            $('.initial-slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+                autoplay: true,
+            });
+
+            $('.brand-image-container').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
                         }
                     },
                     {
@@ -203,15 +225,10 @@
                         }
                     }
                 ]
-            });
+            })
 
-            $('.initial-slider').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                dots: true,
-                autoplay: true,
+            $('.product-link').click(function() {
+                window.location = `http://${window.location.host}/productos`;
             });
         });
     </script>
