@@ -14,7 +14,7 @@
             @endforeach
         </div>
 
-        <img src="/images/sparkie.png" class="sparkie-image" />
+        <img src="/images/sparkie-sello.png" class="sparkie-image" />
     </section><!-- End Hero -->
 
     <main id="main">
