@@ -6,7 +6,7 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>Madero Refacciones</h3>
+                        <h3>Madero Refaccionarias</h3>
                         <p>
                             Calle 31 No.168-E por 14 y 100
                             Francisco I. Madero<br>

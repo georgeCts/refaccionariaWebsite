@@ -1162,7 +1162,7 @@ div.brand-image-container img {
   font-family: Arial;
   font-size: 19px;
   font-weight: bold;
-  text-align: justify !important;
+  text-align: left !important;
   color: #FFF;
 }
 
@@ -1182,15 +1182,7 @@ div.brand-image-container img {
   font-family: Arial;
   font-size: 19px;
   font-weight: bold;
-  text-align: justify !important;
-  color: #FFF;
-}
-
-.about-us .content-3 p {
-  font-family: Arial;
-  font-size: 19px;
-  font-weight: bold;
-  text-align: justify !important;
+  text-align: left !important;
   color: #FFF;
 }
 

@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{URL::to('panel/productos/crear') }}" class="btn btn-success btn-block">Nuevo Producto <i class="mdi mdi-plus"></i></a>
+                    <a href="{{URL::to('logout-panel')}}" class="btn btn-danger btn-block">Cerrar sesión <i class="mdi mdi-exit-to-app"></i></a>
                 </div>
             </li>
 
