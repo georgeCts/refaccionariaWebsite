@@ -16,8 +16,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->share('_PAGE_TITLE', 'Madero Refacciones');
-        view()->share('_SYSTEM_NAME', 'Madero Refacciones Panel'); 
+        view()->share('_PAGE_TITLE', 'Madero Refaccionarias');
+        view()->share('_SYSTEM_NAME', 'Madero Refaccionarias Panel'); 
         View()->share('_SYSTEM_FULL_NAME', 'Sistema de Administración Web');
         View()->share('_SYSTEM_DESCRIPTION', 'La forma fácil de administrar el contenido de tu página web.');
         View()->share('_SYSTEM_VERSION', 'v1.0');

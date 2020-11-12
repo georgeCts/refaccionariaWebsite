@@ -82,7 +82,7 @@
                             {!! Form::close() !!}
                         </div>
                         
-                        <p class="footer-text text-center">copyright © 2020 Madero Refacciones. All rights reserved.</p>
+                        <p class="footer-text text-center">copyright © 2020 Madero Refaccionarias. All rights reserved.</p>
                     </div>
                 </div>
             </div>
