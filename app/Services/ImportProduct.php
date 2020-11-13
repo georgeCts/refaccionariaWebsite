@@ -39,13 +39,13 @@ class ImportProduct {
             try {
                 //dd($excel);
                 $response = DB::table("products")->insert([
-                    'name'              => $excel["nombre"] == null ? '' : $excel["nombre"],
-                    'description'       => $excel["descripcion"],
-                    'part_number'       => $excel["numero_parte"],
-                    'model'             => $excel["modelo"] == null ? '' : $excel["modelo"],
+                    'name'              => $excel["nombre"] == null ? '' : (string)$excel["nombre"],
+                    'description'       => (string)$excel["descripcion"],
+                    'part_number'       => (string)$excel["numero_parte"],
+                    'model'             => $excel["modelo"] == null ? '' : (string)$excel["modelo"],
                     'brand'             => $excel["marca"],
-                    'year'              => $excel["ano"] == null ? '' : $excel["ano"],
-                    'engine'            => $excel["motor"] == null ? '' : $excel["motor"],
+                    'year'              => $excel["ano"] == null ? '' : (string)$excel["ano"],
+                    'engine'            => $excel["motor"] == null ? '' : (string)$excel["motor"],
                     'created_at'        => now(),
                     'updated_at'        => now(),
                     'deleted'           => false
