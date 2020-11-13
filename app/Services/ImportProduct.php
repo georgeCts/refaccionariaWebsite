@@ -57,6 +57,9 @@ class ImportProduct {
                 array_push($excel, "Algun dato ingresado es invalido, favor de guardar el producto manualmente.");
                 return $excel;
             }
+        } else {
+            array_push($excel, "Este numero de parte ya se encuentra registrado en otro producto.");
+            return $excel;
         }
 
         return $response;
