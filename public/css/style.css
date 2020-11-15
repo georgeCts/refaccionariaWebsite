@@ -23,6 +23,10 @@ a {
   color: #f03c02;
 }
 
+a.phone {
+  color: #FFF;
+}
+
 a:hover {
   color: #fd5c28;
   text-decoration: none;

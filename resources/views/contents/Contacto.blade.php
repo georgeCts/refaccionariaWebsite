@@ -61,12 +61,18 @@
         
                             <div class="col-lg-4 info mt-4 mt-lg-0">
                                 <i class="icofont-phone"></i>
-                                <p>{{ $item->phone }}</p>
+                                <p>
+                                    <a class="phone" href="tel:{{$item->phone}}">{{ $item->phone }}</a>
+                                </p>
                             </div>
         
                             <div class="col-lg-4 info mt-4 mt-lg-0">
                                 <i class="icofont-whatsapp"></i>
-                                <p>{{$item->whatsapp1}}<br>{{$item->whatsapp2}}</p>
+                                <p>
+                                    <a class="phone" href="https://api.whatsapp.com/send?phone=52{{$item->whatsapp1}}&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%2C%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank">{{$item->whatsapp1}}</a>
+                                    <br />
+                                    <a class="phone" href="https://api.whatsapp.com/send?phone=52{{$item->whatsapp2}}&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%2C%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank">{{$item->whatsapp2}}</a>
+                                </p>
                             </div>
                         </div>
                     @endforeach

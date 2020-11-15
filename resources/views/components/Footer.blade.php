@@ -12,7 +12,7 @@
                             Francisco I. Madero<br>
                             97240 Mérida, Yuc.<br><br>
                             <strong>Teléfono:</strong> (999) 912 01 00<br>
-                            <strong>Email:</strong> ventas@refaccionariasmadero.com.mx<br>
+                            <strong>Email:</strong> ventas@maderorefaccionarias.com.mx<br>
                         </p>
                     </div>
 
