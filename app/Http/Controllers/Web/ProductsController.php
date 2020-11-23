@@ -21,16 +21,16 @@ class ProductsController extends Controller
         $query->where('deleted', false);
 
         if(!is_null($request->brand))
-            $query->where('brand', $request->brand);
+            $query->where('brand_id', $request->brand);
 
         if(!is_null($request->model))
-            $query->where('model', $request->model);
+            $query->where('brand_model_id', $request->model);
 
         if(!is_null($request->year))
-            $query->where('year', $request->year);
+            $query->where('product_year_id', $request->year);
 
         if(!is_null($request->engine))
-            $query->where('engine', $request->engine);
+            $query->where('product_engine_id', $request->engine);
 
         if(!is_null($request->search)) {
             $query->where(function($query2) use ($request) {

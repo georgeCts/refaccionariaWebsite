@@ -6,28 +6,28 @@
                     <div class="form-group col">
                         <select class="form-control" v-model="filters.brand">
                             <option value="" selected>Marca</option>
-                            <option v-for="(item, index) in brandsComp" :key="index" :value="item.brand">{{item.brand}}</option>
+                            <option v-for="(item, index) in brandsComp" :key="index" :value="item.id">{{item.name}}</option>
                         </select>
                     </div>
 
                     <div class="form-group col">
                         <select class="form-control" v-model="filters.model">
                             <option value="" selected>Modelo</option>
-                            <option v-for="(item, index) in modelsComp" :key="index" :value="item.model">{{item.model}}</option>
+                            <option v-for="(item, index) in modelsComp" :key="index" :value="item.id">{{item.name}}</option>
                         </select>
                     </div>
 
                     <div class="form-group col">
                         <select class="form-control" v-model="filters.year">
                             <option value="" selected>Año</option>
-                            <option v-for="(item, index) in yearsComp" :key="index" :value="item.year">{{item.year}}</option>
+                            <option v-for="(item, index) in yearsComp" :key="index" :value="item.id">{{item.year}}</option>
                         </select>
                     </div>
 
                     <div class="form-group col">
                         <select class="form-control" v-model="filters.engine">
                             <option value="" selected>Motor</option>
-                            <option v-for="(item, index) in engineComp" :key="index" :value="item.engine">{{item.engine}}</option>
+                            <option v-for="(item, index) in engineComp" :key="index" :value="item.id">{{item.engine}}</option>
                         </select>
                     </div>
                 </div>
@@ -121,24 +121,24 @@
                 }
             },
             'filters.brand': function(newValue, oldValue) {
-                if(newValue.trim() != oldValue.trim()) {
-                    this.getData(`${this.server}api/products`);
+                console.log(newValue, oldValue);
+                this.getData(`${this.server}api/products`);
+
+                if(newValue != null & newValue != "") {
+                    this.getModels();
+                } else {
+                    this.filters.brand = "";
+                    this.models = [];
                 }
             },
             'filters.model': function(newValue, oldValue) {
-                if(newValue.trim() != oldValue.trim()) {
-                    this.getData(`${this.server}api/products`);
-                }
+                this.getData(`${this.server}api/products`);
             },
             'filters.year': function(newValue, oldValue) {
-                if(newValue.trim() != oldValue.trim()) {
-                    this.getData(`${this.server}api/products`);
-                }
+                this.getData(`${this.server}api/products`);
             },
             'filters.engine': function(newValue, oldValue) {
-                if(newValue.trim() != oldValue.trim()) {
-                    this.getData(`${this.server}api/products`);
-                }
+                this.getData(`${this.server}api/products`);
             },
         },
         computed: {
@@ -168,16 +168,16 @@
                 return output
             },
             brandsComp() {
-                return this.brands.filter(item => item.brand != '');
+                return this.brands;
             },
             modelsComp() {
-                return this.models.filter(item => item.model != '');
+                return this.models;
             },
             yearsComp() {
-                return this.years.filter(item => item.year != '');
+                return this.years;
             },
             engineComp() {
-                return this.engine.filter(item => item.engine != '');
+                return this.engine;
             },
         },
         methods: {
@@ -198,10 +198,10 @@
             getData(url) {
                 let params = {
                     search  : this.filters.search.trim() != '' ? this.filters.search.trim() : null,
-                    brand   : this.filters.brand.trim() != '' ? this.filters.brand : null,
-                    model   : this.filters.model.trim() != '' ? this.filters.model : null,
-                    year    : this.filters.year.trim() != '' ? this.filters.year : null,
-                    engine  : this.filters.engine.trim() != '' ? this.filters.engine : null,
+                    brand   : this.filters.brand != '' ? this.filters.brand : null,
+                    model   : this.filters.model !='' ? this.filters.model : null,
+                    year    : this.filters.year  != '' ? this.filters.year : null,
+                    engine  : this.filters.engine  != '' ? this.filters.engine : null,
                     _token  : this.token
                 };
 
@@ -220,19 +220,34 @@
                     })
                     .catch(error => console.error(error));
             },
-            getFilters() {
-                axios.get(`${this.server}api/products/filters`)
-                    .then(result => {
-                        this.brands = result.data.brands;
-                        this.models = result.data.models;
-                        this.years  = result.data.years;
-                        this.engine = result.data.engine;
+            getCollection() {
+                axios.get(`${this.server}api/products/loadCollections`)
+                    .then(response => {
+                        let data        = response.data;
+                        this.brands     = data.lstBrands;
+                        this.years      = data.lstYears;
+                        this.engine     = data.lstEngines;
+                        
                     })
                     .catch(error => console.error(error));
-            }
+            },
+            getModels() {
+                let params = {
+                    id : this.filters.brand
+                };
+
+                axios.get(`${this.server}/api/products/loadModels`, {params: params})
+                    .then(response => {
+                        this.models = response.data;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        this.models = [];
+                    });
+            },
         },
         async mounted() {
-            await this.getFilters();
+            await this.getCollection();
             await this.getData(`${this.server}api/products`);
         }
     }
