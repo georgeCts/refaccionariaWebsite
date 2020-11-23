@@ -138,6 +138,22 @@
                     </ul>
                 </div>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#module7" aria-expanded="false" aria-controls="module5">
+                    <i class="menu-icon mdi mdi-watermark"></i>
+                    <span class="menu-title">Catálogos de Marcas</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="module7">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{URL::to('panel/brands') }}">Lista</a>
+                            <a class="nav-link" href="{{URL::to('panel/brands/brand-crear') }}">Nueva marca</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </nav>
     <!-- partial -->

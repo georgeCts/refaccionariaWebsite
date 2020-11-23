@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddParametersProducts extends Migration
+class CreateProductsEngines extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class AddParametersProducts extends Migration
      */
     public function up()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->string('brand', 255);
-            $table->string('year', 5)->nullable();
-            $table->string('engine', 50)->nullable();
+        Schema::create('products_engines', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('engine', 10);
+            $table->boolean('deleted')->default(0);
         });
     }
 
@@ -27,6 +27,6 @@ class AddParametersProducts extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('products_engines');
     }
 }

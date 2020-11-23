@@ -42,7 +42,7 @@
                                     <th>SKU</th>
                                     <th>Marca</th>
                                     <th>Modelo</th>
-                                    <th>Fecha</th>
+                                    <th>Fecha modificación</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -52,9 +52,9 @@
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->part_number }}</td>
-                                        <td>{{ $item->brand }}</td>
-                                        <td>{{ $item->model }}</td>
-                                        <td>{{ $item->created_at }}</td>
+                                        <td>@if(!is_null($item->brand)) {{$item->brand->name}} @endif</td>
+                                        <td>@if(!is_null($item->model)) {{$item->model->name}} @endif</td>
+                                        <td>{{ $item->updated_at }}</td>
                                         <td>
                                             <a href="/panel/productos/producto-editar/{{ $item->id }}" class="btn btn-sm btn-warning">Editar</a>
                                         </td>

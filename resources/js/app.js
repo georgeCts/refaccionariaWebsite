@@ -9,6 +9,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 const Swal = require('sweetalert2')
+const baseUrl     = `http://${window.location.host}`;
 
 /**
  * The following block of code may be used to automatically register your
@@ -91,6 +92,87 @@ if(document.getElementById('panel-modal-product-app')) {
                     Swal.fire('Upps!', 'Necesitas cargar el excel de productos.', 'warning');
                 }
             }
+        }
+    });
+}
+
+if(document.getElementById('panel-product-app')) {
+    new Vue({
+        el: '#panel-product-app',
+        data: {
+            brands: [],
+            models: [],
+            years: [],
+            engines: [],
+            brand_id: 0,
+            brand_model_id: 0,
+            product_year: 0,
+            product_engine: 0,
+
+            url: `${baseUrl}/api/products`,
+            token: window.CSRF_TOKEN
+        },
+        watch: {
+            brand_id: function(value) {
+                if(value != null || value != 0) {
+                    this.getModels();
+                } else {
+                    this.brand_model_id = 0;
+                    this.models = [];
+                }
+            }
+        },
+        methods: {
+            getCollection() {
+                axios.get(`${this.url}/loadCollections`)
+                    .then(response => {
+                        let data        = response.data;
+                        this.brands     = data.lstBrands;
+                        this.years      = data.lstYears;
+                        this.engines    = data.lstEngines;
+                        
+                    })
+                    .catch(error => console.error(error));
+            },
+            getModels() {
+                let params = {
+                    id : this.brand_id
+                };
+
+                axios.get(`${this.url}/loadModels`, {params: params})
+                    .then(response => {
+                        this.models = response.data;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        this.brand_model_id = 0;
+                        this.models = [];
+                    });
+            },
+            getProduct(id) {
+                let params = {
+                    id: id
+                };
+
+                axios.get(`${this.url}/loadProduct`, {params: params})
+                    .then(response => {
+                        let data                = response.data;
+                        this.brand_id           = data.brand_id != null ? data.brand_id : 0;
+                        this.brand_model_id     = data.brand_model_id != null ? data.brand_model_id : 0;
+                        this.product_year       = data.product_year_id != null ? data.product_year_id : 0;
+                        this.product_engine     = data.product_engine_id != null ? data.product_engine_id : 0;
+                    })
+                    .catch(err => console.error(err));
+            }
+        },
+        async mounted() {
+            var inputVal = $('#hddIdProduct') ? $('#hddIdProduct').val() : null;
+            await this.getCollection();
+
+            if(inputVal != null) {
+                this.getProduct(inputVal);
+            }
+
         }
     });
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableProducts extends Migration
+class CreateBrandsModels extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,13 @@ class CreateTableProducts extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('brands_models', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('brand_id')->nullable()->unsigned();
-            $table->string('name', 255);
-            $table->text('description')->nullable();
-            $table->string('part_number', 100);
-            $table->string('file', 128)->nullable();
-            
+            $table->integer('brand_id')->unsigned();
+            $table->string('name', 150);
             $table->timestamps();
             $table->boolean('deleted')->default(0);
 
-            //FOREIGNS KEYS
             $table->foreign('brand_id')->references('id')->on('brands');
         });
     }
@@ -36,6 +31,6 @@ class CreateTableProducts extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('brands_models');
     }
 }

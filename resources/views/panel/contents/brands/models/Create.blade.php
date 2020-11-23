@@ -1,4 +1,4 @@
-@section('title', 'Marcas')
+@section('title', 'Modelos')
 
 @section('content')
     <div class="row">
@@ -14,34 +14,27 @@
         </div>
     </div>
 
-    {!! Form::open(['route' => 'new-brand', 'method' => 'POST']) !!}
+    {!! Form::open(['route' => 'new-model', 'method' => 'POST']) !!}
+        <input type="hidden" name="hddIdBrand" value="{{$objBrand->id}}" />
         <div class="row">
             <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Crear Marca</h4>
-                        <p class="card-description">La marca creada se mostrará en el catálogo principal de la página web</p>
+                        <h4 class="card-title">Crear Modelo de la marca {{$objBrand->name}}</h4>
+                        <p class="card-description">El modelo creado se mostrará en el catálogo de productos de la página web</p>
                         
                         <div class="form-group">
                             <label for="txtTitle">Nombre</label>
-                            <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Nombre de la marca" />
+                            <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Nombre del modelo" />
                         </div>
 
                         <button type="submit" class="btn btn-success mr-2">Guardar</button>
-                        <a href="/panel/brands" role="button" class="btn btn-light">Cancelar</a>
+                        <a href="/panel/brands/{{$objBrand->id}}/models" role="button" class="btn btn-light">Cancelar</a>
                     </div>
                 </div>
             </div>
         </div>
     {!! Form::close() !!}
-@endsection
-
-@section('scripts')
-    <script>
-        $(document).ready(function() {
-
-        });
-    </script>
 @endsection
 
 @include('panel.components.Navbar')

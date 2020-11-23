@@ -15,7 +15,7 @@
     </div>
 
     {!! Form::open(['route' => 'new-product', 'method' => 'POST', 'files' => true]) !!}
-        <div class="row">
+        <div class="row" id="panel-product-app">
             <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
@@ -31,25 +31,45 @@
                             <label for="part_number">SKU</label>
                             <input type="text" class="form-control" id="part_number" name="part_number" placeholder="Número de parte" required />
                         </div>
-
+                        
                         <div class="form-group">
-                            <label for="model">Modelo</label>
-                            <input type="text" class="form-control" id="model" name="model" placeholder="Modelo del producto" />
+                            <label for="brand_id">Marca</label>
+                            <select class="form-control form-control-sm" id="brand_id" name="brand_id" v-model="brand_id">
+                                <option value="0" selected> - </option>
+                                <template v-for="brand in brands">
+                                    <option :key="brand.id" :value="brand.id">@{{brand.name}}</option>
+                                </template>
+                            </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="brand">Marca</label>
-                            <input type="text" class="form-control" id="brand" name="brand" placeholder="Marca del producto" required />
+                            <label for="brand_model_id">Modelo</label>
+                            <select class="form-control form-control-sm" id="brand_model_id" name="brand_model_id" v-model="brand_model_id">
+                                <option value="0" selected> - </option>
+                                <template v-for="model in models">
+                                    <option :key="model.id" :value="model.id">@{{model.name}}</option>
+                                </template>
+                            </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="year">Año</label>
-                            <input type="text" class="form-control" id="year" name="year" placeholder="Año compatible" />
+                            <label for="product_year_id">Año</label>
+                            <select class="form-control form-control-sm" id="product_year_id" name="product_year_id" v-model="product_year">
+                                <option value="0" selected> - </option>
+                                <template v-for="item in years">
+                                    <option :key="item.id" :value="item.id">@{{item.year}}</option>
+                                </template>
+                            </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="engine">Motor</label>
-                            <input type="text" class="form-control" id="engine" name="engine" placeholder="Motor compatible" />
+                            <label for="product_engine_id">Motor</label>
+                            <select class="form-control form-control-sm" id="product_engine_id" name="product_engine_id" v-model="product_engine">
+                                <option value="0" selected> - </option>
+                                <template v-for="item in engines">
+                                    <option :key="item.id" :value="item.id">@{{item.engine}}</option>
+                                </template>
+                            </select>
                         </div>
 
                         <div class="form-group">

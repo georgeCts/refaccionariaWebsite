@@ -1,4 +1,4 @@
-@section('title', 'Marcas')
+@section('title', 'Modelos')
 
 @section('content')
     <div class="row">
@@ -14,34 +14,29 @@
         </div>
     </div>
 
-    {!! Form::open(['route' => 'new-brand', 'method' => 'POST']) !!}
+    {!! Form::open(['route' => 'update-model', 'method' => 'PUT']) !!}
+        <input type="hidden" name="hddIdModel" value="{{$objModel->id}}" />
+        <input type="hidden" name="hddIdBrand" value="{{$objModel->brand_id}}" />
+
         <div class="row">
             <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Crear Marca</h4>
-                        <p class="card-description">La marca creada se mostrará en el catálogo principal de la página web</p>
+                        <h4 class="card-title">Modificar Modelo</h4>
+                        <p class="card-description">El modelo modificado se mostrará en el catálogo de productos de la página web</p>
                         
                         <div class="form-group">
-                            <label for="txtTitle">Nombre</label>
-                            <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Nombre de la marca" />
+                            <label for="txtTitle">Título</label>
+                            <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Nombre del modelo" value="{{ $objModel->name }}" />
                         </div>
 
                         <button type="submit" class="btn btn-success mr-2">Guardar</button>
-                        <a href="/panel/brands" role="button" class="btn btn-light">Cancelar</a>
+                        <a href="/panel/brands/{{$objModel->brand_id}}/models" role="button" class="btn btn-light">Cancelar</a>
                     </div>
                 </div>
             </div>
         </div>
     {!! Form::close() !!}
-@endsection
-
-@section('scripts')
-    <script>
-        $(document).ready(function() {
-
-        });
-    </script>
 @endsection
 
 @include('panel.components.Navbar')

@@ -12,6 +12,10 @@ use App\Library\Returns\ActionReturn;
 use App\Library\Returns\AjaxReturn;
 use App\Services\ImportProduct;
 use App\Product;
+use App\ProductYear;
+use App\ProductEngine;
+use App\Brand;
+use App\BrandModel;
 use Storage;
 
 class ProductsController extends Controller
@@ -30,7 +34,10 @@ class ProductsController extends Controller
     }
 
     public function create() {
-        return view('panel.contents.products.Create');
+        $lstBrands  = Brand::where('deleted', false)->orderBy('name', 'ASC')->get();
+        $lstYears   = ProductYear::where('deleted', false)->orderBy('year', 'ASC')->get();
+        $lstEngines = ProductEngine::where('deleted', false)->orderBy('engine', 'ASC')->get();
+        return view('panel.contents.products.Create', ['lstBrands' => $lstBrands, 'lstYears' => $lstYears, 'lstEngines' => $lstEngines]);
     }
 
     public function store(Request $request) {
@@ -47,15 +54,15 @@ class ProductsController extends Controller
     
                 try {
                     if($request->image->storeAs('productos', $fileName)) {
-                        $objProduct                 = new Product();
-                        $objProduct->name           = $request->name;
-                        $objProduct->description    = $request->description;
-                        $objProduct->model          = $request->model != '' ? $request->model : '';
-                        $objProduct->part_number    = $request->part_number;
-                        $objProduct->brand          = $request->brand != '' ? $request->brand : '';
-                        $objProduct->year           = $request->year;
-                        $objProduct->engine         = $request->engine;
-                        $objProduct->file           = $url;
+                        $objProduct                     = new Product();
+                        $objProduct->name               = $request->name;
+                        $objProduct->description        = $request->description;
+                        $objProduct->part_number        = $request->part_number;
+                        $objProduct->brand_id           = $request->brand_id != 0 ? $request->brand_id : null;
+                        $objProduct->brand_model_id     = $request->brand_model_id != 0 ? $request->brand_model_id : null;
+                        $objProduct->product_year_id    = $request->product_year_id != 0 ? $request->product_year_id : null;
+                        $objProduct->product_engine_id  = $request->product_engine_id != 0 ? $request->product_engine_id : null;
+                        $objProduct->file               = $url;
                         $objProduct->save();
     
                         $objReturn->setResult(true, Messages::PRODUCTS_CREATE_TITLE, Messages::PRODUCTS_CREATE_MESSAGE);
@@ -97,13 +104,14 @@ class ProductsController extends Controller
 
             if($product == null) {
                 try {
-                    $objProduct->name           = $request->name;
-                    $objProduct->description    = $request->description;
-                    $objProduct->model          = $request->model != '' ? $request->model : '';
-                    $objProduct->part_number    = $request->part_number;
-                    $objProduct->brand          = $request->brand != '' ? $request->brand : '';
-                    $objProduct->year           = $request->year;
-                    $objProduct->engine         = $request->engine;
+                    $objProduct->name               = $request->name;
+                    $objProduct->description        = $request->description;
+                    $objProduct->part_number        = $request->part_number;
+                    $objProduct->brand_id           = $request->brand_id != 0 ? $request->brand_id : null;
+                    $objProduct->brand_model_id     = $request->brand_model_id != 0 ? $request->brand_model_id : null;
+                    $objProduct->product_year_id    = $request->product_year_id != 0 ? $request->product_year_id : null;
+                    $objProduct->product_engine_id  = $request->product_engine_id != 0 ? $request->product_engine_id : null;
+                    
     
                     if($request->file('image')) {
                         Storage::delete($objProduct->file);
@@ -150,5 +158,28 @@ class ProductsController extends Controller
                 return response()->json(['message' => 'Datos guardados correctamente.', 'type' => 'success'], 202);
             }
         }
+    }
+
+    public function loadCollection(Request $request) {
+        $lstBrands  = Brand::where('deleted', false)->orderBy('name', 'ASC')->get();
+        $lstYears   = ProductYear::where('deleted', false)->orderBy('year', 'ASC')->get();
+        $lstEngines = ProductEngine::where('deleted', false)->orderBy('engine', 'ASC')->get();
+
+        return response()->json([
+            "lstBrands"     => $lstBrands,
+            "lstYears"      => $lstYears,
+            "lstEngines"    => $lstEngines,
+        ], 200);
+    }
+
+    public function loadModels(Request $request) {
+        $lstModels = BrandModel::where('brand_id', $request->id)->where('deleted', false)->orderBy('name', 'ASC')->get();
+
+        return response()->json($lstModels, 200);
+    }
+
+    public function loadProduct(Request $request) {
+        $objProduct   = Product::where('id', $request->id)->first();
+        return response()->json($objProduct, 200);
     }
 }

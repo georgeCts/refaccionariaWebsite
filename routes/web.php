@@ -59,12 +59,20 @@ Route::group([  'prefix'    => 'panel',
     Route::put('sucursales/sucursal-editar', ['as' => 'update-location', 'uses' => 'Admin\LocationsController@update']);
 
     //MARCAS
-    Route::get('marcas', 'Admin\BrandsController@index');
-    Route::get('marcas/crear', 'Admin\BrandsController@create');
-    Route::post('marcas/crear', ['as' => 'new-brand', 'uses' => 'Admin\BrandsController@store']);
+    Route::get('brands', 'Admin\BrandsController@index');
+    Route::get('brands/brand-crear', 'Admin\BrandsController@create');
+    Route::post('brands/brand-crear', ['as' => 'new-brand', 'uses' => 'Admin\BrandsController@store']);
 
-    Route::get('marcas/editar/{id}', 'Admin\BrandsController@edit');
-    Route::put('marcas/editar', ['as' => 'update-brand', 'uses' => 'Admin\BrandsController@update']);
+    Route::get('brands/brand-editar/{id}', 'Admin\BrandsController@edit');
+    Route::put('brands/brand-editar', ['as' => 'update-brand', 'uses' => 'Admin\BrandsController@update']);
+
+    //MODELOS
+    Route::get('brands/{id}/models', 'Admin\ModelsController@index');
+    Route::get('brands/{id}/models/model-crear', 'Admin\ModelsController@create');
+    Route::post('brands/models', ['as' => 'new-model', 'uses' => 'Admin\ModelsController@store']);
+
+    Route::get('brands/models/model-editar/{id}', 'Admin\ModelsController@edit')->name('model.edit');
+    Route::put('brands/models', ['as' => 'update-model', 'uses' => 'Admin\ModelsController@update']);
 
     //BOLSA DE TRABAJO
     Route::get('bolsa-trabajo', 'Admin\JobsController@index');

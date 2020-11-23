@@ -201,6 +201,23 @@ class Errors {
 	const LOCATIONS_EDIT_02_ID = "9_0003";
 	const LOCATIONS_EDIT_02_TITLE = "Error de modificación";
 	const LOCATIONS_EDIT_02_MESSAGE = "La sucursal no se pudo modificar. Póngase en contacto con el administrador.";
+
+	//MODELS
+	const MODELS_CREATE_01_ID = "10_0001";
+	const MODELS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const MODELS_CREATE_01_MESSAGE = "La marca asociada a este modelo no existe.";
+
+	const MODELS_CREATE_02_ID = "10_0002";
+	const MODELS_CREATE_02_TITLE = "Error de nuevo registro.";
+	const MODELS_CREATE_02_MESSAGE = "El modelo no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const MODELS_EDIT_01_ID = "10_0003";
+	const MODELS_EDIT_01_TITLE = "Error de modificación";
+	const MODELS_EDIT_01_MESSAGE = "No se pudo encontrar el modelo a modificar.";	
+
+	const MODELS_EDIT_02_ID = "10_0004";
+	const MODELS_EDIT_02_TITLE = "Error de modificación";
+	const MODELS_EDIT_02_MESSAGE = "El modelo no se pudo modificar. Póngase en contacto con el administrador.";
 	
 }
 
