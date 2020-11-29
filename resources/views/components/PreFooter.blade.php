@@ -23,7 +23,7 @@
 
         <div class="row suscripcion">
             <div class="col-lg-12 text-center">
-                <h3>SUSCRIBETE AHORA</h3>
+                <h3 class="go-contact">SUSCRIBETE AHORA</h3>
                 <span>OBTENDRÁS DESCUENTOS Y PROMOCIONES EXCLUSIVAS</span>
             </div>
 
@@ -74,6 +74,11 @@
                         }
                     }
                 ]
+            });
+
+            $('.go-contact').click(function() {
+                let baseUrl = `http://${window.location.host}`;
+                window.location.replace(`${baseUrl}/contacto`);
             });
         });
     </script>

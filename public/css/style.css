@@ -1656,6 +1656,7 @@ section.contact {
   color: #000 !important;
   margin: 0 !important;
   padding: 0 !important;
+  cursor: pointer;
 }
 
 .suscripcion h4 {

@@ -54215,7 +54215,7 @@ exports = module.exports = __webpack_require__(13)(false);
 
 
 // module
-exports.push([module.i, "\n.products-viewer input[data-v-129af67e] {\n    height: 44px;\n    width: 300px;\n    border-color: #18FD00;\n    background-color: #000;\n\n    font-family: Arial;\n    font-size: 14px;\n    color: grey;\n}\ndiv.viewer-info[data-v-129af67e] {\n    text-align: right;\n    margin-bottom: 25px;\n}\ndiv.viewer-info span[data-v-129af67e] {\n    font-family: Arial;\n    font-size: 18px;\n    color: #FFF;\n}\ndiv.viewer-info span.total > span[data-v-129af67e],\ndiv.viewer-info span.pages > span[data-v-129af67e] {\n    color: #18FD00 !important;\n}\ndiv.viewer-info span.total[data-v-129af67e],\ndiv.viewer-info span.pages[data-v-129af67e] {\n    margin-left: 15px;\n}\ndiv.product-item[data-v-129af67e] {\n    margin-bottom: 30px;\n}\n.page-link[data-v-129af67e] {\n    color: #000 !important;\n}\n.page-item.disabled .page-link[data-v-129af67e] {\n    color: #6c757d !important;\n}\n.page-item.active .page-link[data-v-129af67e] {\n    background-color: #18FD00;\n    border-color: #18FD00;\n}\n", ""]);
+exports.push([module.i, "\n.icofont-refresh[data-v-129af67e] {\n    color: #18FD00;\n    font-size: 22px;\n    padding: 5px;\n    display: inline-block;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.icofont-refresh[data-v-129af67e]:hover {\n    color: #f03c02;\n}\n.products-viewer input[data-v-129af67e] {\n    height: 44px;\n    width: 300px;\n    border-color: #18FD00;\n    background-color: #000;\n\n    font-family: Arial;\n    font-size: 14px;\n    color: grey;\n}\ndiv.viewer-info[data-v-129af67e] {\n    text-align: right;\n    margin-bottom: 25px;\n}\ndiv.viewer-info span[data-v-129af67e] {\n    font-family: Arial;\n    font-size: 18px;\n    color: #FFF;\n}\ndiv.viewer-info span.total > span[data-v-129af67e],\ndiv.viewer-info span.pages > span[data-v-129af67e] {\n    color: #18FD00 !important;\n}\ndiv.viewer-info span.total[data-v-129af67e],\ndiv.viewer-info span.pages[data-v-129af67e] {\n    margin-left: 15px;\n}\ndiv.product-item[data-v-129af67e] {\n    margin-bottom: 30px;\n}\n.page-link[data-v-129af67e] {\n    color: #000 !important;\n}\n.page-item.disabled .page-link[data-v-129af67e] {\n    color: #6c757d !important;\n}\n.page-item.active .page-link[data-v-129af67e] {\n    background-color: #18FD00;\n    border-color: #18FD00;\n}\n", ""]);
 
 // exports
 
@@ -54267,6 +54267,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
+//
+//
+//
+//
 //
 //
 //
@@ -54515,6 +54519,13 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                 console.error(err);
                 _this3.models = [];
             });
+        },
+        cleanFilters: function cleanFilters() {
+            this.filters.search = '';
+            this.filters.brand = '';
+            this.filters.model = '';
+            this.filters.engine = '';
+            this.filters.year = '';
         }
     },
     mounted: function () {
@@ -54531,6 +54542,10 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                             return this.getData(this.server + 'api/products');
 
                         case 4:
+
+                            $('[data-toggle="tooltip"]').tooltip();
+
+                        case 5:
                         case 'end':
                             return _context.stop();
                     }
@@ -54748,6 +54763,18 @@ var render = function() {
               ],
               2
             )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group col" }, [
+            _c("i", {
+              staticClass: "icofont-refresh",
+              attrs: {
+                "data-toggle": "tooltip",
+                "data-placement": "right",
+                title: "Limpiar filtros"
+              },
+              on: { click: _vm.cleanFilters }
+            })
           ])
         ])
       ]),

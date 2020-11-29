@@ -30,6 +30,10 @@
                             <option v-for="(item, index) in engineComp" :key="index" :value="item.id">{{item.engine}}</option>
                         </select>
                     </div>
+
+                    <div class="form-group col">
+                        <i class="icofont-refresh" @click="cleanFilters" data-toggle="tooltip" data-placement="right" title="Limpiar filtros"></i>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 text-right mb-2">
@@ -245,15 +249,37 @@
                         this.models = [];
                     });
             },
+            cleanFilters() {
+                this.filters.search = '';
+                this.filters.brand  = '';
+                this.filters.model  = '';
+                this.filters.engine = '';
+                this.filters.year   = '';
+            }
         },
         async mounted() {
             await this.getCollection();
             await this.getData(`${this.server}api/products`);
+
+            $('[data-toggle="tooltip"]').tooltip()
         }
     }
 </script>
 
 <style scoped>
+    .icofont-refresh {
+        color: #18FD00;
+        font-size: 22px;
+        padding: 5px;
+        display: inline-block;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .icofont-refresh:hover {
+        color: #f03c02;
+    }
+
     .products-viewer input {
         height: 44px;
         width: 300px;
