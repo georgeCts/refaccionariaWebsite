@@ -1,4 +1,4 @@
-@section('title', 'Sliders')
+@section('title', 'Marcas')
 
 @section('content')
     <div class="row">
@@ -28,7 +28,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-success mr-2">Guardar</button>
-                        <a href="/panel/marcas" role="button" class="btn btn-light">Cancelar</a>
+                        <a href="/panel/brands" role="button" class="btn btn-light">Cancelar</a>
                     </div>
                 </div>
             </div>

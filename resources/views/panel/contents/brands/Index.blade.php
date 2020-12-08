@@ -1,4 +1,4 @@
-@section('title', 'Sliders')
+@section('title', 'Marcas')
 
 @section('content')
     <div class="row">
@@ -27,8 +27,8 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Nombre</th>
-                                    <th>Actualizó</th>
-                                    <th>Fecha</th>
+                                    <th>Modelos registrados</th>
+                                    <th>Fecha modificación</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -37,10 +37,11 @@
                                     <tr>
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->updatedUser->name }} {{ $item->updatedUser->last_name }}</td>
+                                        <td>{{ sizeOf($item->models)}}</td>
                                         <td>{{ $item->updated_at }}</td>
                                         <td>
-                                            <a href="/panel/marcas/editar/{{ $item->id }}" class="btn btn-sm btn-warning">Editar</a>
+                                            <a href="/panel/brands/{{ $item->id }}/models" class="btn btn-sm btn-primary">Modelos</a>
+                                            <a href="/panel/brands/brand-editar/{{ $item->id }}" class="btn btn-sm btn-warning">Editar</a>
                                         </td>
                                     </tr>
                                 @endforeach

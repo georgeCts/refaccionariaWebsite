@@ -28,6 +28,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Título</th>
+                                    <th>Sucursal</th>
                                     <th>Estatus</th>
                                     <th>Fecha</th>
                                     <th>Acciones</th>
@@ -37,7 +38,8 @@
                                 @foreach($lstJobs as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td>{{ $item->title }}</td>
+                                        <td>{{ $item->job }}</td>
+                                        <td>{{ $item->location->name }}</td>
                                         <td>
                                             @if($item->status != 'PUBLISHED')
                                                 <label class="badge badge-info">{{ $item->status }}</label>
@@ -47,7 +49,7 @@
                                         </td>
                                         <td>{{ $item->created_at }}</td>
                                         <td>
-                                            <a href="/panel/bolsa-de-trabajo/editar/{{ $item->id }}" class="btn btn-sm btn-warning">Editar</a>
+                                            <a href="/panel/bolsa-trabajo/trabajo-editar/{{ $item->id }}" class="btn btn-sm btn-warning">Editar</a>
                                         </td>
                                     </tr>
                                 @endforeach

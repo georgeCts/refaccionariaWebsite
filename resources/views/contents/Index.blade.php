@@ -6,95 +6,151 @@
 @endsection
 
 @section('content')
-    <div class="content-slider">
-        <img class="" src="/images/almacen.jpg" style="width: 100%; height: 843px;" />
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="initial">
+        <div class="initial-slider">
+            @foreach ($lstSliders as $item)
+                <img src="{{Storage::url($item->file)}}" alt="{{$item->title}}" />
+            @endforeach
+        </div>
 
-        <img src="/images/slider-seccion/014-sello-garantia.png" style="position: absolute; top: 430px; left: 10px; z-index: 21; width: 250px" />
-        <img src="/images/slider-seccion/015-sparkie.png" style="position: absolute; top: 410px; left: 10px; z-index: 21; width: 400px" />
-        <img src="/images/slider-seccion/013-fondo.png" style="position: absolute; top: 60px; left: -1px; z-index: 20;" />
+        <img src="/images/sparkie-sello.png" class="sparkie-image" />
+    </section><!-- End Hero -->
 
-        <span class="slider cintillo-negro" style="position: absolute; top: 618px; right: 65px; z-index: 22;">Más Información</span>
-        <span class="slider cintillo-blanco" style="position: absolute; top: 645px; right: 50px; z-index: 22;">SURTIDO AMPLIO</span>
+    <main id="main">
+        <!-- ======= Cta Section ======= -->
+        <section id="cta" class="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 text-center text-lg-left">
+                        <h3>Nosotros si la tenemos</h3>
+                        <p>
+                            Contamos con un inventario que supera los <span>149,000</span> productos siendo unos de los 
+                            más amplios del sureste, estamos seguros que nosotros <span>si</span> tenemos la refacción
+                            que tu auto o camión necesita.
+                        </p>
+
+                        <div class="contact-box">
+                            <span>CONTÁCTANOS</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 phone-container" style="position: absolute; right: 0;">
+                        <img class="phone-image" src="/images/banner-contacto/020-telefono.png" style="position: relative;" />
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Cta Section -->
+
+        <!-- ======= Welcome Section ======= -->
+        <section id="welcome" class="welcome">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-center">
+                        <img src="/images/banner-bienvenido/022-logo-slogan.png" style="width: 80%;" />
+                    </div>
+
+                    <div class="col-lg-6 text-center">
+                        <h3>Bienvenido</h3>
+                        <p>
+                            Somos una Empresa Yucateca líder en la comercialización de Refacciones Automotrices para vehículos ligeros y de 
+                            carga pesada, que bajo las mejores prácticas comerciales genera soluciones eficientes para nuestros clientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Welcome Section -->
+
+        <!-- ======= Products Section ======= -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>REFACCIONES</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productos-container">
+                <div class="slider-productos">
+                    <div class="producto-item">
+                        <img src="/images/banner-productos/slide-1.png" class="producto-image product-link" />
+                    </div>
         
-        <img src="/images/slider-seccion/018-cintillo-derecho-negro.png" style="position: absolute; top: 620px; right: 35px; z-index: 21; width: 15%" />
-        <img src="/images/slider-seccion/017-cintillo-derecho-blanco.png" style="position: absolute; top: 650px; right: 30px; z-index: 20; width: 20%" />
-        <img src="/images/slider-seccion/016-pie-banner.png" style="position: absolute; top: 790px; right: 0px; z-index: 19; width: 75%" />
-    </div>
-
-    <div class="banner-contacto">
-        <div class="row">
-            <div class="col-8 text-center" style="margin-top: 4%;">
-                <span class="contacto-titulo">
-                    NOSOTROS SI LA TENEMOS
-                </span>
-                <br />
-                <p class="contacto-subtitulo">
-                    Contamos con un inventario que supera los <span style="color: #18FD00">149,000</span> productos, siendo uno de los más amplios del sureste, 
-                    estamos seguros que nosotros <span style="color: #18FD00">si</span> tenemos la refacción que tu auto o camión necesita.
-                </p>
-
-                <img src="/images/banner-contacto/019-boton-contactanos.png" style="width: 25%; margin-top: 20px" />
-            </div>
-            <div class="col-4">
-                <img src="/images/banner-contacto/020-telefono.png" style="width: 65%; margin-top: 40px" />
-            </div>
-        </div>
-    </div>
-
-    <div class="banner-bienvenido">
-        <div class="row">
-            <div class="col-6 text-center">
-                <img src="/images/banner-bienvenido/022-logo-slogan.png" style="width: 80%;" />
-            </div>
-            <div class="col-6">
-                <img src="/images/banner-bienvenido/023-cajon-texto.png" class="caja-texto" />
-
-                <div class="text-center" style="margin-top: 40px; margin-right: 80px;">
-                    <span class="bienvenido-titulo">Bienvenido</span>
-                    <p class="bienvenido-descripcion">
-                        Somos una Empresa Yucateca líder en la comercialización de Refacciones Automotrices para vehículos ligeros y de 
-                        carga pesada, que bajo las mejores prácticas comerciales genera soluciones eficientes para nuestros clientes.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="banner-productos">
-        <div class="row">
-            <div class="col text-center" style="margin-top: 30px;">
-                <span class="banner-productos-title">REFACCIONES</span>
-            </div>
-        </div>
+                    <div class="producto-item">
+                        <img src="/images/banner-productos/slide-2.png" class="producto-image product-link" />
+                    </div>
         
-        <div class="productos-container">
-            <div class="slider-productos">
-                <div class="producto-item">
-                    <img src="/images/banner-productos/027-frenos.png" class="producto-image" />
-                </div>
+                    <div class="producto-item">
+                        <img src="/images/banner-productos/slide-3.png" class="producto-image product-link" />
+                    </div>
     
-                <div class="producto-item">
-                    <img src="/images/banner-productos/028-suspension.png" class="producto-image" />
-                </div>
-    
-                <div class="producto-item">
-                    <img src="/images/banner-productos/029-motor.png" class="producto-image" />
-                </div>
-
-                <div class="producto-item">
-                    <img src="/images/banner-productos/032-electrico.png" class="producto-image" />
-                </div>
-    
-                <div class="producto-item">
-                    <img src="/images/banner-productos/031-enfriamiento.png" class="producto-image" />
-                </div>
-    
-                <div class="producto-item">
-                    <img src="/images/banner-productos/030-colision.png" class="producto-image" />
+                    <div class="producto-item">
+                        <img src="/images/banner-productos/slide-4.png" class="producto-image product-link" />
+                    </div>
+        
+                    <div class="producto-item">
+                        <img src="/images/banner-productos/slide-5.png" class="producto-image product-link" />
+                    </div>
+        
+                    <div class="producto-item">
+                        <img src="/images/banner-productos/slide-6.png" class="producto-image product-link" />
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+
+            <div class="row search">
+                <div class="col-lg-6">
+                    <img class="trucks-picture" src="/images/banner-productos/025-auto-camion.png" alt="Camión" />
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="search-container">
+                        <h3>Búsqueda Avanzada</h3>
+                        <p>
+                            Encuentra las refacciones disponibles para la marca, modelo y versión
+                             de tu vehículo.
+                        </p>
+                        <a href="{{URL::to('/productos') }}">
+                            <img src="/images/banner-productos/026-boton-buscar.png" class="search-picture" />
+                        </a>
+                    </div>
+
+                    <img class="engine-picture" src="/images/banner-productos/024-motor.png" />
+                </div>
+            </div>
+        </section><!-- End Products Section -->
+
+        <!-- ======= Brands Section ======= -->
+        <section id="brands" class="brands">
+            <div class="container brand-content">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-center left-info">
+                            <h3>Bienvenido</h3>
+                            <p>
+                                Nuestro compromiso es con la calidad, por eso hemos formado grandes alianzas comerciales con las marcas más 
+                                importantes y de más alto prestigio en el mercado nacional e internacional, buscando siempre lo mejor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 text-center mt-4">
+                        <h3>MARCAS DE PRESTIGIO</h3>
+                        <div class="principles-container">
+                            <span>Seguridad, Confianza y Valor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row brand-image-container">
+                    @foreach($_BRANDS as $item)
+                        <div class="col-md-4 col-sm-4 text-center">
+                            <img src="{{Storage::url($item->file)}}" class="img-responsive" alt="Responsive image" />
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section><!-- End Brands Section -->
+    </main><!-- End #main -->
 @endsection
 
 @section('scripts')
@@ -102,12 +158,78 @@
     <script>
         $( document ).ready(function() {
             $('.slider-productos').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToShow: 4,
+                slidesToScroll: 1,
                 arrows: true,
+                infinite: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
             });
 
+            $('.initial-slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+                autoplay: true,
+            });
+
+            $('.brand-image-container').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            })
+
+            $('.product-link').click(function() {
+                window.location = `http://${window.location.host}/productos`;
+            });
         });
     </script>
 @endsection

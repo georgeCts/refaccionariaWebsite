@@ -19,19 +19,10 @@ class CreateTablePromotions extends Migration
             $table->text('body')->nullable();
             $table->enum('status', ['PUBLISHED', 'DRAFT'])->default('DRAFT');
             $table->string('file', 128)->nullable();
+            $table->boolean('is_promotion')->default(0);
 
-            $table->integer('created_user_id')->unsigned();
-            $table->datetime('created_at');
-            $table->integer('updated_user_id')->unsigned();
-            $table->datetime('updated_at');
-
+            $table->timestamps();
             $table->boolean('deleted')->default(0);
-        });
-
-        //FOREIGNS KEYS
-        Schema::table('promotions', function($table) {
-            $table->foreign('created_user_id')->references('id')->on('users');
-            $table->foreign('updated_user_id')->references('id')->on('users');
         });
     }
 

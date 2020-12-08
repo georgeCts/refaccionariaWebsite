@@ -26,22 +26,45 @@
                         <p class="card-description">Información General</p>
                         
                         <div class="form-group">
-                            <label for="txtTitle">Título</label>
-                            <input type="text" class="form-control" id="txtTitle" name="txtTitle" placeholder="Título del empleo" value="{{$objJob->title}}" required />
+                            <label for="job">Título</label>
+                            <input type="text" class="form-control" id="job" name="job" placeholder="Título del empleo" value="{{$objJob->job}}" required />
                         </div>
                     
                         <div class="form-group">
-                            <label for="txtSlug">URL Amigable</label>
-                            <input type="text" class="form-control" id="txtSlug" name="txtSlug" placeholder="esto-es-un-ejemplo" value="{{$objJob->slug}}" required/>
+                            <label for="location_id">Sucursal</label>
+                            <select class="form-control form-control-sm" id="location_id" name="location_id">
+                                @foreach ($lstLocations as $item)
+                                    @if ($item->id == $objJob->location_id)
+                                        <option value="{{$item->id}}" selected>{{$item->name}}</option>
+                                    @else
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endif
+                                @endforeach
+                            </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="txtBody">Contenido</label>
-                            <textarea class="form-control" id="txtBody" name="txtBody" rows="5">{!!$objJob->body!!}</textarea>
+                            <label for="requirement">Requisitos</label>
+                            <textarea class="form-control" id="requirement" name="requirement" rows="5">{{$objJob->requirement}}</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="offer">Ofrecemos</label>
+                            <textarea class="form-control" id="offer" name="offer" rows="5">{{$objJob->offer}}</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="apply">Postularse</label>
+                            <textarea class="form-control" id="apply" name="apply" rows="5">{{$objJob->apply}}</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact">Contacto</label>
+                            <textarea class="form-control" id="contact" name="contact" rows="5">{{$objJob->contact}}</textarea>
                         </div>
 
                         <button type="submit" class="btn btn-success mr-2">Guardar</button>
-                        <a href="/panel/bolsa-de-trabajo" role="button" class="btn btn-light">Cancelar</a>
+                        <a href="/panel/bolsa-trabajo" role="button" class="btn btn-light">Cancelar</a>
                     </div>
                 </div>
             </div>
@@ -51,10 +74,11 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Imagen de la Publicación</h4>
-                                <p class="card-description">La imagen deben ser (960 x 750)</p>
-                                {{-- <img src="{{ Storage::disk('s3')->url($objPost->file) }}" class="img-thumbnail" />
-                                <br /> --}}
+                                <h4 class="card-title">Imagen de la oferta laboral</h4>
+                                @if ($objJob->file != null)
+                                    <img src="{{Storage::url($objJob->file)}}" alt="Oferta laboral" style="width: 250px;" />
+                                @endif
+                                <p class="card-description">La imagen deben ser (400 x 400)</p>
                                 <div class="form-group">
                                     <label>Imágen</label>
                                     <input type="file" name="image" class="form-control" />
@@ -63,24 +87,24 @@
                                 <hr />
 
                                 <h4 class="card-title">Estatus</h4>
-                                <p class="card-description">Selecciona el estatus que tendrá la publicación al ser creada</p>
+                                <p class="card-description">Selecciona el estatus que tendrá el empleo al ser creado.</p>
 
                                 <div class="form-group">
                                     <div class="form-radio">
                                         <label class="form-check-label">
                                             @if($objJob->status == 'PUBLISHED')
-                                                <input type="radio" class="form-check-input" name="rdEstatus" id="rdEstatus1" value="PUBLISHED" checked> Publicado
+                                                <input type="radio" class="form-check-input" name="status" value="PUBLISHED" checked> Publicado
                                             @else
-                                                <input type="radio" class="form-check-input" name="rdEstatus" id="rdEstatus1" value="PUBLISHED"> Publicado
+                                                <input type="radio" class="form-check-input" name="status" value="PUBLISHED"> Publicado
                                             @endif
                                         </label>
                                     </div>
                                     <div class="form-radio">
                                         <label class="form-check-label">
                                             @if($objJob->status == 'DRAFT')
-                                                <input type="radio" class="form-check-input" name="rdEstatus" id="rdEstatus2" value="DRAFT" checked> Borrador
+                                                <input type="radio" class="form-check-input" name="status" value="DRAFT" checked> Borrador
                                             @else
-                                                <input type="radio" class="form-check-input" name="rdEstatus" id="rdEstatus2" value="DRAFT"> Borrador
+                                                <input type="radio" class="form-check-input" name="status" value="DRAFT"> Borrador
                                             @endif
                                         </label>
                                     </div>
@@ -92,36 +116,6 @@
             </div>
         </div>
     {!! Form::close() !!}
-@endsection
-
-@section('scripts')
-    {{--<script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>--}}
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=o3myw93jxyb8rtmkdckvyptqgdkxf69orqm77h57frjjt5v0"></script>
-    <script src="{{ asset('assets/vendors/jquery-stringtoslug-1.3/jquery.stringToSlug.min.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $("#txtTitle, #txtSlug").stringToSlug({
-                callback: function(text) {
-                    $("#txtSlug").val(text);
-                }
-            })
-
-            tinymce.init({
-                selector: '#txtBody',
-                theme: 'modern',
-                height: 400,
-                plugins: [
-		            'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-		            'searchreplace wordcount visualblocks visualchars code fullscreen',
-		            'insertdatetime media nonbreaking save table contextmenu directionality',
-		            'emoticons template paste textcolor colorpicker textpattern imagetools'
-		        ],
-		        toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-		        toolbar2: 'print preview media | forecolor backcolor emoticons',
-		        image_advtab: true
-            });
-        });        
-    </script>
 @endsection
 
 @include('panel.components.Navbar')

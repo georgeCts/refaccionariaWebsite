@@ -24,13 +24,13 @@ class BrandsController extends Controller
     }
 
     public function store(Request $request) {
-        $objReturn = new ActionReturn('panel/marcas/crear', 'panel/marcas');
+        $objReturn = new ActionReturn('panel/brands/brand-crear', 'panel/brands');
 
         $objBrand = new Brand();
         $objBrand->name        = $request['txtName'];
 
         try {
-            if($objBrand->create()) {
+            if($objBrand->save()) {
                 $objReturn->setResult(true, Messages::BRANDS_CREATE_TITLE, Messages::BRANDS_CREATE_MESSAGE);
             } else {
                 $objReturn->setResult(false, Errors::BRANDS_CREATE_01_TITLE, Errors::BRANDS_CREATE_01_MESSAGE);
@@ -44,7 +44,7 @@ class BrandsController extends Controller
 
     public function edit($id) {
 
-        $return = redirect('panel/sliders');
+        $return = redirect('panel/brands');
 
         $objBrand = Brand::where('id', $id)->first();
 
@@ -56,7 +56,7 @@ class BrandsController extends Controller
     }
 
     public function update(Request $request) {
-        $objReturn = new ActionReturn('panel/marcas/editar/'.$request['hddIdBrand'], 'panel/marcas');
+        $objReturn = new ActionReturn('panel/brands/brand-editar/'.$request['hddIdBrand'], 'panel/brands');
 
         $objBrand = Brand::where('id', $request['hddIdBrand'])->first();
 
@@ -64,7 +64,7 @@ class BrandsController extends Controller
             $objBrand->name        = $request['txtName'];
 
             try {
-                if($objBrand->update()) {
+                if($objBrand->save()) {
                     $objReturn->setResult(true, Messages::BRANDS_EDIT_TITLE, Messages::BRANDS_EDIT_MESSAGE);
                 } else {
                     $objReturn->setResult(false, Errors::BRANDS_EDIT_02_TITLE, Errors::BRANDS_EDIT_02_MESSAGE);

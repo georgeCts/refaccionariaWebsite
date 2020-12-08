@@ -1,4 +1,7 @@
 @section('components.Scripts')
+    <script type="text/javascript">
+        window.CSRF_TOKEN = '{{ csrf_token() }}';
+    </script>
     <!-- plugins:js -->
     <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>
     <script src="{{ asset('assets/vendors/js/vendor.bundle.addons.js') }}"></script>
@@ -14,6 +17,7 @@
     
     <!-- Custom js for this page-->
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
     @yield('scripts')
     <!-- End custom js for this page-->

@@ -15,18 +15,7 @@
 </div>
 
 {!! Form::open(['route' => 'update-slider', 'method' => 'POST', 'files' => true]) !!}
-    <input type="hidden" name="hddPkSlider" value="{{$objSlider->pk_slider}}" />
-    <div class="row">
-        <div class="col-md-6 grid-margin stretch-card">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h4 class="card-title">Imágen actual</h4>
-                    <p class="card-description">Las proporciones de esta imágen no son las reales.</p>
-                    <img src="{{Storage::disk('s3')->url($objSlider->file)}}" width="80%" />
-                </div>
-            </div> 
-        </div>
-    </div>
+    <input type="hidden" name="hddIdSlider" value="{{$objSlider->id}}" />
 
     <div class="row">
         <div class="col-md-8 grid-margin stretch-card">
@@ -36,22 +25,22 @@
                     <p class="card-description">La imágen cargada se mostrará en el slider principal de la página web</p>
                     
                     <div class="form-group">
-                        <label for="txtTitle">Título</label>
-                        <input type="text" class="form-control" id="txtTitle" name="txtTitle" placeholder="Título del slider" value="{{ $objSlider->title }}" />
+                        <label for="title">Título</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Título del slider" value="{{ $objSlider->title }}" />
                     </div>
                 
                     <div class="form-group">
-                        <label for="txtBody">Contenido</label>
-                        <textarea class="form-control" id="txtBody" name="txtBody" rows="2">{!! $objSlider->body !!}</textarea>
+                        <label for="body">Contenido</label>
+                        <textarea class="form-control" id="body" name="body" rows="2">{!! $objSlider->body !!}</textarea>
                     </div>
                     
                     <div class="form-group">
                         <label for="txtUrl">URL (Opcional)</label>
-                        <input class="form-control" id="txtUrl" name="txtUrl" placeholder="http://www.dominio.com/ejemplo" />
+                        <input class="form-control" id="url_redirect" name="url_redirect" placeholder="http://www.dominio.com/ejemplo" />
                     </div>
                     
                     <button type="submit" class="btn btn-success mr-2">Guardar</button>
-                    <button class="btn btn-light">Cancelar</button>                    
+                    <button class="btn btn-light">Cancelar</button>
                 </div>
             </div>
         </div>
@@ -62,6 +51,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Imagen del Slider</h4>
+                            @if ($objSlider->file != null)
+                                    <img src="{{Storage::url($objSlider->file)}}" alt="imagen" style="width: 250px;" />
+                                @endif
                             <p class="card-description">La imagen debe ser (1920 x 790)</p>
                             <div class="form-group">
                                 <label>Imágen</label>
@@ -76,12 +68,20 @@
                             <div class="form-group">
                                 <div class="form-radio">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="rdEstatus" id="rdEstatus1" value="PUBLISHED" checked> Publicado
+                                        @if($objSlider->status == 'PUBLISHED')
+                                            <input type="radio" class="form-check-input" name="status" value="PUBLISHED" checked> Publicado
+                                        @else
+                                            <input type="radio" class="form-check-input" name="status" value="PUBLISHED"> Publicado
+                                        @endif
                                     </label>
                                 </div>
                                 <div class="form-radio">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="rdEstatus" id="rdEstatus2" value="DRAFT"> Borrador
+                                        @if($objSlider->status == 'DRAFT')
+                                            <input type="radio" class="form-check-input" name="status" value="DRAFT" checked> Borrador
+                                        @else
+                                            <input type="radio" class="form-check-input" name="status" value="DRAFT"> Borrador
+                                        @endif
                                     </label>
                                 </div>
                             </div>
@@ -90,16 +90,8 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 {!! Form::close() !!}
-@endsection
-
-@section('scripts')
-    <script>
-        $(document).ready(function() {
-
-        });        
-    </script>
 @endsection
 
 @include('panel.components.Navbar')
