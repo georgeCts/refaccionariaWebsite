@@ -29,16 +29,14 @@
                                     <th>Título</th>
                                     <th>Estatus</th>
                                     <th>Imágen</th>
-                                    <th>Actualizó</th>
                                     <th>Fecha</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($lstSliders as $item)
-                                   
                                     <tr>
-                                        <td>{{ $item->pk_slider }}</td>
+                                        <td>{{ $item->id }}</td>
                                         <td>{{ (($item->title != null)?$item->title:'-') }}</td>
                                         <td>
                                             @if($item->status != 'PUBLISHED')
@@ -48,13 +46,12 @@
                                             @endif
                                         </td>
                                         <td class="py-1">
-                                            <img src="{{ Storage::disk('s3')->url($item->file) }}" alt="slider" />
+                                            <img src="{{ Storage::url($item->file) }}" alt="slider" />
                                         </td>
-                                        <td>{{ $item->updatedUser->name }} {{ $item->updatedUser->last_name }}</td>
                                         <td>{{ $item->updated_at }}</td>
                                         <td>
-                                            <a href="/panel/sliders/slider-editar/{{ $item->pk_slider }}" class="btn btn-sm btn-warning">Editar</a>
-                                            <a href="{{ Storage::disk('s3')->url($item->file) }}" target="_blank" class="btn btn-sm btn-primary">Ver</a>
+                                            <a href="/panel/sliders/slider-editar/{{ $item->id }}" class="btn btn-sm btn-warning">Editar</a>
+                                            <a href="{{ Storage::url($item->file) }}" target="_blank" class="btn btn-sm btn-primary">Ver</a>
                                         </td>
                                     </tr>
                                 @endforeach

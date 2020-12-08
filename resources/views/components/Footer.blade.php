@@ -1,68 +1,61 @@
 @section('components.Footer')
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="logo"><a href="index.html"><span>Still</span><span>Hope México</span></a></h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    </div>
-                </div>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
 
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4 ml-md-5">
-                        <h2 class="ftco-heading-2">Quick Links</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Church kids</a></li>
-                            <li><a href="#" class="py-2 d-block">Community</a></li>
-                            <li><a href="#" class="py-2 d-block">Ministries</a></li>
-                            <li><a href="#" class="py-2 d-block">Message</a></li>
-                            <li><a href="#" class="py-2 d-block">Sermons</a></li>
-                            <li><a href="#" class="py-2 d-block">Events</a></li>
-                        </ul>
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Madero Refaccionarias</h3>
+                        <p>
+                            Calle 31 No.168-E por 14 y 100
+                            Francisco I. Madero<br>
+                            97240 Mérida, Yuc.<br><br>
+                            <strong>Teléfono:</strong> (999) 912 01 00<br>
+                            <strong>Email:</strong> ventas@maderorefaccionarias.com.mx<br>
+                        </p>
                     </div>
-                </div>
-            
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Informaci&oacute;n de contacto</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">198 West 21th Street, Suite 721 Monterrey, MX 10016</a></li>
-                            <li><a href="#" class="py-2 d-block">+ 1235 2355 98</a></li>
-                            <li><a href="#" class="py-2 d-block">info@stillhope.com.mx</a></li>
-                            <li><a href="#" class="py-2 d-block">email@stillhope.com.mx</a></li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4">
-                        <div class="block-23 mb-3">
-                            <ul>
-                                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-                                <li><span class="icon icon-clock-o"></span><span class="text">Saturday &mdash; Sunday 8:00am - 5:00pm</span></li>
-                            </ul>
-                        </div>
-                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Otros Links</h4>
+                        <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/bolsa-trabajo">Bolsa de trabajo</a></li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#">Colorlib</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </p>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Sucursales</h4>
+                        <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://www.google.com.mx/maps/place/MADERO+%7C+Refaccionaria+Circuito+Poniente/@20.9647038,-89.6492583,17z/data=!4m12!1m6!3m5!1s0x8f5673ba2e2b5c79:0x2f95f68deb8b1cb0!2sMADERO+%7C+Refaccionaria+Circuito+Poniente!8m2!3d20.9646161!4d-89.649319!3m4!1s0x8f5673ba2e2b5c79:0x2f95f68deb8b1cb0!8m2!3d20.9646161!4d-89.649319">Sucursal Matriz</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://www.google.com.mx/maps/place/Madero+Refaccionarias/@20.938576,-89.5651907,17z/data=!4m8!1m2!2m1!1srefaccionaria+madero!3m4!1s0x8f5673a620a199ed:0x4b132413e43be801!8m2!3d20.9387297!4d-89.5651968">Sucursal Kanasin</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://www.google.com.mx/maps/place/REFACCIONARIAS+MADERO+SUC+CENTRO/@20.9498403,-89.6406455,12.89z/data=!4m8!1m2!2m1!1srefaccionaria+madero!3m4!1s0x8f5673d285eaec51:0x914b0cc0a2253c30!8m2!3d20.9528491!4d-89.6340203">Sucursal Centro</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="https://www.google.com.mx/maps/place/Refaccionarias+Madero/@20.995025,-89.5801843,17.57z/data=!4m8!1m2!2m1!1srefaccionaria+madero!3m4!1s0x8f5670d2f3670671:0x55be44b68146e176!8m2!3d20.9951851!4d-89.5794184">Sucursal Macro</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="subscribe-app" class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Únete a nuestro boletín de noticias</h4>
+                        <form @submit.prevent="subscribe">
+                            <input type="email" v-model="email">
+                            <input type="submit" value="Suscríbete" />
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+
+        <div class="container d-md-flex py-4">
+            <div class="mr-md-auto text-center text-md-left">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Madero Refaccionarias</span></strong>. All Rights Reserved
+                </div>
+            </div>
+
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="https://api.whatsapp.com/send?phone=529993135534&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%2C%20deseo%20recibir%20atenci%C3%B3n%20personalizada." class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                <a href="https://www.facebook.com/maderorefaccionarias.madero" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
 @endsection

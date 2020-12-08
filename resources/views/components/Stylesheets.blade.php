@@ -1,26 +1,18 @@
 @section('components.Stylesheets')
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
 
-    <link rel="stylesheet" href="{{ asset('css/open-iconic-bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendor/icofont/icofont.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendor/animate.css/animate.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendor/venobox/venobox.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet" />
 
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}" />
-
-    <link rel="stylesheet" href="{{ asset('css/aos.css') }}" />
-
-    <link rel="stylesheet" href="{{ asset('css/ionicons.min.css') }}" />
-
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/jquery.timepicker.css') }}" />
-
-
-    <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
-  
-    {{--<link rel="shortcut icon" href="{{ asset('images/ico/favicon.ico') }}" />--}}
+    <!-- Template Main CSS File -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
 
     @yield('stylesheets')
 @endsection

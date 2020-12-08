@@ -32,7 +32,7 @@ class Errors {
 
 	/* *********************************************************************
 	 * *************	ERRORES DE LA INTERFAZ DEL PANEL ************
-	 * ****************************************************************** */		
+	 * ****************************************************************** */
 
 
 	// POSTS
@@ -62,7 +62,6 @@ class Errors {
 	const SLIDERS_CREATE_02_TITLE = "Error de nuevo registro.";
 	const SLIDERS_CREATE_02_MESSAGE = "El slider no se pudo registrar. Póngase en contacto con el administrador.";
 
-
 	const SLIDERS_EDIT_01_ID = "3_0003";
 	const SLIDERS_EDIT_01_TITLE = "Error de modificación";
 	const SLIDERS_EDIT_01_MESSAGE = "No se pudo encontrar el slider a modificar.";	
@@ -72,34 +71,29 @@ class Errors {
 	const SLIDERS_EDIT_02_MESSAGE = "El slider no se pudo registrar. Póngase en contacto con el administrador.";
 
 	//VIDEOS
-	const VIDEOS_CREATE_01_ID = "4_0001";
-	const VIDEOS_CREATE_01_TITLE = "Error de nuevo registro.";
-	const VIDEOS_CREATE_01_MESSAGE = "No se ingresaron todos los campos requeridos. Verifique la información ingresada.";
+	const PRODUCTS_CREATE_01_ID = "4_0001";
+	const PRODUCTS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const PRODUCTS_CREATE_01_MESSAGE = "No se adjuntó la imagen para el producto.";
 
-	const VIDEOS_CREATE_02_ID = "4_0002";
-	const VIDEOS_CREATE_02_TITLE = "Error de nuevo registro.";
-	const VIDEOS_CREATE_02_MESSAGE = "Actualmente existe un registro con estatus (PUBLISHED). Solamente puede existir un vídeo activo.";
+	const PRODUCTS_CREATE_02_ID = "4_0002";
+	const PRODUCTS_CREATE_02_TITLE = "Error de nuevo registro.";
+	const PRODUCTS_CREATE_02_MESSAGE = "El número de parte ingresado ya se encuentra registrado en otro producto.";
 
-	const VIDEOS_CREATE_03_ID = "4_0003";
-	const VIDEOS_CREATE_03_TITLE = "Error de nuevo registro.";
-	const VIDEOS_CREATE_03_MESSAGE = "El vídeo no se pudo registrar. Póngase en contacto con el administrador.";
+	const PRODUCTS_CREATE_03_ID = "4_0003";
+	const PRODUCTS_CREATE_03_TITLE = "Error de nuevo registro.";
+	const PRODUCTS_CREATE_03_MESSAGE = "El producto no se pudo registrar. Póngase en contacto con el administrador.";
 
-	const VIDEOS_EDIT_01_ID = "4_0004";
-	const VIDEOS_EDIT_01_TITLE = "Error de modificación.";
-	const VIDEOS_EDIT_01_MESSAGE = "No se pudo encontrar el vídeo a modificar. Verifique la información ingresada.";
+	const PRODUCTS_EDIT_01_ID = "4_0004";
+	const PRODUCTS_EDIT_01_TITLE = "Error de modificación.";
+	const PRODUCTS_EDIT_01_MESSAGE = "No se pudo encontrar el producto a modificar. Verifique la información ingresada.";
 
-	const VIDEOS_EDIT_02_ID = "4_0005";
-	const VIDEOS_EDIT_02_TITLE = "Error de modificación.";
-	const VIDEOS_EDIT_02_MESSAGE = "No se ingresaron todos los campos requeridos. Verifique la información ingresada.";
+	const PRODUCTS_EDIT_02_ID = "4_0005";
+	const PRODUCTS_EDIT_02_TITLE = "Error de modificación.";
+	const PRODUCTS_EDIT_02_MESSAGE = "Actualmente existe un producto con el Número de parte ingresado.";
 
-	const VIDEOS_EDIT_03_ID = "4_0006";
-	const VIDEOS_EDIT_03_TITLE = "Error de modificación.";
-	const VIDEOS_EDIT_03_MESSAGE = "Actualmente existe un registro con estatus (PUBLISHED). Solamente puede existir un vídeo activo.";
-
-	const VIDEOS_EDIT_04_ID = "4_0007";
-	const VIDEOS_EDIT_04_TITLE = "Error de nuevo registro.";
-	const VIDEOS_EDIT_04_MESSAGE = "El vídeo no se pudo registrar. Póngase en contacto con el administrador.";
-
+	const PRODUCTS_EDIT_03_ID = "4_0006";
+	const PRODUCTS_EDIT_03_TITLE = "Error de nuevo registro.";
+	const PRODUCTS_EDIT_03_MESSAGE = "El producto no se pudo registrar. Póngase en contacto con el administrador.";
 
 
 	//USUARIOS
@@ -134,6 +128,96 @@ class Errors {
 	const USUARIOS_EDIT_04_ID = "5_0008";
 	const USUARIOS_EDIT_04_TITLE = "Error de modificación.";
 	const USUARIOS_EDIT_04_MESSAGE = "Las contraseñas no coinciden. Verifique la información.";
+
+	//BRANDS
+	const BRANDS_CREATE_01_ID = "6_0001";
+	const BRANDS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const BRANDS_CREATE_01_MESSAGE = "La marca no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const BRANDS_EDIT_01_ID = "6_0002";
+	const BRANDS_EDIT_01_TITLE = "Error de modificación";
+	const BRANDS_EDIT_01_MESSAGE = "No se pudo encontrar la marca a modificar.";	
+
+	const BRANDS_EDIT_02_ID = "6_0003";
+	const BRANDS_EDIT_02_TITLE = "Error de modificación";
+	const BRANDS_EDIT_02_MESSAGE = "La marca no se pudo modificar. Póngase en contacto con el administrador.";
+
+	//JOBS
+	const JOBS_CREATE_01_ID = "6_0001";
+	const JOBS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const JOBS_CREATE_01_MESSAGE = "El empleo no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const JOBS_EDIT_01_ID = "6_0002";
+	const JOBS_EDIT_01_TITLE = "Error de modificación";
+	const JOBS_EDIT_01_MESSAGE = "No se pudo encontrar el empleo a modificar.";	
+
+	const JOBS_EDIT_02_ID = "6_0003";
+	const JOBS_EDIT_02_TITLE = "Error de modificación";
+	const JOBS_EDIT_02_MESSAGE = "El empleo no se pudo modificar. Póngase en contacto con el administrador.";
+
+	//EXPERT TIPS
+	const TIPS_CREATE_01_ID = "7_0001";
+	const TIPS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const TIPS_CREATE_01_MESSAGE = "No se adjuntó una imagen en el formulario.";
+
+	const TIPS_CREATE_02_ID = "7_0002";
+	const TIPS_CREATE_02_TITLE = "Error de nuevo registro.";
+	const TIPS_CREATE_02_MESSAGE = "El tip no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const TIPS_EDIT_01_ID = "7_0003";
+	const TIPS_EDIT_01_TITLE = "Error de modificación";
+	const TIPS_EDIT_01_MESSAGE = "No se pudo encontrar el tip a modificar.";	
+
+	const TIPS_EDIT_02_ID = "7_0004";
+	const TIPS_EDIT_02_TITLE = "Error de modificación";
+	const TIPS_EDIT_02_MESSAGE = "El tip no se pudo modificar. Póngase en contacto con el administrador.";
+
+	//PROMOCIONES
+	const PROMOTIONS_CREATE_01_ID = "8_0001";
+	const PROMOTIONS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const PROMOTIONS_CREATE_01_MESSAGE = "No se adjuntó una imagen en el formulario.";
+
+	const PROMOTIONS_CREATE_02_ID = "8_0002";
+	const PROMOTIONS_CREATE_02_TITLE = "Error de nuevo registro.";
+	const PROMOTIONS_CREATE_02_MESSAGE = "La promoción/oferta no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const PROMOTIONS_EDIT_01_ID = "8_0003";
+	const PROMOTIONS_EDIT_01_TITLE = "Error de modificación";
+	const PROMOTIONS_EDIT_01_MESSAGE = "No se pudo encontrar la promoción/oferta a modificar.";	
+
+	const PROMOTIONS_EDIT_02_ID = "8_0004";
+	const PROMOTIONS_EDIT_02_TITLE = "Error de modificación";
+	const PROMOTIONS_EDIT_02_MESSAGE = "La promoción/oferta no se pudo modificar. Póngase en contacto con el administrador.";
+
+	//LOCATIONS
+	const LOCATIONS_CREATE_01_ID = "9_0001";
+	const LOCATIONS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const LOCATIONS_CREATE_01_MESSAGE = "La sucursal no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const LOCATIONS_EDIT_01_ID = "9_0002";
+	const LOCATIONS_EDIT_01_TITLE = "Error de modificación";
+	const LOCATIONS_EDIT_01_MESSAGE = "No se pudo encontrar la sucursal a modificar.";	
+
+	const LOCATIONS_EDIT_02_ID = "9_0003";
+	const LOCATIONS_EDIT_02_TITLE = "Error de modificación";
+	const LOCATIONS_EDIT_02_MESSAGE = "La sucursal no se pudo modificar. Póngase en contacto con el administrador.";
+
+	//MODELS
+	const MODELS_CREATE_01_ID = "10_0001";
+	const MODELS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const MODELS_CREATE_01_MESSAGE = "La marca asociada a este modelo no existe.";
+
+	const MODELS_CREATE_02_ID = "10_0002";
+	const MODELS_CREATE_02_TITLE = "Error de nuevo registro.";
+	const MODELS_CREATE_02_MESSAGE = "El modelo no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const MODELS_EDIT_01_ID = "10_0003";
+	const MODELS_EDIT_01_TITLE = "Error de modificación";
+	const MODELS_EDIT_01_MESSAGE = "No se pudo encontrar el modelo a modificar.";	
+
+	const MODELS_EDIT_02_ID = "10_0004";
+	const MODELS_EDIT_02_TITLE = "Error de modificación";
+	const MODELS_EDIT_02_MESSAGE = "El modelo no se pudo modificar. Póngase en contacto con el administrador.";
 	
 }
 
