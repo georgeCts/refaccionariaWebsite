@@ -9,7 +9,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 const Swal = require('sweetalert2')
-const baseUrl     = `http://${window.location.host}`;
+const baseUrl     = `https://${window.location.host}`;
 
 /**
  * The following block of code may be used to automatically register your

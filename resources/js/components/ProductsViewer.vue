@@ -115,7 +115,7 @@
                     engine  : '',
                     year    : '',
                 },
-                server  : `http://${window.location.host}/`,
+                server  : `https://${window.location.host}/`,
             }
         },
         watch: {
