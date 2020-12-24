@@ -114,7 +114,7 @@
                         </a>
                     </div>
 
-                    <img class="engine-picture" src="/images/banner-productos/024-motor.png" />
+                    <img class="engine-picture" src="/images/banner-productos/024-Motor.png" />
                 </div>
             </div>
         </section><!-- End Products Section -->
