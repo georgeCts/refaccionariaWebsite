@@ -1,8 +1,8 @@
 @section('title', 'Nosotros')
 
 @section('stylesheets')
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+    <link href="{{ asset('vendor/slick/slick.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendor/slick/slick-theme.css') }}" rel="stylesheet" />
 @endsection
 
 @section('content')
@@ -402,7 +402,7 @@
 @endsection
 
 @section('scripts')
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="{{ asset('vendor/slick/slick.min.js') }}"></script>
     <script>
         $( document ).ready(function() {
             $('.slider-sucursales').slick({
