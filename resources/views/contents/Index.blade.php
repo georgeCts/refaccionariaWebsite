@@ -228,7 +228,7 @@
             })
 
             $('.product-link').click(function() {
-                window.location = `http://${window.location.host}/productos`;
+                window.location = `https://${window.location.host}/productos`;
             });
         });
     </script>
