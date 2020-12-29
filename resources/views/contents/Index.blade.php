@@ -230,6 +230,10 @@
             $('.product-link').click(function() {
                 window.location = `https://${window.location.host}/productos`;
             });
+
+            $('.contact-box').click(function() {
+               // window.location = `https://${window.location.host}/contacto`;
+            });
         });
     </script>
 @endsection

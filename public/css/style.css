@@ -783,6 +783,8 @@ section {
   font-size: 25px !important;
   color: white;
   padding: 15px 0px;
+
+  /* cursor: pointer; */
 }
 
 .cta .phone-container {

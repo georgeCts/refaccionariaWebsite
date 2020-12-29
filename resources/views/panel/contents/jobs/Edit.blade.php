@@ -45,22 +45,22 @@
 
                         <div class="form-group">
                             <label for="requirement">Requisitos</label>
-                            <textarea class="form-control" id="requirement" name="requirement" rows="5">{{$objJob->requirement}}</textarea>
+                            <textarea class="form-control" id="requirement" name="requirement" rows="5" required>{{$objJob->requirement}}</textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="offer">Ofrecemos</label>
-                            <textarea class="form-control" id="offer" name="offer" rows="5">{{$objJob->offer}}</textarea>
+                            <textarea class="form-control" id="offer" name="offer" rows="5" required>{{$objJob->offer}}</textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="apply">Postularse</label>
-                            <textarea class="form-control" id="apply" name="apply" rows="5">{{$objJob->apply}}</textarea>
+                            <textarea class="form-control" id="apply" name="apply" rows="5" required>{{$objJob->apply}}</textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="contact">Contacto</label>
-                            <textarea class="form-control" id="contact" name="contact" rows="5">{{$objJob->contact}}</textarea>
+                            <textarea class="form-control" id="contact" name="contact" rows="5" required>{{$objJob->contact}}</textarea>
                         </div>
 
                         <button type="submit" class="btn btn-success mr-2">Guardar</button>
