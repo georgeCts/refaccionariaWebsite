@@ -196,7 +196,7 @@ if(document.getElementById('contact-app')) {
                 this.error          = false;
                 this.errorMessage   = '';
                 this.success        = false;
-                var baseUrl     = `http://${window.location.host}`;
+                var baseUrl     = `https://${window.location.host}`;
 
                 if(this.name.trim() != '' && this.email.trim() != '' && this.subject.trim() != '' && this.message.trim() != '') {
                     if(!this.loading) {
