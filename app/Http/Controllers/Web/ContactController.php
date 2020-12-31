@@ -38,11 +38,11 @@ class ContactController extends Controller
         );
        
         try{
-            $destinatarios = ['georgeluis.idem@gmail.com'];
+            $destinatarios = ['ventas@maderorefaccionarias.com.mx'];
             
             if(count($destinatarios) > 0) {
                 Mail::send('email', $data, function($message) use ($destinatarios, $asunto) {
-                    $message->from("hola@refaccionariasmadero.com.mx", $asunto);
+                    $message->from("ventas@maderorefaccionarias.com.mx", $asunto);
                     $message->to($destinatarios)->subject($asunto);
                 });
 
