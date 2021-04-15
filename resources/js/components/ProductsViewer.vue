@@ -268,7 +268,7 @@
 
 <style scoped>
     .icofont-refresh {
-        color: #18FD00;
+        color: #3a8433;
         font-size: 22px;
         padding: 5px;
         display: inline-block;
@@ -283,7 +283,7 @@
     .products-viewer input {
         height: 44px;
         width: 300px;
-        border-color: #18FD00;
+        border-color: #3a8433;
         background-color: #000;
 
         font-family: Arial;
@@ -302,7 +302,7 @@
     }
     div.viewer-info span.total > span,
     div.viewer-info span.pages > span {
-        color: #18FD00 !important;
+        color: #3a8433 !important;
     }
     div.viewer-info span.total,
     div.viewer-info span.pages {
@@ -321,7 +321,7 @@
     }
 
     .page-item.active .page-link {
-        background-color: #18FD00;
-        border-color: #18FD00;
+        background-color: #3a8433;
+        border-color: #3a8433;
     }
 </style>
