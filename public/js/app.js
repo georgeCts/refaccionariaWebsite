@@ -14910,7 +14910,7 @@ __webpack_require__(20);
 
 window.Vue = __webpack_require__(41);
 var Swal = __webpack_require__(45);
-var baseUrl = 'http://' + window.location.host;
+var baseUrl = 'https://' + window.location.host;
 
 /**
  * The following block of code may be used to automatically register your
@@ -15127,7 +15127,7 @@ if (document.getElementById('contact-app')) {
                 this.error = false;
                 this.errorMessage = '';
                 this.success = false;
-                var baseUrl = 'http://' + window.location.host;
+                var baseUrl = 'https://' + window.location.host;
 
                 if (this.name.trim() != '' && this.email.trim() != '' && this.subject.trim() != '' && this.message.trim() != '') {
                     if (!this.loading) {
@@ -54215,7 +54215,7 @@ exports = module.exports = __webpack_require__(13)(false);
 
 
 // module
-exports.push([module.i, "\n.icofont-refresh[data-v-129af67e] {\n    color: #18FD00;\n    font-size: 22px;\n    padding: 5px;\n    display: inline-block;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.icofont-refresh[data-v-129af67e]:hover {\n    color: #f03c02;\n}\n.products-viewer input[data-v-129af67e] {\n    height: 44px;\n    width: 300px;\n    border-color: #18FD00;\n    background-color: #000;\n\n    font-family: Arial;\n    font-size: 14px;\n    color: grey;\n}\ndiv.viewer-info[data-v-129af67e] {\n    text-align: right;\n    margin-bottom: 25px;\n}\ndiv.viewer-info span[data-v-129af67e] {\n    font-family: Arial;\n    font-size: 18px;\n    color: #FFF;\n}\ndiv.viewer-info span.total > span[data-v-129af67e],\ndiv.viewer-info span.pages > span[data-v-129af67e] {\n    color: #18FD00 !important;\n}\ndiv.viewer-info span.total[data-v-129af67e],\ndiv.viewer-info span.pages[data-v-129af67e] {\n    margin-left: 15px;\n}\ndiv.product-item[data-v-129af67e] {\n    margin-bottom: 30px;\n}\n.page-link[data-v-129af67e] {\n    color: #000 !important;\n}\n.page-item.disabled .page-link[data-v-129af67e] {\n    color: #6c757d !important;\n}\n.page-item.active .page-link[data-v-129af67e] {\n    background-color: #18FD00;\n    border-color: #18FD00;\n}\n", ""]);
+exports.push([module.i, "\n.icofont-refresh[data-v-129af67e] {\n    color: #3a8433;\n    font-size: 22px;\n    padding: 5px;\n    display: inline-block;\n    -webkit-transition: 0.3s;\n    transition: 0.3s;\n    cursor: pointer;\n}\n.icofont-refresh[data-v-129af67e]:hover {\n    color: #f03c02;\n}\n.products-viewer input[data-v-129af67e] {\n    height: 44px;\n    width: 300px;\n    border-color: #3a8433;\n    background-color: #000;\n\n    font-family: Arial;\n    font-size: 14px;\n    color: grey;\n}\ndiv.viewer-info[data-v-129af67e] {\n    text-align: right;\n    margin-bottom: 25px;\n}\ndiv.viewer-info span[data-v-129af67e] {\n    font-family: Arial;\n    font-size: 18px;\n    color: #FFF;\n}\ndiv.viewer-info span.total > span[data-v-129af67e],\ndiv.viewer-info span.pages > span[data-v-129af67e] {\n    color: #3a8433 !important;\n}\ndiv.viewer-info span.total[data-v-129af67e],\ndiv.viewer-info span.pages[data-v-129af67e] {\n    margin-left: 15px;\n}\ndiv.product-item[data-v-129af67e] {\n    margin-bottom: 30px;\n}\n.page-link[data-v-129af67e] {\n    color: #000 !important;\n}\n.page-item.disabled .page-link[data-v-129af67e] {\n    color: #6c757d !important;\n}\n.page-item.active .page-link[data-v-129af67e] {\n    background-color: #3a8433;\n    border-color: #3a8433;\n}\n", ""]);
 
 // exports
 
@@ -54384,7 +54384,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                 engine: '',
                 year: ''
             },
-            server: 'http://' + window.location.host + '/'
+            server: 'https://' + window.location.host + '/'
         };
     },
 

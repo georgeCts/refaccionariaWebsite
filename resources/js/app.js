@@ -9,7 +9,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 const Swal = require('sweetalert2')
-const baseUrl     = `http://${window.location.host}`;
+const baseUrl     = `https://${window.location.host}`;
 
 /**
  * The following block of code may be used to automatically register your
@@ -196,7 +196,7 @@ if(document.getElementById('contact-app')) {
                 this.error          = false;
                 this.errorMessage   = '';
                 this.success        = false;
-                var baseUrl     = `http://${window.location.host}`;
+                var baseUrl     = `https://${window.location.host}`;
 
                 if(this.name.trim() != '' && this.email.trim() != '' && this.subject.trim() != '' && this.message.trim() != '') {
                     if(!this.loading) {

@@ -114,7 +114,7 @@
                         </a>
                     </div>
 
-                    <img class="engine-picture" src="/images/banner-productos/024-motor.png" />
+                    <img class="engine-picture" src="/images/banner-productos/024-Motor.png" />
                 </div>
             </div>
         </section><!-- End Products Section -->
@@ -228,7 +228,11 @@
             })
 
             $('.product-link').click(function() {
-                window.location = `http://${window.location.host}/productos`;
+                window.location = `https://${window.location.host}/productos`;
+            });
+
+            $('.contact-box').click(function() {
+               // window.location = `https://${window.location.host}/contacto`;
             });
         });
     </script>
