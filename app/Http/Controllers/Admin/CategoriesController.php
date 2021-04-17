@@ -25,7 +25,7 @@ class CategoriesController extends Controller
     public function store(Request $request) {
         $objReturn = new ActionReturn('panel/categorias/categoria-crear', 'panel/categorias');
 
-        $objCategory = Category::where('slug', '!=', $request->slug)->first();
+        $objCategory = Category::where('slug', $request->slug)->first();
 
         if(!is_null($objCategory)) {
             $objReturn->setResult(false, Errors::CATEGORIES_CREATE_01_TITLE, Errors::CATEGORIES_CREATE_01_MESSAGE);
