@@ -124,7 +124,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#module6" aria-expanded="false" aria-controls="module5">
+                <a class="nav-link" data-toggle="collapse" href="#module6" aria-expanded="false" aria-controls="module6">
                     <i class="menu-icon mdi mdi-watermark"></i>
                     <span class="menu-title">Marcas de Prestigio</span>
                     <i class="menu-arrow"></i>
@@ -140,7 +140,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#module7" aria-expanded="false" aria-controls="module5">
+                <a class="nav-link" data-toggle="collapse" href="#module7" aria-expanded="false" aria-controls="module7">
                     <i class="menu-icon mdi mdi-watermark"></i>
                     <span class="menu-title">Catálogos de Marcas</span>
                     <i class="menu-arrow"></i>
@@ -150,6 +150,38 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{URL::to('panel/brands') }}">Lista</a>
                             <a class="nav-link" href="{{URL::to('panel/brands/brand-crear') }}">Nueva marca</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#module8" aria-expanded="false" aria-controls="module8">
+                    <i class="menu-icon mdi mdi-watermark"></i>
+                    <span class="menu-title">Catálogos PDF</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="module8">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{URL::to('panel/catalogos') }}">Lista</a>
+                            <a class="nav-link" href="{{URL::to('panel/catalogos/catalogo-crear') }}">Nuevo catalogo</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#module9" aria-expanded="false" aria-controls="module9">
+                    <i class="menu-icon mdi mdi-watermark"></i>
+                    <span class="menu-title">Categorias</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="module9">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{URL::to('panel/categorias') }}">Lista</a>
+                            <a class="nav-link" href="{{URL::to('panel/categorias/categoria-crear') }}">Nueva categoria</a>
                         </li>
                     </ul>
                 </div>

@@ -64,6 +64,22 @@ class Messages {
 	const LOCATIONS_EDIT_TITLE = "Sucursal modificada";
 	const LOCATIONS_EDIT_MESSAGE = "La sucursal se modificó exitosamente.";
 
+	//CATALOGS
+	const CATALOGS_CREATE_TITLE = "Nuevo catálogo agregado";
+	const CATALOGS_CREATE_MESSAGE = "El nuevo catálogo se agregó exitosamente.";
+	const CATALOGS_EDIT_TITLE = "Catálogo modificado";
+	const CATALOGS_EDIT_MESSAGE = "El catálogo se modificó exitosamente.";
+	const CATALOGS_DELETE_TITLE = "Catálogo eliminado";
+	const CATALOGS_DELETE_MESSAGE = "El catálogo se eliminó exitosamente.";
+
+	//CATERGORIES
+	const CATEGORIES_CREATE_TITLE = "Nueva categoria agregada";
+	const CATEGORIES_CREATE_MESSAGE = "La nueva categoria se agregó exitosamente.";
+	const CATEGORIES_EDIT_TITLE = "Categoria modificada";
+	const CATEGORIES_EDIT_MESSAGE = "La categoria se modificó exitosamente.";
+	const CATEGORIES_DELETE_TITLE = "Categoria eliminado";
+	const CATEGORIES_DELETE_MESSAGE = "La categoria se eliminó exitosamente.";
+
 }
 
 ?>

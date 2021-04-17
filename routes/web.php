@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,7 @@ Route::get('/promociones', 'Web\PromotionsController@index');
 Route::get('/productos', 'Web\ProductsController@index');
 Route::get('/expert-tips', 'Web\ExpertTipsController@index');
 Route::get('/bolsa-trabajo', 'Web\JobsController@index');
+Route::get('/categorias/{slug}', 'Web\CatalogsController@index');
 Route::get('/contacto', 'Web\ContactController@index');
 Route::post('/contacto-mail', 'Web\ContactController@sendMail');
 
@@ -105,4 +107,24 @@ Route::group([  'prefix'    => 'panel',
 
     Route::get('marcas-prestigio/prestigio-editar/{id}', 'Admin\PrestigeBrandsController@edit');
     Route::put('marcas-prestigio/prestigio-editar', ['as' => 'update-prestige-brand', 'uses' => 'Admin\PrestigeBrandsController@update']);
+
+    //CATALOGOS
+    Route::get('catalogos', 'Admin\CatalogsController@index');
+    Route::get('catalogos/catalogo-crear', 'Admin\CatalogsController@create');
+    Route::post('catalogos/catalogo-crear', ['as' => 'new-catalog', 'uses' => 'Admin\CatalogsController@store']);
+
+    Route::get('catalogos/catalogo-editar/{id}', 'Admin\CatalogsController@edit');
+    Route::put('catalogos/catalogo-editar', ['as' => 'update-catalog', 'uses' => 'Admin\CatalogsController@update']);
+
+    Route::get('catalogos/eliminar/{id}', 'Admin\CatalogsController@delete');
+
+    //CATEGORIAS
+    Route::get('categorias', 'Admin\CategoriesController@index');
+    Route::get('categorias/categoria-crear', 'Admin\CategoriesController@create');
+    Route::post('categorias/categoria-crear', ['as' => 'new-category', 'uses' => 'Admin\CategoriesController@store']);
+
+    Route::get('categorias/categoria-editar/{id}', 'Admin\CategoriesController@edit');
+    Route::put('categorias/categoria-editar', ['as' => 'update-category', 'uses' => 'Admin\CategoriesController@update']);
+
+    Route::get('categorias/eliminar/{id}', 'Admin\CategoriesController@delete');
 });

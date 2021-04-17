@@ -13,6 +13,7 @@
                 <img src="{{Storage::url($item->file)}}" alt="{{$item->title}}" />
             @endforeach
         </div>
+        <div class="slick-slider-dots"></div>
 
         <img src="/images/sparkie-sello.png" class="sparkie-image" />
     </section><!-- End Hero -->
@@ -41,64 +42,35 @@
             </div>
         </section><!-- End Cta Section -->
 
-        <!-- ======= Welcome Section ======= -->
-        <section id="welcome" class="welcome">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 text-center">
-                        <img src="/images/banner-bienvenido/022-logo-slogan.png" style="width: 80%;" />
-                    </div>
-
-                    <div class="col-lg-6 text-center">
-                        <h3>Bienvenido</h3>
-                        <p>
-                            Somos una Empresa Yucateca líder en la comercialización de Refacciones Automotrices para vehículos ligeros y de 
-                            carga pesada, que bajo las mejores prácticas comerciales genera soluciones eficientes para nuestros clientes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End Welcome Section -->
-
         <!-- ======= Products Section ======= -->
         <section id="products" class="products">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>REFACCIONES</h2>
+                        <h2>LINEA DE PRODUCTOS</h2>
                     </div>
                 </div>
             </div>
 
             <div class="productos-container">
                 <div class="slider-productos">
-                    <div class="producto-item">
-                        <img src="/images/banner-productos/slide-1.png" class="producto-image product-link" />
-                    </div>
-        
-                    <div class="producto-item">
-                        <img src="/images/banner-productos/slide-2.png" class="producto-image product-link" />
-                    </div>
-        
-                    <div class="producto-item">
-                        <img src="/images/banner-productos/slide-3.png" class="producto-image product-link" />
-                    </div>
-    
-                    <div class="producto-item">
-                        <img src="/images/banner-productos/slide-4.png" class="producto-image product-link" />
-                    </div>
-        
-                    <div class="producto-item">
-                        <img src="/images/banner-productos/slide-5.png" class="producto-image product-link" />
-                    </div>
-        
-                    <div class="producto-item">
-                        <img src="/images/banner-productos/slide-6.png" class="producto-image product-link" />
-                    </div>
+                    @foreach ($lstCategories as $item)
+                        <div class="producto-item">
+                            <img src="{{Storage::url($item->file)}}" class="producto-image product-link" data-slug="{{$item->slug}}" />
+                        </div>
+                    @endforeach
                 </div>
             </div>
 
-            <div class="row search">
+            <div class="row brand-image-container">
+                @foreach($_BRANDS as $item)
+                    <div class="col-md-4 col-sm-4 text-center">
+                        <img src="{{Storage::url($item->file)}}" class="img-responsive" alt="Responsive image" />
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="row search mt-4">
                 <div class="col-lg-6">
                     <img class="trucks-picture" src="/images/banner-productos/025-auto-camion.png" alt="Camión" />
                 </div>
@@ -118,38 +90,6 @@
                 </div>
             </div>
         </section><!-- End Products Section -->
-
-        <!-- ======= Brands Section ======= -->
-        <section id="brands" class="brands">
-            <div class="container brand-content">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="text-center left-info">
-                            <h3>Bienvenido</h3>
-                            <p>
-                                Nuestro compromiso es con la calidad, por eso hemos formado grandes alianzas comerciales con las marcas más 
-                                importantes y de más alto prestigio en el mercado nacional e internacional, buscando siempre lo mejor.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 text-center mt-4">
-                        <h3>MARCAS DE PRESTIGIO</h3>
-                        <div class="principles-container">
-                            <span>Seguridad, Confianza y Valor</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row brand-image-container">
-                    @foreach($_BRANDS as $item)
-                        <div class="col-md-4 col-sm-4 text-center">
-                            <img src="{{Storage::url($item->file)}}" class="img-responsive" alt="Responsive image" />
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section><!-- End Brands Section -->
     </main><!-- End #main -->
 @endsection
 
@@ -157,6 +97,15 @@
     <script type="text/javascript" src="{{ asset('vendor/slick/slick.min.js') }}"></script>
     <script>
         $( document ).ready(function() {
+            $('.initial-slider').slick({
+                dots: true,
+                arrows: false,
+                infinite: true,
+                autoplay: true,
+                speed: 300,
+                appendDots: $('.slick-slider-dots'),
+            });
+
             $('.slider-productos').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
@@ -185,15 +134,6 @@
                         }
                     }
                 ]
-            });
-
-            $('.initial-slider').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                dots: true,
-                autoplay: true,
             });
 
             $('.brand-image-container').slick({
@@ -227,8 +167,12 @@
                 ]
             })
 
-            $('.product-link').click(function() {
-                window.location = `https://${window.location.host}/productos`;
+            $('.product-link').click(function(e) {
+                var element = e.target;
+                var slug = element.getAttribute('data-slug');
+
+                console.log(slug);
+                window.location = `https://${window.location.host}/categorias/${slug}`;
             });
 
             $('.contact-box').click(function() {
