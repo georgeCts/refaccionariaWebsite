@@ -1,4 +1,4 @@
-@section('title', 'Catálogos')
+@section('title', 'Categorias')
 
 @section('content')
     <div class="row">
@@ -14,49 +14,27 @@
         </div>
     </div>
 
-    {!! Form::open(['route' => 'update-catalog', 'method' => 'PUT', 'files' => true]) !!}
-        <input type="hidden" id="hddIdProduct" name="hddIdCatalog" value="{{$objCatalog->id}}" />
-
+    {!! Form::open(['route' => 'update-category', 'method' => 'PUT', 'files' => true]) !!}
+        <input type="hidden" name="hddIdCategory" value="{{$objCategory->id}}" />
         <div class="row">
             <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Modificar catálogo</h4>
-                        <p class="card-description">El catálogo modificado se mostrará en la página web</p>
-
+                        <h4 class="card-title">Modificar categoría</h4>
+                        <p class="card-description">El categoría modificada se mostrará en la página web</p>
+                        
                         <div class="form-group">
                             <label for="name">Nombre</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre del catálogo" value="{{$objCatalog->name}}" required />
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre de la categoría" value="{{$objCategory->name}}" required />
                         </div>
 
                         <div class="form-group">
-                            <label for="brand_id">Marca</label>
-                            <select class="form-control form-control-sm" id="brand_id" name="brand_id" required>
-                                @foreach ($lstBrands as $item)
-                                    @if($item->id == $objCatalog->brand_id)
-                                        <option value="{{$item->id}}" selected>{{$item->name}}</option>
-                                    @else
-                                        <option value="{{$item->id}}">{{$item->name}}</option>
-                                    @endif
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="category_id">Categoría</label>
-                            <select class="form-control form-control-sm" id="category_id" name="category_id" required>
-                                @foreach ($lstCategories as $item)
-                                    @if ($item->id == $objCatalog->category_id)
-                                        <option value="{{$item->id}}" selected>{{$item->name}}</option>
-                                    @else
-                                        <option value="{{$item->id}}">{{$item->name}}</option>
-                                    @endif
-                                @endforeach
-                            </select>
+                            <label for="slug">URL Amigable</label>
+                            <input type="text" class="form-control" id="slug" name="slug" placeholder="esto-es-un-ejemplo" value="{{$objCategory->slug}}" required />
                         </div>
 
                         <button type="submit" class="btn btn-success mr-2">Guardar</button>
-                        <a href="/panel/catalogos" role="button" class="btn btn-light">Cancelar</a>
+                        <a href="/panel/categorias" role="button" class="btn btn-light">Cancelar</a>
                     </div>
                 </div>
             </div>
@@ -66,26 +44,14 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Imagen del catálogo</h4>
-                                @if ($objCatalog->file != null)
-                                    <img src="{{Storage::url($objCatalog->file)}}" alt="catálogo" style="width: 250px;" />
+                                <h4 class="card-title">Imagen de la categoría</h4>
+                                @if ($objCategory->file != null)
+                                    <img src="{{Storage::url($objCategory->file)}}" alt="categoría" style="width: 250px;" />
                                 @endif
-                                <p class="card-description">La imagen deben ser (200 x 250)</p>
+                                <p class="card-description">La imagen deben ser (650 x 600)</p>
                                 <div class="form-group">
                                     <label>Imágen</label>
                                     <input type="file" name="image" class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">PDF del catálogo</h4>
-                                <div class="form-group">
-                                    <label>Archivo</label>
-                                    <input type="file" name="pdf" class="form-control" />
                                 </div>
                             </div>
                         </div>
@@ -97,9 +63,14 @@
 @endsection
 
 @section('scripts')
+    <script src="{{ asset('assets/vendors/jquery-stringtoslug-1.3/jquery.stringToSlug.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-
+            $("#name, #slug").stringToSlug({
+                callback: function(text) {
+                    $("#slug").val(text);
+                }
+            })
         });
     </script>
 @endsection
