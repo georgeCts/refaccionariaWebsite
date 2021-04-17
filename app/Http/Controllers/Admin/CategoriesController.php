@@ -27,7 +27,7 @@ class CategoriesController extends Controller
 
         $objCategory = Category::where('slug', '!=', $request->slug)->first();
 
-        if(is_null($objCategory)) {
+        if(!is_null($objCategory)) {
             $objReturn->setResult(false, Errors::CATEGORIES_CREATE_01_TITLE, Errors::CATEGORIES_CREATE_01_MESSAGE);
             return $objReturn->getRedirectPath();
         }
