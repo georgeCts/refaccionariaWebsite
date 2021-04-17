@@ -70,7 +70,7 @@ class Errors {
 	const SLIDERS_EDIT_02_TITLE = "Error de modificación";
 	const SLIDERS_EDIT_02_MESSAGE = "El slider no se pudo registrar. Póngase en contacto con el administrador.";
 
-	//VIDEOS
+	//PRODUCTS
 	const PRODUCTS_CREATE_01_ID = "4_0001";
 	const PRODUCTS_CREATE_01_TITLE = "Error de nuevo registro.";
 	const PRODUCTS_CREATE_01_MESSAGE = "No se adjuntó la imagen para el producto.";
@@ -94,7 +94,6 @@ class Errors {
 	const PRODUCTS_EDIT_03_ID = "4_0006";
 	const PRODUCTS_EDIT_03_TITLE = "Error de nuevo registro.";
 	const PRODUCTS_EDIT_03_MESSAGE = "El producto no se pudo registrar. Póngase en contacto con el administrador.";
-
 
 	//USUARIOS
 	const USUARIOS_CREATE_01_ID = "5_0001";
@@ -218,6 +217,44 @@ class Errors {
 	const MODELS_EDIT_02_ID = "10_0004";
 	const MODELS_EDIT_02_TITLE = "Error de modificación";
 	const MODELS_EDIT_02_MESSAGE = "El modelo no se pudo modificar. Póngase en contacto con el administrador.";
+
+	//CATALOGS
+	const CATALOGS_CREATE_01_ID = "11_0001";
+	const CATALOGS_CREATE_01_TITLE = "Error de nuevo registro.";
+	const CATALOGS_CREATE_01_MESSAGE = "No se adjuntó el PDF para el catálogo.";
+
+	const CATALOGS_CREATE_02_ID = "11_0002";
+	const CATALOGS_CREATE_02_TITLE = "Error de nuevo registro.";
+	const CATALOGS_CREATE_02_MESSAGE = "El catálogo no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const CATALOGS_EDIT_01_ID = "11_0003";
+	const CATALOGS_EDIT_01_TITLE = "Error de modificación.";
+	const CATALOGS_EDIT_01_MESSAGE = "No se pudo encontrar el catálogo a modificar. Verifique la información ingresada.";
+
+	const CATALOGS_EDIT_02_ID = "11_0004";
+	const CATALOGS_EDIT_02_TITLE = "Error de nuevo registro.";
+	const CATALOGS_EDIT_02_MESSAGE = "El catálogo no se pudo registrar. Póngase en contacto con el administrador.";
+
+	//CATEGORIAS
+	const CATEGORIES_CREATE_01_ID = "12_0001";
+	const CATEGORIES_CREATE_01_TITLE = "Error de nuevo registro.";
+	const CATEGORIES_CREATE_01_MESSAGE = "La URL amigable ya se encuentra registrada en otro tipo de categoria.";
+
+	const CATEGORIES_CREATE_02_ID = "12_0001";
+	const CATEGORIES_CREATE_02_TITLE = "Error de nuevo registro.";
+	const CATEGORIES_CREATE_02_MESSAGE = "No se adjuntó la imagen para la catergoria.";
+
+	const CATEGORIES_CREATE_03_ID = "12_0002";
+	const CATEGORIES_CREATE_03_TITLE = "Error de nuevo registro.";
+	const CATEGORIES_CREATE_03_MESSAGE = "La categoria no se pudo registrar. Póngase en contacto con el administrador.";
+
+	const CATEGORIES_EDIT_01_ID = "12_0003";
+	const CATEGORIES_EDIT_01_TITLE = "Error de modificación.";
+	const CATEGORIES_EDIT_01_MESSAGE = "No se pudo encontrar la categoria a modificar. Verifique la información ingresada.";
+
+	const CATEGORIES_EDIT_02_ID = "12_0004";
+	const CATEGORIES_EDIT_02_TITLE = "Error de nuevo registro.";
+	const CATEGORIES_EDIT_02_MESSAGE = "La categoria no se pudo registrar. Póngase en contacto con el administrador.";
 	
 }
 
