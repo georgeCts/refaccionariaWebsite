@@ -70,6 +70,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">PDF del catálogo</h4>
+                                <p class="card-description">El tamaño máximo del archivo es 5MB</p>
                                 <div class="form-group">
                                     <label>Archivo</label>
                                     <input type="file" name="pdf" class="form-control" required />
