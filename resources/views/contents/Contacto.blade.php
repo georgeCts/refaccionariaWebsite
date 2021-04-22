@@ -1,90 +1,64 @@
 @section('title', 'Contacto')
 
 @section('content')
-    <section id="contact" class="contact">
-        <div class="row justify-content-center" data-aos="fade-up">
-            <div class="col-lg-12">
-                <h2>CONTÁCTANOS</h2>
-            </div>
-        </div>
-        
-        <div id="contact-app" class="row mt-5 justify-content-center" data-aos="fade-up">
-            <div class="col-lg-6 col-sm-12">
-                <form class="php-email-form" @submit.prevent="sendMessage">
-                    <div class="form-row">
-                        <div class="col-md-6 form-group">
-                            <input type="text" name="name" v-model="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Ingresa al menos 4 caractéres" />
-                            <div class="validate"></div>
-                        </div>
-                    
-                        <div class="col-md-6 form-group">
-                            <input type="email" class="form-control" name="email" v-model="email" id="email" placeholder="Email" data-rule="email" data-msg="Ingresa un email válido" />
-                            <div class="validate"></div>
-                        </div>
+    <div class="contacto">
+        <div class="bg-amarillo" style="background-image: url('/images/nosotros/bg-mapa.png')">
+            <div class="container-fluid w12">
+                <div class="row formulario m30">
+                    <div class="col-12 m15">
+                        <h3 class="text-uppercase">¿Tienes alguna duda? Contáctanos</h3>
                     </div>
-                
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="subject" v-model="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Ingresa al menos 8 caractéres de asunto" />
-                        <div class="validate"></div>
-                    </div>
-                
-                    <div class="form-group">
-                        <textarea class="form-control" name="message" v-model="message" rows="5" data-rule="required" data-msg="" placeholder="Mensaje"></textarea>
-                        <div class="validate"></div>
-                    </div>
-                
-                    <div class="mb-3">
-                        <div class="loading" v-if="loading">Cargando</div>
-                        <div class="error-message" v-if="error">@{{ errorMessage }}</div>
-                        <div class="sent-message" v-if="success">Tu mensaje ha sido enviado. Gracias!</div>
-                    </div>
-                    
-                    <div class="text-center">
-                        <button type="submit">Enviar Mensaje</button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="col-lg-6 col-sm-12">
-                <div class="info-wrap">
-                    @foreach ($lstLocations as $item)
-                        <div class="row mb-4">
-                            <div class="col-lg-12 text-center">
-                                <h3>{{ $item->name}}</h3>
+                    <div class="col-12 col-md-7 col-lg-8 m30">
+                        <form action="https://www.fernandez.com.mx/contacto/send" class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-12 col-lg-6 m15">
+                                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" required>
+                                    <input type="email" name="correo" id="correo" placeholder="Email" class="form-control" required>
+                                    <input type="text" name="telefono" id="telefono" placeholder="Teléfono" class="form-control" required>
+                                    <input type="text" name="asunto" id="asunto" placeholder="Asunto" class="form-control" required>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Mensaje" class="m20 form-control" required></textarea>
+                                    <button type="submit" class="btn btn-negro">ENVIAR</button>
+                                </div>
                             </div>
-                            <div class="col-lg-4 info">
-                                <a target="_blank" href="@php echo 'https://www.google.com.mx/maps/@'.$item->latitude.','.$item->longitude.',19.55z' @endphp">
-                                    <i class="icofont-google-map"></i>
-                                </a>
-                                <p>{{ $item->address }}</p>
-                            </div>
-        
-                            <div class="col-lg-4 info mt-4 mt-lg-0">
-                                <i class="icofont-phone"></i>
-                                <p>
-                                    <a class="phone" href="tel:{{$item->phone}}">{{ $item->phone }}</a>
-                                </p>
-                            </div>
-        
-                            <div class="col-lg-4 info mt-4 mt-lg-0">
-                                <i class="icofont-whatsapp"></i>
-                                <p>
-                                    <a class="phone" href="https://api.whatsapp.com/send?phone=52{{$item->whatsapp1}}&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%2C%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank">{{$item->whatsapp1}}</a>
-                                    <br />
-                                    <a class="phone" href="https://api.whatsapp.com/send?phone=52{{$item->whatsapp2}}&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%2C%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank">{{$item->whatsapp2}}</a>
-                                </p>
-                            </div>
-                        </div>
-                    @endforeach
+                        </form>
+                    </div>
+                    <div class="col-12 col-md-5 col-lg-4">
+                        <p class="m30">
+                            <b>Dirección:</b> Calle 70 No. 535-A entre 65 y 67 Centro. Mérida, Yucatán, México. <br>
+                            <b>Tel/fax:</b> 52 (999) 9281096 y (999) 9280345<br>
+                            <b>Correo:</b> cia@fernandez.com.mx
+                        </p>
+                        <p>
+                            <b>Horario de Atención</b> <br>
+                            Lunes a Viernes de 8 a.m. a 6.30 p.m. <br>
+                            Sábado  de 8 a.m. a 2.30 p.m.
+                        </p>
+                    </div>
+                </div>
+                <div class="row mapa">
+                    <div class="col-12">
+                        <div id="mapa"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section><!-- End Contact Section -->
-
+    </div>
 @endsection
 
-@include('components.Navbar')
+@section('scripts')
+    <script type="text/javascript">
+        var lat = 20.964810,
+            lng = -89.630630;
+    </script>
+    <script src="{{ asset('js/mapa-v=12245.js') }}"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuu1Q0hHmlO30h7YRDZ0mWYof-SM-edns&callback=initMap"></script>
+@endsection
+
+@include('components.Header')
 @include('components.Footer')
+@include('components.Modals')
 @include('components.Scripts')
 @include('components.Stylesheets')
 
