@@ -40,7 +40,6 @@
                         <ul>
                             <li class="text-uppercase "><a href="{{URL::to('/nosotros') }}">Nosotros</a></li>
                             <li class="text-uppercase "><a href="{{URL::to('/catalogos') }}">Líneas de productos</a></li>
-                            <li class="text-uppercase "><a href="{{URL::to('/marcas') }}">Marcas</a></li>
                             <li class="text-uppercase "><a href="{{URL::to('/bolsa-trabajo') }}">Bolsa de Trabajo</a></li>
                             <li class="text-uppercase "><a href="{{URL::to('/contacto') }}">Contacto</a></li>
                             <li class="text-uppercase"><a href="#mdCotizaciones" data-toggle="modal" class="btn d-inline-block btn-amarillo">Cotiza con nosotros</a></li>

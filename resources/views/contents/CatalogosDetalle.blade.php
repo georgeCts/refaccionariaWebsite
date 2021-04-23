@@ -46,6 +46,7 @@
 @endsection
 
 @include('components.Header')
+@include('components.Prefooter')
 @include('components.Footer')
 @include('components.Modals')
 @include('components.Scripts')

@@ -25,16 +25,13 @@
                         </form>
                     </div>
                     <div class="col-12 col-md-5 col-lg-4">
+                        @foreach ($lstLocations as $item)
                         <p class="m30">
-                            <b>Dirección:</b> Calle 70 No. 535-A entre 65 y 67 Centro. Mérida, Yucatán, México. <br>
-                            <b>Tel/fax:</b> 52 (999) 9281096 y (999) 9280345<br>
-                            <b>Correo:</b> cia@fernandez.com.mx
+                            <h4>{{ $item->name }}</h4>
+                            <b>Dirección:</b>{{ $item->address }}<br>
+                            <b>Whatsapp:</b><a href="https://api.whatsapp.com/send?phone=52{{$item->whatsapp1}}&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank">{{$item->whatsapp1}}</a> y <a href="https://api.whatsapp.com/send?phone=52{{$item->whatsapp2}}&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank">{{$item->whatsapp2}}</a>
                         </p>
-                        <p>
-                            <b>Horario de Atención</b> <br>
-                            Lunes a Viernes de 8 a.m. a 6.30 p.m. <br>
-                            Sábado  de 8 a.m. a 2.30 p.m.
-                        </p>
+                        @endforeach
                     </div>
                 </div>
                 <div class="row mapa">
@@ -49,14 +46,34 @@
 
 @section('scripts')
     <script type="text/javascript">
-        var lat = 20.964810,
-            lng = -89.630630;
+        var sucursales = JSON.parse('{!!$lstLocations!!}');
+
+        // Mapa
+        var map;
+        function initMap() {
+            var uluru = {lat: 20.964810, lng: -89.630630};
+            map = new google.maps.Map(document.getElementById('mapa'), {
+                zoom: 12,
+                center: uluru,
+            });
+
+            sucursales.map(sucursal => {
+                new google.maps.Marker({
+                    position: {
+                        lat: parseFloat(sucursal.latitude),
+                        lng: parseFloat(sucursal.longitude)
+                    },
+                    map: map,
+                    icon: '/images/pin.png',
+                });
+            })
+        }
     </script>
-    <script src="{{ asset('js/mapa-v=12245.js') }}"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuu1Q0hHmlO30h7YRDZ0mWYof-SM-edns&callback=initMap"></script>
 @endsection
 
 @include('components.Header')
+@include('components.Prefooter')
 @include('components.Footer')
 @include('components.Modals')
 @include('components.Scripts')
