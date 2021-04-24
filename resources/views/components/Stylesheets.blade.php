@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/secciones/productos_catalogo-v=12245.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/secciones/contacto-v=12245.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/secciones/bolsa_trabajo-v=12245.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/secciones/nosotros-v=12245.css') }}" />
 
     @yield('styles')
 @endsection

@@ -3,7 +3,7 @@
         <div class="container-fluid w14">
             <div class="row align-items-lg-center">
                 <div class="col-12 col-sm-6 col-lg-4 m30 text-center">
-                    <img src="images/footer/direccion.svg" alt="Direccion" class="w-100 logo mb-sm-4 mb-lg-0">
+                    <img src="/images/logo/logo.png" alt="Direccion" class="w-60 logo mb-sm-4 mb-lg-0">
                     <div class="d-none d-sm-block d-lg-none mt-sm-1">
                         <ul class="redes mt-sm-3">
                             <li><a href="https://api.whatsapp.com/send?phone=529993135534&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%2C%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank"><i class="fab fa-whatsapp"></i></a></li>
