@@ -22,6 +22,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   background-color: #fff;
   min-height: 100vh;
@@ -1300,7 +1321,7 @@ footer .derechos h4 {
 
 .newsletter h3 {
   font-weight: 700;
-  color: #252525;
+  color: #FFF;
   font-size: 35px;
 }
 
@@ -1672,5 +1693,23 @@ footer .derechos h4 {
 
 .modal .bg-metal p {
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Whatsapp Floating Button
+--------------------------------------------------------------*/
+.floating-whatsapp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 3px;
+  right: 20px;
+  bottom: 60px;
+  transition: display 0.5s ease-in-out;
+  z-index: 99999;
+}
+
+.floating-whatsapp img {
+  width: 60px;
 }
 
