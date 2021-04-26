@@ -20,7 +20,8 @@ Route::get('/promociones', 'Web\PromotionsController@index');
 Route::get('/productos', 'Web\ProductsController@index');
 Route::get('/expert-tips', 'Web\ExpertTipsController@index');
 Route::get('/bolsa-trabajo', 'Web\JobsController@index');
-Route::get('/categorias/{slug}', 'Web\CatalogsController@index');
+Route::get('/catalogos', 'Web\CatalogsController@index');
+Route::get('/catalogos/{slug}', 'Web\CatalogsController@show');
 Route::get('/contacto', 'Web\ContactController@index');
 Route::post('/contacto-mail', 'Web\ContactController@sendMail');
 
