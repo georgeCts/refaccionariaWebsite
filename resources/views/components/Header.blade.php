@@ -45,7 +45,7 @@
                             <li class="text-uppercase"><a href="#mdCotizaciones" data-toggle="modal" class="btn d-inline-block btn-amarillo">Cotiza con nosotros</a></li>
                             <li>
                                 <a class="d-inline-block mr-2" href="https://api.whatsapp.com/send?phone=529993135534&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%2C%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank"><i class="fab fa-whatsapp"></i></a>
-                                <a class="d-inline-block mr-2" href="https://www.facebook.com/maderorefaccionarias.madero" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a class="d-inline-block mr-2" href="https://www.facebook.com/RefaccionariasMadero" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                 <a class="d-inline-block" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                             </li>
                         </ul>

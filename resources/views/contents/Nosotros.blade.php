@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="nosotros">
-        <div class="portada" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), url('/images/seo/DHxapFIsi1FXb8L5jYlEulyTDCpwmEYHSaWEJmFs.jpeg')">
+        <div class="portada" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), url('/images/nosotros/bg-nosotros.png')">
             <div class="w16 mr-auto ml-auto h-100">
                 <div class="container-fluid w14 h-100">
                     <div class="row align-items-end h-100">
@@ -18,7 +18,7 @@
             <div class="container-fluid w14">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-md-12 col-lg-6 text-center text-lg-left m30">
-                        <h2 class="text-uppercase">&quot;ENCUENTRA TODO LO QUE NECESITAS EN UN SOLO LUGAR Y AL MEJOR PRECIO”</h2>
+                        <h2 class="text-uppercase">Conoce un poco de los valores con los que hemos forjado una historia, 40 años de un servicio de calidad, pasión y compromiso por brindar más que soluciones.</h2>
                     </div>
                     <div class="col-12 col-md-10 col-lg-6">
                         
@@ -43,7 +43,7 @@
             <div class="container-fluid w14">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-8 col-xl-8 text-center">
-                        <h3>Nosotros le garantizamos que usted encontrará en nuestros almacenes todos los productos que necesita.</h3>
+                        <h3>Somos una empresa yucateca líder en la comercialización de Refacciones Automotrices para vehículos ligeros y de carga pesada.</h3>
                     </div>
                 </div>
             </div>
@@ -61,13 +61,11 @@
                                     <div class="col-12 col-md-6 col-lg-5 m20">
                                         
                                         <h2>MATRIZ MÉRIDA YUC.</h2>
-                                        <img src="images/footer/direccion.svg" alt="Direccion" class="w-100 direccion mb-sm-4 mb-lg-0">
+                                        <img src="images/nosotros/matriz.png" alt="Direccion" class="w-100 direccion mb-sm-4 mb-lg-0">
                                     </div>
                                     <div class="col-12 col-md-6 text-center">
-                                        <img src="/images/seo/4b9RIaTfn8JBa305AbRVju7kHgpy7rb5P2URBItk.svg" alt="Mapa" class="mapa w-100 m20">
-                                        
                                         <div class="text-left">
-                                            <h4>COBERTURA<br>YUCATÁN, QUINTANA ROO,<br>CAMPECHE, TABASCO, CHIAPAS,<br>VERACRUZ Y OAXACA</h4>
+                                            <h4>COBERTURA<br>YUCATÁN</h4>
                                         </div>
                                     </div>
                                 </div>

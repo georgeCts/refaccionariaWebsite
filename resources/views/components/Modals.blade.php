@@ -49,7 +49,7 @@
                                     <img src="{{ asset('images/logo/logo_horizontal.png') }}" alt="Fernández" class="m20 w-90" style="max-width: 277px">
                                     <p>Suscríbete para recibir las noticias más nuevas, productos, y eventos de Madero Refaccionarias.</p>
                                     <p>Síguenos en Redes Sociales</p>
-                                    <a href="https://www.facebook.com/maderorefaccionarias.madero" target="_blank" class="d-inline-block mr-3 text-white"><i class="fab fa-lg fa-facebook-f"></i></a>
+                                    <a href="https://www.facebook.com/RefaccionariasMadero" target="_blank" class="d-inline-block mr-3 text-white"><i class="fab fa-lg fa-facebook-f"></i></a>
                                     <a href="#" target="_blank" class="d-inline-block mr-3 text-white"><i class="fab fa-lg fa-instagram"></i></a>
                                     
                                 </div>
