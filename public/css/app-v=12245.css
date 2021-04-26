@@ -1350,7 +1350,7 @@ footer .derechos h4 {
 
 .newsletter .btn {
   background-color: #252525;
-  color: #3a8433;
+  color: #FFF;
   font-size: 22px;
   font-weight: 700;
   padding: 5px 30px;
@@ -1472,7 +1472,7 @@ footer .derechos h4 {
 .modal h3 {
   font-size: 30px;
   font-weight: bold;
-  color: #000;
+  color: #FFF;
 }
 
 @media screen and (min-width: 768px) {
@@ -1504,7 +1504,7 @@ footer .derechos h4 {
   padding-bottom: 2px;
   text-transform: uppercase;
   background-color: #252525;
-  color: #3a8433;
+  color: #FFF;
 }
 
 .modal .btn.btn-amarillo {

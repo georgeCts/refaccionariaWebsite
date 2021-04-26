@@ -12,11 +12,11 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
                     <div class="wrapper"><img src="/images/caracteristicas/3.svg" alt=""></div>
-                    <p>Compras en <br> línea, más rápido</p>
+                    <p>Catálogos en <br> línea, más rápido</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="wrapper"><img src="/images/caracteristicas/4.svg" alt=""></div>
-                    <p>Con más de 30 años <br> en el mercado</p>
+                    <p>Con más de 40 años <br> en la industria</p>
                 </div>
             </div>
         </div>
@@ -24,8 +24,7 @@
 
     <div class="newsletter">
         <div class="container text-center">
-            <form action="https://fernandez.com.mx/admin/boletin/store" method="POST" class="needs-validation" novalidate>
-                <input type="hidden" name="_token" value="0X5hezWrAfzANxIydq0F6WH3OcUAMS9gQKL8h8uB">
+            <form action="#" method="POST" class="needs-validation" novalidate>
                 <div class="row align-items-center justify-content-center">
                     <div class="col-12 m20"><h3 class="text-uppercase">Suscríbete a nuestro BOLETÍN</h3></div>
                     <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0"><input class="form-control" type="text" name="name" placeholder="Nombre" required autocomplete="off"></div>

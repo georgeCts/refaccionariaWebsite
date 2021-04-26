@@ -15,15 +15,16 @@
     <meta property="og:description" content="" />
     <meta property="og:image" content="" />
 
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon/favicon.png" />
 
     @yield('components.Stylesheets')
 </head>
 <body>
     @yield('components.Header')
 
-
     @yield('content', '*** CONTENT ***')
+
+    @yield('components.Prefooter')
 
     @yield('components.Footer')
 

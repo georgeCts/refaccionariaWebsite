@@ -23,7 +23,6 @@
                                     <li><a href="{{URL::to('/catalogos') }}">Catálogos</a></li>
                                     <li><a href="{{URL::to('/contacto') }}">Contacto</a></li>
                                     <li><a href="{{URL::to('/bolsa-trabajo') }}">Bolsa de Trabajo</a></li>
-                                    <li><a href="#mdVendedores" data-toggle="modal">Equipo Madero</a></li>
                                 </ul>
                             </div>
                         </div>

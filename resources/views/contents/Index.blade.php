@@ -34,12 +34,12 @@
                     <div class="row mt-sm-5 m30 align-items-md-center">
                         <div class="col-12 col-md-6 col-lg-8 order-md-last">
                             <div class="contenedor-image text-center">
-                                <img src="/images/productos/2neyQOeLSTDudM72n6Efg20JfmfpMVxSA2jfz1zm.png" alt="Ferretería">
+                                <img src="/images/productos/colision.png" alt="Colisión">
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4 order-md-first">
-                            <h4 class="text-uppercase">Ferretería</h4>
-                            <p>Contamos con la mejor variedad y disponibilidad  en productos de  Ferretería</p>
+                            <h4 class="text-uppercase">Colisión</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
@@ -48,12 +48,12 @@
                     <div class="row mt-sm-5 m30 align-items-md-center">
                         <div class="col-12 col-md-6 col-lg-8 order-md-last">
                             <div class="contenedor-image text-center">
-                                <img src="/images/productos/JHlBlMFko5DzkSGroJqHCDdBNGM9wMCbfX5D8rtN.png" alt="Plomería">
+                                <img src="/images/productos/electrico.png" alt="Eléctrico">
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4 order-md-first">
-                            <h4 class="text-uppercase">Plomería</h4>
-                            <p>Contamos con la mejor variedad y disponibilidad  en productos de Plomería</p>
+                            <h4 class="text-uppercase">Eléctrico</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
@@ -62,12 +62,12 @@
                     <div class="row mt-sm-5 m30 align-items-md-center">
                         <div class="col-12 col-md-6 col-lg-8 order-md-last">
                             <div class="contenedor-image text-center">
-                                <img src="/images/productos/fHBOdeolYyNWsZzUcoDPNSyZFRA3c2jrxtZsR5t2.png" alt="Material Eléctrico">
+                                <img src="/images/productos/enfriamiento.png" alt="Enfriamiento">
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4 order-md-first">
-                            <h4 class="text-uppercase">Material Eléctrico</h4>
-                            <p>Contamos con la mejor variedad y disponibilidad  en productos de Material Eléctrico</p>
+                            <h4 class="text-uppercase">Enfriamiento</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
@@ -76,12 +76,12 @@
                     <div class="row mt-sm-5 m30 align-items-md-center">
                         <div class="col-12 col-md-6 col-lg-8 order-md-last">
                             <div class="contenedor-image text-center">
-                                <img src="/images/productos/YF1c3YAcRqI9yQsXJ6dJcdDLu1dLMpd1sc4FST3z.png" alt="Agroindustrial">
+                                <img src="/images/productos/frenos.png" alt="Frenos">
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4 order-md-first">
-                            <h4 class="text-uppercase">Agroindustrial</h4>
-                            <p>Contamos con la mejor variedad y disponibilidad  en productos de Equipo Agroindustrail</p>
+                            <h4 class="text-uppercase">Frenos</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
@@ -90,26 +90,12 @@
                     <div class="row mt-sm-5 m30 align-items-md-center">
                         <div class="col-12 col-md-6 col-lg-8 order-md-last">
                            <div class="contenedor-image text-center">
-                                <img src="/images/productos/aXGI9DMGiFt9XuLG49eMBEHlsNNUkalBPUfZ0QZ1.png" alt="Iluminación">
+                                <img src="/images/productos/suspension.png" alt="Suspension">
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4 order-md-first">
-                            <h4 class="text-uppercase">Iluminación</h4>
-                            <p>Contamos con la mejor variedad y disponibilidad  en productos de iluminación</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade " id="nav-7" role="tabpanel" aria-labelledby="nav-7-tab">
-                    <div class="row mt-sm-5 m30 align-items-md-center">
-                        <div class="col-12 col-md-6 col-lg-8 order-md-last">
-                            <div class="contenedor-image text-center">
-                                <img src="/images/productos/hrugtmBDCj8cWjbS7mHgycn7hVjnC4Xyid0TTmlw.png" alt="Tornillería">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 order-md-first">
-                            <h4 class="text-uppercase">Tornillería</h4>
-                            <p>Contamos con la mejor variedad y disponibilidad  en productos de Tornillería</p>
+                            <h4 class="text-uppercase">Suspension</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
@@ -131,12 +117,11 @@
 
             <nav id="nav-productos-destacados">
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link text-uppercase active" id="nav-2-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-2" aria-selected="true">Ferretería</a>
-                    <a class="nav-item nav-link text-uppercase" id="nav-3-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-3" aria-selected="true">Plomería</a>
-                    <a class="nav-item nav-link text-uppercase" id="nav-4-tab" data-toggle="tab" href="#nav-4" role="tab" aria-controls="nav-4" aria-selected="true">Material Eléctrico</a>
-                    <a class="nav-item nav-link text-uppercase" id="nav-5-tab" data-toggle="tab" href="#nav-5" role="tab" aria-controls="nav-5" aria-selected="true">Agroindustrial</a>
-                    <a class="nav-item nav-link text-uppercase" id="nav-6-tab" data-toggle="tab" href="#nav-6" role="tab" aria-controls="nav-6" aria-selected="true">Iluminación</a>
-                    <a class="nav-item nav-link text-uppercase" id="nav-7-tab" data-toggle="tab" href="#nav-7" role="tab" aria-controls="nav-7" aria-selected="true">Tornillería</a>
+                    <a class="nav-item nav-link text-uppercase active" id="nav-2-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-2" aria-selected="true">Colisión</a>
+                    <a class="nav-item nav-link text-uppercase" id="nav-3-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-3" aria-selected="true">Eléctrico</a>
+                    <a class="nav-item nav-link text-uppercase" id="nav-4-tab" data-toggle="tab" href="#nav-4" role="tab" aria-controls="nav-4" aria-selected="true">Enfriamiento</a>
+                    <a class="nav-item nav-link text-uppercase" id="nav-5-tab" data-toggle="tab" href="#nav-5" role="tab" aria-controls="nav-5" aria-selected="true">Frenos</a>
+                    <a class="nav-item nav-link text-uppercase" id="nav-6-tab" data-toggle="tab" href="#nav-6" role="tab" aria-controls="nav-6" aria-selected="true">Suspension</a>
                 </div>
             </nav>
         </div>
