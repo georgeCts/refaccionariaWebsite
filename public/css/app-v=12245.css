@@ -1713,3 +1713,51 @@ footer .derechos h4 {
   width: 60px;
 }
 
+/*--------------------------------------------------------------
+# Expert Tips
+--------------------------------------------------------------*/
+.expert-tips {
+  margin-top: 30px;
+}
+
+.expert-tips > .row div {
+  margin-bottom: 25px;
+}
+
+.expert-tips > .row div img {
+  width: 350px;
+}
+
+.expert-tips > .row div > .info {
+  margin-top: 15px;
+  display: inline-block;
+  background-color: #FFF;
+  height: 100px;
+  width: 350px;
+}
+
+.expert-tips .info > p {
+  font-family: Arial;
+  font-size: 14px;
+  text-align: justify;
+  color: #000 !important;
+  padding: 10px 15px;
+}
+
+/*-------------------------------------------------
+# Promociones
+--------------------------------------------------- */
+div.slider-promociones {
+  margin: 60px auto;
+  width: 90%;
+}
+
+div.promocion-item {
+  margin: 25px 20px;
+}
+
+img.promocion-image {
+  width: inherit;
+  cursor: pointer;
+}
+

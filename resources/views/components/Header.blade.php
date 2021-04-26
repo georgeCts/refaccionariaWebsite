@@ -20,7 +20,8 @@
                     <ul>
                         <li class="text-uppercase "><a href="{{URL::to('/nosotros') }}">Nosotros</a></li>
                         <li class="text-uppercase "><a href="{{URL::to('/catalogos') }}">Catálogos</a></li>
-                        <li class="text-uppercase "><a href="{{URL::to('/bolsa-trabajo') }}">Bolsa de Trabajo</a></li>
+                        <li class="text-uppercase "><a href="{{URL::to('/expert-tips') }}">Expert Tips</a></li>
+                        <li class="text-uppercase "><a href="{{URL::to('/promociones') }}">Promociones</a></li>
                         <li class="text-uppercase "><a href="{{URL::to('/contacto') }}">Contacto</a></li>
                         <li class="text-uppercase"><a href="#mdCotizaciones" data-toggle="modal" class="btn d-inline-block btn-amarillo">Cotiza con nosotros</a></li>
                     </ul>
@@ -33,14 +34,15 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3">
                         <a href="{{URL::to('/') }}">
-                            <img src="{{ asset('images/logo/logo_horizontal.png') }}" alt="Compañia Fernandez" class="w-100 logo">
+                            <img src="{{ asset('images/logo/logo_horizontal.png') }}" alt="Madero Refaccionarias" class="w-100 logo">
                         </a>
                     </div>
                     <div class="col-lg-9">
                         <ul>
                             <li class="text-uppercase "><a href="{{URL::to('/nosotros') }}">Nosotros</a></li>
-                            <li class="text-uppercase "><a href="{{URL::to('/catalogos') }}">Líneas de productos</a></li>
-                            <li class="text-uppercase "><a href="{{URL::to('/bolsa-trabajo') }}">Bolsa de Trabajo</a></li>
+                            <li class="text-uppercase "><a href="{{URL::to('/catalogos') }}">Catálogos</a></li>
+                            <li class="text-uppercase "><a href="{{URL::to('/expert-tips') }}">Expert Tips</a></li>
+                            <li class="text-uppercase "><a href="{{URL::to('/promociones') }}">Promociones</a></li>
                             <li class="text-uppercase "><a href="{{URL::to('/contacto') }}">Contacto</a></li>
                             <li class="text-uppercase"><a href="#mdCotizaciones" data-toggle="modal" class="btn d-inline-block btn-amarillo">Cotiza con nosotros</a></li>
                             <li>
