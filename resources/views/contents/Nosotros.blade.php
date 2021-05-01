@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="nosotros">
-        <div class="portada" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), url('/images/nosotros/bg-nosotros.png')">
+        <div class="portada" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), url('/images/nosotros/bg-nosotros.jpg')">
             <div class="w16 mr-auto ml-auto h-100">
                 <div class="container-fluid w14 h-100">
                     <div class="row align-items-end h-100">
@@ -58,15 +58,8 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="row justify-content-between align-items-center">
-                                    <div class="col-12 col-md-6 col-lg-5 m20">
-                                        
-                                        <h2>MATRIZ MÉRIDA YUC.</h2>
-                                        <img src="images/nosotros/matriz.png" alt="Direccion" class="w-100 direccion mb-sm-4 mb-lg-0">
-                                    </div>
-                                    <div class="col-12 col-md-6 text-center">
-                                        <div class="text-left">
-                                            <h4>COBERTURA<br>YUCATÁN</h4>
-                                        </div>
+                                    <div class="col-12 col-md-12">
+                                        <img src="images/nosotros/sucursales.jpg" alt="Direccion" class="w-100 mb-sm-4 mb-lg-0">
                                     </div>
                                 </div>
                             </div>
