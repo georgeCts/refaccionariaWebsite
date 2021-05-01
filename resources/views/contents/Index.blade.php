@@ -103,15 +103,14 @@
 
             <div class="dropdown ml-auto mr-auto" id="nav-productos-destacados-movil">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Ferretería
+                    Colisión
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item active" href="">FERRETERíA</a>
-                    <a class="dropdown-item " href="">PLOMERíA</a>
-                    <a class="dropdown-item " href="">MATERIAL ELéCTRICO</a>
-                    <a class="dropdown-item " href="">AGROINDUSTRIAL</a>
-                    <a class="dropdown-item " href="">ILUMINACIóN</a>
-                    <a class="dropdown-item " href="">TORNILLERíA</a>
+                    <a class="dropdown-item active" href="">Colisión</a>
+                    <a class="dropdown-item " href="">Eléctrico</a>
+                    <a class="dropdown-item " href="">Enfriamiento</a>
+                    <a class="dropdown-item " href="">Frenos</a>
+                    <a class="dropdown-item " href="">Suspension</a>
                 </div>
             </div>
 
