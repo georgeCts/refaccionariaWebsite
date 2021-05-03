@@ -1,20 +1,17 @@
 @section('title', 'Expert Tips')
 
 @section('content')
-    <!-- ======= Pomociones Section ======= -->
-    <section id="products" class="products">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>EXPERT TIPS</h2>
-                </div>
+    <div class="bolsa-trabajo">
+        <div class="portada">
+            <div class="container-fluid w13">
+                <h3 class="text-uppercase">Expert Tips</h3>
             </div>
         </div>
 
-        <div class="container expert-tips">
+        <div class="expert-tips">
             <div class="row">
                 @foreach ($lstTips as $item)
-                    <div class="col-lg-6 text-center">
+                    <div class="col-lg-4 text-center">
                         @if ($item->file != null)
                             <img src="{{Storage::url($item->file)}}" alt="{{$item->title}}" />
                         @endif
@@ -25,12 +22,12 @@
                 @endforeach
             </div>
         </div>
-    </section><!-- End Promociones Section -->
+    </div>
 @endsection
 
-@include('components.Navbar')
+@include('components.Header')
 @include('components.Footer')
-@include('components.PreFooter')
+@include('components.Modals')
 @include('components.Scripts')
 @include('components.Stylesheets')
 

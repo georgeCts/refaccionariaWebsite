@@ -1,18 +1,13 @@
 @section('components.Stylesheets')
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('css/plugins/bootstrap.css') }}" />
+    <script src="https://kit.fontawesome.com/81659f74aa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ asset('css/app-v=12245.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/secciones/inicio-v=12345.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/secciones/productos-v=12245.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/secciones/productos_catalogo-v=12245.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/secciones/contacto-v=12245.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/secciones/bolsa_trabajo-v=12245.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/secciones/nosotros-v=12245.css') }}" />
 
-    <!-- Vendor CSS Files -->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('vendor/icofont/icofont.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('vendor/animate.css/animate.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('vendor/venobox/venobox.css') }}" rel="stylesheet" />
-    <link href="{{ asset('vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet" />
-
-    <!-- Template Main CSS File -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
-
-    @yield('stylesheets')
+    @yield('styles')
 @endsection
