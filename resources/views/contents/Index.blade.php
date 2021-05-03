@@ -30,75 +30,21 @@
             </div>
 
             <div class="tab-content" id="productos-destacados">
-                <div class="tab-pane fade show active" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab">
-                    <div class="row mt-sm-5 m30 align-items-md-center">
-                        <div class="col-12 col-md-6 col-lg-8 order-md-last">
-                            <div class="contenedor-image text-center">
-                                <img src="/images/productos/colision.png" alt="Colisión">
+                @foreach ($lstCategories as $index => $item)
+                    <div class="tab-pane fade {{$index == 0 ? 'show active' : ''}}" id="nav-{{$item->id}}" role="tabpanel" aria-labelledby="nav-{{$item->id}}-tab">
+                        <div class="row mt-sm-5 m30 align-items-md-center">
+                            <div class="col-12 col-md-6 col-lg-8 order-md-last">
+                                <div class="contenedor-image text-center">
+                                    <img src="{{Storage::url($item->file)}}" alt="{{$item->name}}">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 order-md-first">
+                                <h4 class="text-uppercase">{{$item->name}}</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 order-md-first">
-                            <h4 class="text-uppercase">Colisión</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
                     </div>
-                </div>
-
-                <div class="tab-pane fade " id="nav-3" role="tabpanel" aria-labelledby="nav-3-tab">
-                    <div class="row mt-sm-5 m30 align-items-md-center">
-                        <div class="col-12 col-md-6 col-lg-8 order-md-last">
-                            <div class="contenedor-image text-center">
-                                <img src="/images/productos/electrico.png" alt="Eléctrico">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 order-md-first">
-                            <h4 class="text-uppercase">Eléctrico</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade " id="nav-4" role="tabpanel" aria-labelledby="nav-4-tab">
-                    <div class="row mt-sm-5 m30 align-items-md-center">
-                        <div class="col-12 col-md-6 col-lg-8 order-md-last">
-                            <div class="contenedor-image text-center">
-                                <img src="/images/productos/enfriamiento.png" alt="Enfriamiento">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 order-md-first">
-                            <h4 class="text-uppercase">Enfriamiento</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade " id="nav-5" role="tabpanel" aria-labelledby="nav-5-tab">
-                    <div class="row mt-sm-5 m30 align-items-md-center">
-                        <div class="col-12 col-md-6 col-lg-8 order-md-last">
-                            <div class="contenedor-image text-center">
-                                <img src="/images/productos/frenos.png" alt="Frenos">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 order-md-first">
-                            <h4 class="text-uppercase">Frenos</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade " id="nav-6" role="tabpanel" aria-labelledby="nav-6-tab">
-                    <div class="row mt-sm-5 m30 align-items-md-center">
-                        <div class="col-12 col-md-6 col-lg-8 order-md-last">
-                           <div class="contenedor-image text-center">
-                                <img src="/images/productos/suspension.png" alt="Suspension">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 order-md-first">
-                            <h4 class="text-uppercase">Suspension</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
             <div class="dropdown ml-auto mr-auto" id="nav-productos-destacados-movil">
@@ -106,21 +52,17 @@
                     Colisión
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item active" href="">Colisión</a>
-                    <a class="dropdown-item " href="">Eléctrico</a>
-                    <a class="dropdown-item " href="">Enfriamiento</a>
-                    <a class="dropdown-item " href="">Frenos</a>
-                    <a class="dropdown-item " href="">Suspension</a>
+                    @foreach ($lstCategories as $index => $item)
+                        <a class="dropdown-item {{$index == 0 ? 'active' : ''}}" href="">{{$item->name}}</a>
+                    @endforeach
                 </div>
             </div>
 
             <nav id="nav-productos-destacados">
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link text-uppercase active" id="nav-2-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-2" aria-selected="true">Colisión</a>
-                    <a class="nav-item nav-link text-uppercase" id="nav-3-tab" data-toggle="tab" href="#nav-3" role="tab" aria-controls="nav-3" aria-selected="true">Eléctrico</a>
-                    <a class="nav-item nav-link text-uppercase" id="nav-4-tab" data-toggle="tab" href="#nav-4" role="tab" aria-controls="nav-4" aria-selected="true">Enfriamiento</a>
-                    <a class="nav-item nav-link text-uppercase" id="nav-5-tab" data-toggle="tab" href="#nav-5" role="tab" aria-controls="nav-5" aria-selected="true">Frenos</a>
-                    <a class="nav-item nav-link text-uppercase" id="nav-6-tab" data-toggle="tab" href="#nav-6" role="tab" aria-controls="nav-6" aria-selected="true">Suspension</a>
+                    @foreach ($lstCategories as $index => $item)
+                        <a class="nav-item nav-link text-uppercase {{$index == 0 ? 'active' : ''}}" id="nav-{{$item->id}}-tab" data-toggle="tab" href="#nav-{{$item->id}}" role="tab" aria-controls="nav-{{$item->id}}" aria-selected="true">{{$item->name}}</a>
+                    @endforeach
                 </div>
             </nav>
         </div>
