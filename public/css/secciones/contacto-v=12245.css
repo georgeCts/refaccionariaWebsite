@@ -52,6 +52,7 @@
 .contacto .formulario h3 {
   font-weight: bold;
   letter-spacing: 0.11px;
+  color: #FFF;
 }
 
 @media screen and (min-width: 768px) {
@@ -174,7 +175,7 @@
 .contacto .formulario .btn.btn-negro {
   border: 2px solid #000;
   background-color: #000;
-  color: #3a8433;
+  color: #FFF;
 }
 
 @media screen and (min-width: 768px) {
