@@ -40,7 +40,7 @@
                         <li><a href="https://www.facebook.com/RefaccionariasMadero" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
                     </ul>
-                    <a href="#" class="aviso">Aviso de privacidad</a>
+                    <a href="##" class="aviso">Aviso de privacidad</a>
                 </div>
             </div>
         </div>
