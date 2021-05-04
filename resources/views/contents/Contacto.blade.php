@@ -26,7 +26,8 @@
                                                 <p class="m30">
                                                     <h4>{{ $item->name }}</h4>
                                                     <b>Dirección:</b>{{ $item->address }}<br>
-                                                    <b>Whatsapp:</b><a href="https://api.whatsapp.com/send?phone=52{{$item->whatsapp1}}&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank">{{$item->whatsapp1}}</a> y <a href="https://api.whatsapp.com/send?phone=52{{$item->whatsapp2}}&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank">{{$item->whatsapp2}}</a>
+                                                    <i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=52{{$item->whatsapp1}}&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank">{{$item->whatsapp1}}</a><br />
+                                                    <i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=52{{$item->whatsapp2}}&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank">{{$item->whatsapp2}}</a>
                                                 </p>
                                             </div>
                                         @endforeach
