@@ -8,7 +8,7 @@
                         <ul class="redes mt-sm-3">
                             <li><a href="https://api.whatsapp.com/send?phone=529993135534&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%2C%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                             <li><a href="https://www.facebook.com/RefaccionariasMadero" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://www.instagram.com/companiafernandez/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
                         </ul>
                         <a href="#" class="aviso d-inline-block mt-sm-1">Aviso de privacidad</a>
                     </div>
@@ -38,9 +38,9 @@
                     <ul class="redes">
                         <li><a href="https://api.whatsapp.com/send?phone=529993135534&text=Hola!%20%E2%9C%8B%F0%9F%8F%BBle%20contacto%20desde%20su%20sitio%20web%20Refaccionaria%20Madero%2C%20deseo%20recibir%20atenci%C3%B3n%20personalizada." target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                         <li><a href="https://www.facebook.com/RefaccionariasMadero" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com/companiafernandez/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
                     </ul>
-                    <a href="#" class="aviso">Aviso de privacidad</a>
+                    <a href="##" class="aviso">Aviso de privacidad</a>
                 </div>
             </div>
         </div>

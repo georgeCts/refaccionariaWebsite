@@ -20,9 +20,9 @@
                                     <input type="text" name="phone_number" placeholder="*Teléfono" class="m20 form-control" autocomplete="off" required>
                                     <label for="cv_file" class="btn btn-amarillo position-relative m15">
                                         Anexar CV
-                                        <input type="file" name="cv_file" id="cv_file" accept=".doc, .docx, .pdf" required>
+                                        <input type="file" name="cv_file" id="cv_file" accept=".jpeg, .jpg, .pdf" required>
                                     </label>
-                                    <p>Se admiten documentos Word (.doc, .docx) y PDFs (.pdf). Peso máximo del archivo: 5 mb</p>
+                                    <p>Se admiten imagenes (.jpg, .jpeg) y PDFs (.pdf). Peso máximo del archivo: 5 mb</p>
                                     <button class="btn btn-blanco">Enviar</button>
                                 </form>
                             </div>
@@ -104,9 +104,9 @@
                                     </select>
                                     <label for="cv_file" class="btn btn-amarillo position-relative m15">
                                         Anexar Cotización
-                                        <input type="file" name="cv_file" id="cv_file" accept=".doc, .docx, .pdf" required>
+                                        <input type="file" name="cv_file" id="cv_file" accept=".jpg, .jpeg, .pdf" required>
                                     </label>
-                                    <p>Se admiten documentos Word (.doc, .docx) y PDFs (.pdf). Peso máximo del archivo: 5 mb</p>
+                                    <p>Se admiten imagenes (.jpg, .jpeg) y PDFs (.pdf). Peso máximo del archivo: 5 mb</p>
                                     <button class="btn btn-blanco">Enviar</button>
                                 </form>
                             </div>
