@@ -1,5 +1,5 @@
 @section('components.Prefooter')
-    <div class="caracteristicas">
+    <!-- <div class="caracteristicas">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12 col-md-6 col-lg-3">
@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="newsletter">
         <div class="container text-center">
