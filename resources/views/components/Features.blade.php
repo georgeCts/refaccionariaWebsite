@@ -11,7 +11,7 @@
                     <p>Llegamos a toda la <br> República Mexicana</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
-                    <div class="wrapper"><img src="/images/caracteristicas/productos.png" alt=""></div>
+                    <div class="wrapper"><img src="/images/caracteristicas/productos2.png" alt=""></div>
                     <p>Forman parte de <br> nuestros productos</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
