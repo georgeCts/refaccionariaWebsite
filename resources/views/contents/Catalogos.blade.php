@@ -10,7 +10,7 @@
                             <div class="content text-center w-80">
                                 <h3 class="text-uppercase m20">Frenos</h3>
                                 <a href="{{URL::to('/catalogos/frenos') }}" class="btn btn-blanco d-inline-block m20">ver catálogo</a>
-                                <a href="#mdCotizaciones" data-toggle="modal" class="btn btn-amarillo d-inline-block">Cotiza con nosotros</a>
+                                <a href="#mdCotizaciones" data-toggle="modal" class="btn btn-amarillo d-inline-block">Cotiza aquí</a>
                             </div>
                         </div>
 
@@ -18,7 +18,7 @@
                             <div class="content text-center w-80">
                                 <h3 class="text-uppercase m20">Eléctrico</h3>
                                 <a href="{{URL::to('/catalogos/electrico') }}" class="btn btn-blanco d-inline-block m20">ver catálogo</a>
-                                <a href="#mdCotizaciones" data-toggle="modal" class="btn btn-amarillo d-inline-block">Cotiza con nosotros</a>
+                                <a href="#mdCotizaciones" data-toggle="modal" class="btn btn-amarillo d-inline-block">Cotiza aquí</a>
                             </div>
                         </div>
 
@@ -26,7 +26,7 @@
                             <div class="content text-center w-80">
                                 <h3 class="text-uppercase m20">Suspensión</h3>
                                 <a href="{{URL::to('/catalogos/suspension') }}" class="btn btn-blanco d-inline-block m20">ver catálogo</a>
-                                <a href="#mdCotizaciones" data-toggle="modal" class="btn btn-amarillo d-inline-block">Cotiza con nosotros</a>
+                                <a href="#mdCotizaciones" data-toggle="modal" class="btn btn-amarillo d-inline-block">Cotiza aquí</a>
                             </div>
                         </div>
 
@@ -34,15 +34,15 @@
                             <div class="content text-center w-80">
                                 <h3 class="text-uppercase m20">Colisión</h3>
                                 <a href="{{URL::to('/catalogos/colision') }}" class="btn btn-blanco d-inline-block m20">ver catálogo</a>
-                                <a href="#mdCotizaciones" data-toggle="modal" class="btn btn-amarillo d-inline-block">Cotiza con nosotros</a>
+                                <a href="#mdCotizaciones" data-toggle="modal" class="btn btn-amarillo d-inline-block">Cotiza aquí</a>
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(37,37,37,0.6) 0%, rgba(37,37,37,0.6) 100%), url('/images/productos/lineaProducto-04   .png')">
+                        <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(37,37,37,0.6) 0%, rgba(37,37,37,0.6) 100%), url('/images/productos/lineaProducto-04.png')">
                             <div class="content text-center w-80">
                                 <h3 class="text-uppercase m20">Enfriamiento</h3>
                                 <a href="{{URL::to('/catalogos/enfriamiento') }}" class="btn btn-blanco d-inline-block m20">ver catálogo</a>
-                                <a href="#mdCotizaciones" data-toggle="modal" class="btn btn-amarillo d-inline-block">Cotiza con nosotros</a>
+                                <a href="#mdCotizaciones" data-toggle="modal" class="btn btn-amarillo d-inline-block">Cotiza aquí</a>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-8 col-lg-7 col-xl-6 trapecio-top text-center text-uppercase">
-                        <a href="productos.html#mdCotizaciones" data-toggle="modal" class="d-inline-block">Cotiza con nosotros</a>
+                        <a href="productos.html#mdCotizaciones" data-toggle="modal" class="d-inline-block">Cotiza Aquí</a>
                     </div>
                 </div>
             </div>
@@ -68,15 +68,15 @@
             <div class="row text-center">
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="wrapper"><img src="/images/caracteristicas/ubicacion.png" alt=""></div>
-                    <p>Con más de 40 años <br> en el mercado</p>
+                    <p>Con más de 40 años <br> en la industria</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
                     <div class="wrapper"><img src="/images/caracteristicas/delivery.png" alt="" class="ml-n3"></div>
-                    <p>Llegamos a toda la <br> República Mexicana</p>
+                    <p>Envíos a toda la <br> República Mexicana</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
                     <div class="wrapper"><img src="/images/caracteristicas/productos2.png" alt=""></div>
-                    <p>Forman parte de <br> nuestros productos</p>
+                    <p>Forman parte de <br> nuestro inventario</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
                     <div class="wrapper"><img src="/images/caracteristicas/mesa_trabajo.png" alt=""></div>
