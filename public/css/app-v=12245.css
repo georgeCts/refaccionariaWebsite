@@ -543,7 +543,7 @@ header {
   top: 0px;
   left: 0px;
   z-index: 500;
-  background-image: url("../images/bg-header.jpg");
+  /* background-image: url("../images/bg-header.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-color: #000;
@@ -1278,7 +1278,8 @@ footer .derechos h4 {
 
 .caracteristicas {
   padding: 30px 0px;
-  background-image: url("../images/bg-caracteristicas-principal.png");
+  /* background-image: url("../images/bg-caracteristicas-principal.png"); */
+  background-color: #000;
   background-repeat: repeat;
   background-position: center;
   color: #fff;

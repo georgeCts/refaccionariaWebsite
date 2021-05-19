@@ -60,12 +60,12 @@
                                         <h3 class="text-uppercase">SUSCRÍBETE</h3>
                                         <input id="nameNews" type="text" name="name" placeholder="*Nombre" class="m20 form-control" autocomplete="off" required>
                                         <input id="emailNews" type="email" name="email" placeholder="*Correo" class="m20 form-control" autocomplete="off" required>
-                                        <select name="estado" class="m20 form-control" autocomplete="off" required="">
+                                        <!-- <select name="estado" class="m20 form-control" autocomplete="off" required="">
                                             <option value="">*Seleccione un estado</option>
                                             <option value="Yucatan">Yucatán</option>
                                             <option value="Campeche">Campeche</option>
                                             <option value="Quintana Roo">Quintana Roo</option>
-                                        </select>
+                                        </select> -->
                                         <button class="btn">Suscribirme</button>
                                     </form>
                                 </div>
@@ -96,12 +96,12 @@
                                     <input type="email" name="email" placeholder="*Correo" class="m20 form-control" autocomplete="off" required>
                                     <input type="text" name="phone_number" placeholder="*Teléfono" class="m20 form-control" autocomplete="off" required>
                                     <textarea name="comentarios" placeholder="Comentarios" cols="30" rows="3" class="tx"></textarea>
-                                    <select name="estados" class="m20" autocomplete="off" required>
+                                    <!-- <select name="estados" class="m20" autocomplete="off" required>
                                         <option value="">Seleccione un estado</option>
                                         <option value="Yucatan">Yucatan</option>
                                         <option value="Campeche">Campeche</option>
                                         <option value="Quintana Roo">Quintana Roo</option>
-                                    </select>
+                                    </select> -->
                                     <label for="cv_file" class="btn btn-amarillo position-relative m15">
                                         Anexar Cotización
                                         <input type="file" name="cv_file" id="cv_file" accept=".jpg, .jpeg, .pdf" required>

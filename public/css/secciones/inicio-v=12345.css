@@ -531,16 +531,17 @@ button.swiper-pagination-bullet {
 }
 
 .productos-destacados {
-  background-image: url("../../images/bg-productos-destacados.jpg");
+  /* background-image: url("../../images/bg-productos-destacados.jpg"); */
+  background-color: #fff;
   background-blend-mode: multiply;
-  background-color: #25252580;
+  /* background-color: #25252580; */
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
   position: relative;
   padding-top: 70px;
   padding-bottom: 40px;
-  color: #fff;
+  color: #000;
   overflow: hidden;
 }
 
@@ -557,7 +558,7 @@ button.swiper-pagination-bullet {
   content: "";
   width: 322px;
   height: 121px;
-  background-image: url("../../images/deco-titulo-producto-destacado.png");
+  /* background-image: url("../../images/deco-titulo-producto-destacado.png"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -568,8 +569,8 @@ button.swiper-pagination-bullet {
 }
 
 .productos-destacados .btn-blanco {
-  background-color: #fff;
-  color: #252525;
+  background-color: #3a8433;
+  color: #fff;
   font-weight: 700;
   border-radius: 0px;
   border: none;
@@ -745,7 +746,7 @@ button.swiper-pagination-bullet {
   border: none;
   border-radius: 0px;
   padding: 0px 19px;
-  background-color: #fff;
+  background-color: #3a8433;
   color: #252525;
   font-weight: 700;
   line-height: 2.82;
@@ -832,7 +833,8 @@ button.swiper-pagination-bullet {
 
 .link-tienda-online {
   overflow: hidden;
-  background-image: url("../../images/bg-cotizacion.png");
+  /* background-image: url("../../images/bg-cotizacion.png"); */
+  background-color: #3a8433;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
