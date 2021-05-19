@@ -14,7 +14,7 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(37,37,37,0.6) 0%, rgba(37,37,37,0.6) 100%), url('/images/productos/lineaProducto.png')">
+                        <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(37,37,37,0.6) 0%, rgba(37,37,37,0.6) 100%), url('/images/productos/lineaProducto-01.jpg')">
                             <div class="content text-center w-80">
                                 <h3 class="text-uppercase m20">Eléctrico</h3>
                                 <a href="{{URL::to('/catalogos/electrico') }}" class="btn btn-blanco d-inline-block m20">ver catálogo</a>
@@ -22,7 +22,7 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(37,37,37,0.6) 0%, rgba(37,37,37,0.6) 100%), url('/images/productos/lineaProducto.png')">
+                        <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(37,37,37,0.6) 0%, rgba(37,37,37,0.6) 100%), url('/images/productos/lineaProducto-02.png')">
                             <div class="content text-center w-80">
                                 <h3 class="text-uppercase m20">Suspensión</h3>
                                 <a href="{{URL::to('/catalogos/suspension') }}" class="btn btn-blanco d-inline-block m20">ver catálogo</a>
@@ -30,7 +30,7 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(37,37,37,0.6) 0%, rgba(37,37,37,0.6) 100%), url('/images/productos/lineaProducto.png')">
+                        <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(37,37,37,0.6) 0%, rgba(37,37,37,0.6) 100%), url('/images/productos/lineaProducto-03.png')">
                             <div class="content text-center w-80">
                                 <h3 class="text-uppercase m20">Colisión</h3>
                                 <a href="{{URL::to('/catalogos/colision') }}" class="btn btn-blanco d-inline-block m20">ver catálogo</a>
@@ -38,7 +38,7 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(37,37,37,0.6) 0%, rgba(37,37,37,0.6) 100%), url('/images/productos/lineaProducto.png')">
+                        <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(37,37,37,0.6) 0%, rgba(37,37,37,0.6) 100%), url('/images/productos/lineaProducto-04   .png')">
                             <div class="content text-center w-80">
                                 <h3 class="text-uppercase m20">Enfriamiento</h3>
                                 <a href="{{URL::to('/catalogos/enfriamiento') }}" class="btn btn-blanco d-inline-block m20">ver catálogo</a>

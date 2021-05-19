@@ -432,7 +432,9 @@ button.swiper-pagination-bullet {
 }
 
 .productos .categorias {
-  background-color: #252525;
+  /* background-color: #252525; */
+  background-color: #fff;
+  /* background-image: url("../../images/productos/bg-productos.png"); */
   overflow: hidden;
 }
 
@@ -651,7 +653,8 @@ button.swiper-pagination-bullet {
 
 .productos .link-tienda-online {
   overflow: hidden;
-  background-image: url("../../images/bg-cotizacion.png");
+  /* background-image: url("../../images/bg-cotizacion.png"); */
+  background-color: #3a8433;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -31,7 +31,7 @@
                             @foreach ($lstCatalogs as $item)
                                 <div class="col-12 col-md-4 col-lg-4 text-center m30">
                                     <div class="bg bg-size-contain mx-auto m20" style="background-image: url({{Storage::url($item->file)}})">
-                                        <img src="https://www.fernandez.com.mx/images/catalogo/1.jpg" alt="Catálogo de productos marca Cadena">
+                                        <img src="https://www.mad/images/catalogo/1.jpg" alt="Catálogo de productos marca Cadena">
                                     </div>
                                     <h3 class="text-uppercase m20">{{$item->name}}</h3>
                                     <a href="{{Storage::url($item->pdf)}}" target="_blank" class="btn btn-amarillo text-uppercase">Descargar</a>
