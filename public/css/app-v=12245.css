@@ -1682,7 +1682,7 @@ footer .derechos h4 {
 
 .modal .bg-metal {
   background-color: #252525;
-  background-image: url("../images/modals/bg-metal.jpg");
+  /* background-image: url("../images/modals/bg-metal.jpg"); */
   background-repeat: repeat;
   background-position: center;
   background-size: auto;
