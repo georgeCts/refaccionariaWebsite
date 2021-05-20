@@ -19,7 +19,7 @@
                     <div class="col-12 col-md-12 col-lg-12 col-xl-12 listado-catalogos">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb px-0 mb-0">
-                            <li class="breadcrumb-item"><a href="{{URL::to('/catalogos') }}">Línea de Productos</a></li>
+                            <li class="breadcrumb-item"><a href="{{URL::to('/catalogos') }}">Catálogos</a></li>
                             <li class="breadcrumb-item"><a href="#">{{$objCategory->name}}</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Catálogos</li>
                             </ol>

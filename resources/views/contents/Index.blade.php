@@ -46,9 +46,9 @@
     <div class="productos-destacados">
         <div class="container-fluid w14">
             <div class="row m30 align-items-sm-center">
-                <div class="col-12 col-sm-5 col-md-6"><h3 class="d-inline-block m30 mb-sm-0"> <br> Catálogos</h3></div>
+                <div class="col-12 col-sm-5 col-md-6"><h3 class="d-inline-block m30 mb-sm-0"> <br> Categorías</h3></div>
                 <div class="col-12 col-sm-7 col-md-6 text-sm-right">
-                    <a href="{{URL::to('/catalogos') }}" class="btn btn-blanco">CATÁLOGOS <i class="fas fa-caret-right ml-2 ml-lg-3"></i></a>
+                    <a href="{{URL::to('/catalogos') }}" class="btn btn-blanco">CATÁLOGOS<i class="fas fa-caret-right ml-2 ml-lg-3"></i></a>
                 </div>
             </div>
 
