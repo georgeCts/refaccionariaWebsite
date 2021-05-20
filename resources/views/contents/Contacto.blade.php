@@ -6,16 +6,16 @@
             <div class="container-fluid w12">
                 <div class="row formulario m30">
                     <div class="col-12 m15">
-                        <h3 class="text-uppercase">¿Tienes alguna duda? Contáctanos</h3>
+                        <h3 class="text-uppercase">Contáctanos</h3>
                     </div>
                     <div class="col-12 col-lg-12 m30">
-                        <form action="https://www.fernandez.com.mx/contacto/send" class="needs-validation" novalidate>
+                        <form action="https://www.maderorefaccionarias.com.mx" class="needs-validation" novalidate>
                             <div class="row">
                                 <div class="col-12 col-lg-4 m15">
                                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" required>
                                     <input type="email" name="correo" id="correo" placeholder="Email" class="form-control" required>
                                     <input type="text" name="telefono" id="telefono" placeholder="Teléfono" class="form-control" required>
-                                    <input type="text" name="asunto" id="asunto" placeholder="Asunto" class="form-control" required>
+                                    <br>
                                     <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Mensaje" class="m20 form-control" required></textarea>
                                     <button type="submit" class="btn btn-negro">ENVIAR</button>
                                 </div>

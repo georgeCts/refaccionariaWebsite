@@ -39,7 +39,7 @@
         </div>
 
         
-        <div class="informacion--2" style="background-image: url('/images/nosotros/bg-manchas.png')">
+        <div class="informacion--2">
             <div class="container-fluid w14">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-8 col-xl-8 text-center">
