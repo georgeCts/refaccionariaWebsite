@@ -25,11 +25,11 @@
             <div class="row text-center">
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="wrapper"><img src="/images/caracteristicas/ubicacion.png" alt=""></div>
-                    <p>Con más de 40 años <br> en la industria</p>
+                    <p>Con más de 40 años <br> en el mercado</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
                     <div class="wrapper"><img src="/images/caracteristicas/delivery.png" alt="" class="ml-n3"></div>
-                    <p>Envíos a toda la <br> República Mexicana</p>
+                    <p>Envíos a todo <br>el sureste</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
                     <div class="wrapper"><img src="/images/caracteristicas/productos2.png" alt=""></div>
@@ -63,7 +63,6 @@
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 order-md-first">
                                 <h4 class="text-uppercase">{{$item->name}}</h4>
-                                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> -->
                             </div>
                         </div>
                     </div>
@@ -136,11 +135,11 @@
             <div class="row align-items-md-center">
                 <div class="col-12 col-md-6 m40 mb-md-0">
                     <h2 class="text-uppercase">Acerca de<br>Madero Refaccionaria</h2>
-                    <p>Contamos con un inventario que supera los 149,000 productos siendo unos de los más amplios del sureste, estamos seguros que nosotros si tenemos la refacción que tu auto o camión necesita.</p>
+                    <p>Contamos con un inventario que supera los 100,000 productos siendo unos de los más amplios del sureste, estamos seguros que nosotros si tenemos la refacción que tu auto o camión necesita.</p>
                     <a href="{{URL::to('/nosotros') }}" class="btn btn-amarillo text-uppercase">Nuestra historia</a>
                 </div>
                 <div class="col-12 col-md-6 text-center">
-                    <h3>Encuentra todo lo que necesitas en un solo lugar y al mejor precio</h3>
+                    <h3>En auto y camion somos la mejor opciones nacionales e importados</h3>
                 </div>
             </div>
         </div>
