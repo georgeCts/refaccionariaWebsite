@@ -58,7 +58,7 @@
                         <div class="row mt-sm-5 m30 align-items-md-center">
                             <div class="col-12 col-md-6 col-lg-8 order-md-last">
                                 <div class="contenedor-image text-center">
-                                    <img src="{{Storage::url($item->file)}}" alt="{{$item->name}}">
+                                    <img src="{{Storage::url($item->file)}}" alt="{{$item->name}}" />
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 order-md-first">
