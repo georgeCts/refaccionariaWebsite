@@ -139,7 +139,7 @@
                     <a href="{{URL::to('/nosotros') }}" class="btn btn-amarillo text-uppercase">Nuestra historia</a>
                 </div>
                 <div class="col-12 col-md-6 text-center">
-                    <h3>En auto y camion somos la mejor opciones nacionales e importados</h3>
+                    <h3>En auto y camion, la mejor opción nacionales e importados</h3>
                 </div>
             </div>
         </div>
