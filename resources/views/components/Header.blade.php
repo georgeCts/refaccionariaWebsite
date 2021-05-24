@@ -22,10 +22,10 @@
                         <li class="text-uppercase "><a href="{{URL::to('/catalogos') }}">Catálogos</a></li>
                         <li class="text-uppercase "><a href="{{URL::to('/expert-tips') }}">Expert Tips</a></li>
                         <li class="text-uppercase "><a href="{{URL::to('/promociones') }}">Promociones</a></li>
-                        <li class="text-uppercase "><a href="{{URL::to('/contacto') }}">Contáctanos</a>
+                        <li class="text-uppercase "><a href="#">Contáctanos</a>
                             <ul>
-                                <li class="text-uppercase "><a href="{{URL::to('/promociones') }}">Promociones</a></li>
-                                <li class="text-uppercase "><a href="{{URL::to('/promociones') }}">Promociones</a></li> 
+                                <li class="text-uppercase "><a href="{{URL::to('/contacto') }}">Contacto</a></li>
+                                <li class="text-uppercase "><a href="{{URL::to('/bolsa-trabajo') }}">Bolsa de trabajo</a></li> 
                             </ul>
                         </li>
                         <li class="text-uppercase"><a href="#mdCotizaciones" data-toggle="modal" class="btn d-inline-block btn-amarillo">Cotiza aquí</a></li>
