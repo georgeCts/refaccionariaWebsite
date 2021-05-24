@@ -28,7 +28,7 @@
                             productos nacionales e importados de gran tecnología y alta calidad a nuestros clientes.
                         </p>
                         <p>
-                            Respaldados por 40 años de experiencia en la industria y más de 30 años de presencia en el mercado, somos especialistas en el 
+                            Respaldados por 40 años de experiencia en el mercado, somos especialistas en el 
                             Automotive Aftermarket (Mercado Postventa Automotriz) y por ello buscamos satisfacer las necesidades de nuestros consumidores con 
                             gran calidad y calidez humana.
                         </p>
@@ -81,11 +81,11 @@
             <div class="row text-center">
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="wrapper"><img src="/images/caracteristicas/ubicacion.png" alt=""></div>
-                    <p>Con más de 40 años <br> en la industria</p>
+                    <p>Con más de 40 años <br> en el mercado</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
                     <div class="wrapper"><img src="/images/caracteristicas/delivery.png" alt="" class="ml-n3"></div>
-                    <p>Envíos a toda la <br> República Mexicana</p>
+                    <p>Envíos a todo <br>el sureste</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
                     <div class="wrapper"><img src="/images/caracteristicas/productos2.png" alt=""></div>

@@ -11,7 +11,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12 text-center">
-                                <h3 class="text-uppercase">POSTULAtE</h3>
+                                <h3 class="text-uppercase">POSTULATE</h3>
                                 <p>Llena el siguiente formulario</p>
                                 <form action="#" method="POST" class="needs-validation" novalidate data-action="$('#mdBolsaTrabajo').modal('hide')" enctype="multipart/form-data" >
                                     <input type="hidden" name="job_offer_id" id="job_offer_id">
@@ -95,13 +95,8 @@
                                     <input type="text" name="name" placeholder="*Nombre" class="m20 form-control" autocomplete="off" required>
                                     <input type="email" name="email" placeholder="*Correo" class="m20 form-control" autocomplete="off" required>
                                     <input type="text" name="phone_number" placeholder="*Teléfono" class="m20 form-control" autocomplete="off" required>
-                                    <textarea name="comentarios" placeholder="Comentarios" cols="30" rows="3" class="tx"></textarea>
-                                    <!-- <select name="estados" class="m20" autocomplete="off" required>
-                                        <option value="">Seleccione un estado</option>
-                                        <option value="Yucatan">Yucatan</option>
-                                        <option value="Campeche">Campeche</option>
-                                        <option value="Quintana Roo">Quintana Roo</option>
-                                    </select> -->
+                                    <textarea name="comentarios" placeholder="Comentarios" cols="30" rows="3" class="tx"></textarea>                                   
+                                    <BR></BR>
                                     <label for="cv_file" class="btn btn-amarillo position-relative m15">
                                         Adjuntar cotización
                                         <input type="file" name="cv_file" id="cv_file" accept=".jpg, .jpeg, .pdf" required>

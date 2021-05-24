@@ -531,7 +531,7 @@ button.swiper-pagination-bullet {
 }
 
 .productos-destacados {
-  background-image: url("../../images/bg-productos-destacados.png");
+  /* background-image: url("../../images/bg-productos-destacados.png"); */
   background-color: #fff;
   background-blend-mode: multiply;
   /* background-color: #25252580; */
