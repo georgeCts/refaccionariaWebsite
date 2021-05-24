@@ -56,7 +56,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-8 col-lg-7 col-xl-6 trapecio-top text-center text-uppercase">
-                        <a href="productos.html#mdCotizaciones" data-toggle="modal" class="d-inline-block">Cotiza Aquí</a>
+                        <a href="#mdCotizaciones" data-toggle="modal" class="d-inline-block">Cotiza Aquí</a>
                     </div>
                 </div>
             </div>
