@@ -24,7 +24,7 @@
 
                         <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(37,37,37,0.6) 0%, rgba(37,37,37,0.6) 100%), url('/images/productos/lineaProducto-02.png')">
                             <div class="content text-center w-80">
-                                <h3 class="text-uppercase m20">Suspensión</h3>
+                                <h3 class="text-uppercase m20">Tren motriz</h3>
                                 <a href="{{URL::to('/catalogos/suspension') }}" class="btn btn-blanco d-inline-block m20">ver catálogo</a>
                                 <a href="#mdCotizaciones" data-toggle="modal" class="btn btn-amarillo d-inline-block">Cotiza aquí</a>
                             </div>
