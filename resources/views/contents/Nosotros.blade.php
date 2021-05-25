@@ -18,7 +18,7 @@
             <div class="container-fluid w14">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-md-12 col-lg-6 text-center text-lg-left m30">
-                        <h2 class="text-uppercase">Conoce un poco de los valores con los que hemos forjado una historia, 40 años de un servicio de calidad, pasión y compromiso por brindar más que soluciones.</h2>
+                        <h2 class="text-uppercase">Conoce un poco de los valores con los que hemos forjado una historia, 40 años de un servicio de calidad, pasión y compromiso por brindar soluciones.</h2>
                     </div>
                     <div class="col-12 col-md-10 col-lg-6">
                         
@@ -43,7 +43,10 @@
             <div class="container-fluid w14">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-8 col-xl-8 text-center">
-                        <h3>Somos una empresa yucateca líder en la comercialización de Refacciones Automotrices para vehículos ligeros y de carga pesada.</h3>
+                        <h3>¿Como llegamos hasta aquí? <br>
+                            “La estabilidad de un negocio no se logra con sueños sino con realizaciones, pero tiene un costo mucho más fuerte que el dinero, el pago es; trabajo, orden, disciplina, responsabilidad y compromiso, no hay de otra manera”
+                            <br><h3 align = "right"> Luis Jorge Aranda Zavala </h3>   
+                        </h3>
                     </div>
                 </div>
             </div>
