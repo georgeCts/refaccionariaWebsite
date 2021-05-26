@@ -7,7 +7,7 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-md-10 text-center text-md-left">
                         <h1 class="text-uppercase mb-md-0">{{$objCategory->name}}</h1>
-                        <h4 class="text-uppercase w-lg-70">"Encuentra todo lo que necesitas en un solo lugar y al mejor precio"</h4>
+                        <!-- <h4 class="text-uppercase w-lg-70">"Encuentra todo lo que necesitas en un solo lugar y al mejor precio"</h4> -->
                     </div>
                 </div>
             </div>
