@@ -37,12 +37,11 @@ class ContactController extends Controller
         );
        
         try{
-            //$destinatarios = ['ventas@maderorefaccionarias.com.mx'];
-            $destinatarios = ['georgeluis.idem@gmail.com'];
+            $destinatarios = ['boletin@maderorefaccionarias.com.mx'];
             
             if(count($destinatarios) > 0) {
                 Mail::send('email', $data, function($message) use ($destinatarios, $asunto) {
-                    $message->from("ventas@maderorefaccionarias.com.mx", $asunto);
+                    $message->from("boletin@maderorefaccionarias.com.mx", $asunto);
                     $message->to($destinatarios)->subject($asunto);
                 });
 
@@ -71,12 +70,11 @@ class ContactController extends Controller
         );
        
         try{
-            //$destinatarios = ['ventas@maderorefaccionarias.com.mx'];
-            $destinatarios = ['georgeluis.idem@gmail.com'];
+            $destinatarios = ['rhumanos@maderorefaccionarias.com.mx', 'rh.aux@maderorefaccionarias.com.mx'];
             
             if(count($destinatarios) > 0) {
                 Mail::send('email', $data, function($message) use ($destinatarios, $asunto, $request) {
-                    $message->from("ventas@maderorefaccionarias.com.mx", $asunto);
+                    $message->from("bolsadetrabajo@maderorefaccionarias.com.mx", $asunto);
                     $message->to($destinatarios)->subject($asunto);
                     $message->attach($request->cv_file, ['as' => 'cv.'.$request->file('cv_file')->extension()]);
                 });
@@ -111,12 +109,11 @@ class ContactController extends Controller
         );
        
         try{
-            //$destinatarios = ['ventas@maderorefaccionarias.com.mx'];
-            $destinatarios = ['georgeluis.idem@gmail.com'];
+            $destinatarios = ['mkt@maderorefaccionarias.com.mx'];
             
             if(count($destinatarios) > 0) {
                 Mail::send('email', $data, function($message) use ($destinatarios, $asunto, $request) {
-                    $message->from("ventas@maderorefaccionarias.com.mx", $asunto);
+                    $message->from("cotizaciones@maderorefaccionarias.com.mx", $asunto);
                     $message->to($destinatarios)->subject($asunto);
                     $message->attach($request->cv_file, ['as' => 'cotizacion.'.$request->file('cv_file')->extension()]);
                 });
@@ -149,12 +146,11 @@ class ContactController extends Controller
         );
        
         try{
-            //$destinatarios = ['ventas@maderorefaccionarias.com.mx'];
-            $destinatarios = ['georgeluis.idem@gmail.com'];
+            $destinatarios = ['boletin@maderorefaccionarias.com.mx'];
             
             if(count($destinatarios) > 0) {
                 Mail::send('email', $data, function($message) use ($destinatarios, $asunto) {
-                    $message->from("ventas@maderorefaccionarias.com.mx", $asunto);
+                    $message->from("boletin@maderorefaccionarias.com.mx", $asunto);
                     $message->to($destinatarios)->subject($asunto);
                 });
 
