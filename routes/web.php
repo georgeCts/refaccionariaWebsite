@@ -24,6 +24,9 @@ Route::get('/catalogos', 'Web\CatalogsController@index');
 Route::get('/catalogos/{slug}', 'Web\CatalogsController@show');
 Route::get('/contacto', 'Web\ContactController@index');
 Route::post('/contacto-mail', 'Web\ContactController@sendMail');
+Route::post('/contacto-cv', 'Web\ContactController@sendCV');
+Route::post('/contacto-quote', 'Web\ContactController@sendQuote');
+Route::post('/contacto-subscribe', 'Web\ContactController@sendSubscription');
 
 Route::get('/login-panel', 'Admin\LoginController@index');
 Route::post('/login-panel', ['as' => 'login-panel', 'uses' => 'Admin\LoginController@access']);
