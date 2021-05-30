@@ -11,15 +11,14 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12 text-center">
-                                <h3 class="text-uppercase">POSTULARSE</h3>
-                                <p>Favor de llenar el siguiente formulario para capturar tus datos</p>
-                                <form action="#" method="POST" class="needs-validation" novalidate data-action="$('#mdBolsaTrabajo').modal('hide')" enctype="multipart/form-data" >
-                                    <input type="hidden" name="job_offer_id" id="job_offer_id">
-                                    <input type="text" name="name" placeholder="*Nombre" class="m20 form-control" autocomplete="off" required>
-                                    <input type="email" name="email" placeholder="*Correo" class="m20 form-control" autocomplete="off" required>
-                                    <input type="text" name="phone_number" placeholder="*Teléfono" class="m20 form-control" autocomplete="off" required>
+                                <h3 class="text-uppercase">POSTULATE</h3>
+                                <p>Llena el siguiente formulario</p>
+                                <form action="/contacto-cv" method="POST" class="needs-validation" novalidate data-action="$('#mdBolsaTrabajo').modal('hide')" enctype="multipart/form-data" >
+                                    <input type="text" name="name" placeholder="*Nombre" class="m20 form-control" autocomplete="off" required />
+                                    <input type="email" name="email" placeholder="*Correo" class="m20 form-control" autocomplete="off" required />
+                                    <input type="text" name="phone_number" placeholder="*Teléfono" class="m20 form-control" autocomplete="off" required />
                                     <label for="cv_file" class="btn btn-amarillo position-relative m15">
-                                        Anexar CV
+                                        Adjuntar CV
                                         <input type="file" name="cv_file" id="cv_file" accept=".jpeg, .jpg, .pdf" required>
                                     </label>
                                     <p>Se admiten imagenes (.jpg, .jpeg) y PDFs (.pdf). Peso máximo del archivo: 5 mb</p>
@@ -47,7 +46,7 @@
                             <div class="col-12 col-lg-6 bg-ngr text-center text-lg-left">
                                 <div class="position-relative" style="z-index: 3">
                                     <img src="{{ asset('images/logo/logo_horizontal.png') }}" alt="Fernández" class="m20 w-90" style="max-width: 277px">
-                                    <p>Suscríbete para recibir las noticias más nuevas, productos, y eventos de Madero Refaccionarias.</p>
+                                    <p>Suscríbete para recibir noticias de nuevos productos, eventos y promociones de Madero Refaccionarias.</p>
                                     <p>Síguenos en Redes Sociales</p>
                                     <a href="https://www.facebook.com/RefaccionariasMadero" target="_blank" class="d-inline-block mr-3 text-white"><i class="fab fa-lg fa-facebook-f"></i></a>
                                     <a href="#" target="_blank" class="d-inline-block mr-3 text-white"><i class="fab fa-lg fa-instagram"></i></a>
@@ -56,16 +55,10 @@
                             </div>
                             <div class="col-12 col-lg-6 bg-amr text-center">
                                 <div class="position-relative" style="z-index: 3">
-                                    <form action="#" method="POST" class="needs-validation" novalidate data-action="$('#mdNewsletter').modal('hide')">
+                                    <form action="/contacto-subscribe" method="POST" class="needs-validation" novalidate data-action="$('#mdNewsletter').modal('hide')">
                                         <h3 class="text-uppercase">SUSCRÍBETE</h3>
-                                        <input id="nameNews" type="text" name="name" placeholder="*Nombre" class="m20 form-control" autocomplete="off" required>
-                                        <input id="emailNews" type="email" name="email" placeholder="*Correo" class="m20 form-control" autocomplete="off" required>
-                                        <select name="estado" class="m20 form-control" autocomplete="off" required="">
-                                            <option value="">*Seleccione un estado</option>
-                                            <option value="Yucatan">Yucatán</option>
-                                            <option value="Campeche">Campeche</option>
-                                            <option value="Quintana Roo">Quintana Roo</option>
-                                        </select>
+                                        <input id="nameNews" type="text" name="name" placeholder="*Nombre" class="m20 form-control" autocomplete="off" required />
+                                        <input id="emailNews" type="email" name="email" placeholder="*Correo" class="m20 form-control" autocomplete="off" required />
                                         <button class="btn">Suscribirme</button>
                                     </form>
                                 </div>
@@ -90,21 +83,16 @@
                         <div class="row">
                             <div class="col-12 text-center">
                                 <h3 class="text-uppercase">COTIZACIONES</h3>
-                                <p>Favor de llenar el siguiente formulario para capturar tus datos</p>
-                                <form action="#" method="POST" class="needs-validation" novalidate data-action="$('#mdCotizaciones').modal('hide')" enctype="multipart/form-data" >
-                                    <input type="text" name="name" placeholder="*Nombre" class="m20 form-control" autocomplete="off" required>
-                                    <input type="email" name="email" placeholder="*Correo" class="m20 form-control" autocomplete="off" required>
-                                    <input type="text" name="phone_number" placeholder="*Teléfono" class="m20 form-control" autocomplete="off" required>
+                                <p>Llena el siguiente formulario</p>
+                                <form action="/contacto-quote" method="POST" class="needs-validation" novalidate data-action="$('#mdCotizaciones').modal('hide')" enctype="multipart/form-data" >
+                                    <input type="text" name="name" placeholder="*Nombre" class="m20 form-control" autocomplete="off" required />
+                                    <input type="email" name="email" placeholder="*Correo" class="m20 form-control" autocomplete="off" required />
+                                    <input type="text" name="phone_number" placeholder="*Teléfono" class="m20 form-control" autocomplete="off" required />
                                     <textarea name="comentarios" placeholder="Comentarios" cols="30" rows="3" class="tx"></textarea>
-                                    <select name="estados" class="m20" autocomplete="off" required>
-                                        <option value="">Seleccione un estado</option>
-                                        <option value="Yucatan">Yucatan</option>
-                                        <option value="Campeche">Campeche</option>
-                                        <option value="Quintana Roo">Quintana Roo</option>
-                                    </select>
+                                    <br /><br />
                                     <label for="cv_file" class="btn btn-amarillo position-relative m15">
-                                        Anexar Cotización
-                                        <input type="file" name="cv_file" id="cv_file" accept=".jpg, .jpeg, .pdf" required>
+                                        Adjuntar cotización
+                                        <input type="file" name="cv_file" id="cv_file" accept=".jpg, .jpeg, .pdf" required />
                                     </label>
                                     <p>Se admiten imagenes (.jpg, .jpeg) y PDFs (.pdf). Peso máximo del archivo: 5 mb</p>
                                     <button class="btn btn-blanco">Enviar</button>

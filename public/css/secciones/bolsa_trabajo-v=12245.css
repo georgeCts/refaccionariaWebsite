@@ -103,12 +103,13 @@
 }
 
 .bolsa-trabajo .listado .bg-contain:nth-child(odd) {
+  background-image: url("/images/bg-reclutamiento03.png");
   background-color: #fff;
 }
 
 .bolsa-trabajo .listado .bg-contain:nth-child(even) {
   background-color: #252525;
-  background-image: url("/images/bg-bolsa-trabajo.png");
+  /* background-image: url("/images/bg-bolsa-trabajo.png"); */
   background-position: center;
   background-repeat: repeat-x;
   background-size: auto;

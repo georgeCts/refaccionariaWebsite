@@ -20,12 +20,35 @@
         </div>
     </div>
 
+    <div class="caracteristicas">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="wrapper"><img src="/images/caracteristicas/ubicacion.png" alt=""></div>
+                    <p>Con más de 40 años <br> en el mercado</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/delivery.png" alt="" class="ml-n3"></div>
+                    <p>Envíos a todo <br>el sureste</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/productos2.png" alt=""></div>
+                    <p>Forman parte de <br> nuestro inventario</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/mesa_trabajo.png" alt=""></div>
+                    <p>Catálogos en <br> línea, más rápido</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="productos-destacados">
         <div class="container-fluid w14">
             <div class="row m30 align-items-sm-center">
-                <div class="col-12 col-sm-5 col-md-6"><h3 class="d-inline-block m30 mb-sm-0">ÁREAS <br> ESPECIALIZADAS</h3></div>
+                <div class="col-12 col-sm-5 col-md-6"><h3 class="d-inline-block m30 mb-sm-0"> <br> Categorías</h3></div>
                 <div class="col-12 col-sm-7 col-md-6 text-sm-right">
-                    <a href="{{URL::to('/catalogos') }}" class="btn btn-blanco">CONOCE TODA LA LÍNEA DE PRODUCTOS <i class="fas fa-caret-right ml-2 ml-lg-3"></i></a>
+                    <a href="{{URL::to('/catalogos') }}" class="btn btn-blanco">CATÁLOGOS<i class="fas fa-caret-right ml-2 ml-lg-3"></i></a>
                 </div>
             </div>
 
@@ -35,12 +58,11 @@
                         <div class="row mt-sm-5 m30 align-items-md-center">
                             <div class="col-12 col-md-6 col-lg-8 order-md-last">
                                 <div class="contenedor-image text-center">
-                                    <img src="{{Storage::url($item->file)}}" alt="{{$item->name}}">
+                                    <img src="{{Storage::url($item->file)}}" alt="{{$item->name}}" />
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 order-md-first">
                                 <h4 class="text-uppercase">{{$item->name}}</h4>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
                         </div>
                     </div>
@@ -102,7 +124,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 col-lg-7 col-xl-6 trapecio-top text-center text-uppercase">
-                    <a href="#mdCotizaciones" data-toggle="modal" class="d-inline-block">Cotiza con nosotros</a>
+                    <a href="#mdCotizaciones" data-toggle="modal" class="d-inline-block">Cotiza aquí</a>
                 </div>
             </div>
         </div>
@@ -113,11 +135,11 @@
             <div class="row align-items-md-center">
                 <div class="col-12 col-md-6 m40 mb-md-0">
                     <h2 class="text-uppercase">Acerca de<br>Madero Refaccionaria</h2>
-                    <p>Contamos con un inventario que supera los 149,000 productos siendo unos de los más amplios del sureste, estamos seguros que nosotros si tenemos la refacción que tu auto o camión necesita.</p>
+                    <p>Contamos con un inventario que supera los 100,000 productos siendo unos de los más amplios del sureste, estamos seguros que nosotros si tenemos la refacción que tu auto o camión necesita.</p>
                     <a href="{{URL::to('/nosotros') }}" class="btn btn-amarillo text-uppercase">Nuestra historia</a>
                 </div>
                 <div class="col-12 col-md-6 text-center">
-                    <h3>Encuentra todo lo que necesitas en un solo lugar y al mejor precio</h3>
+                    <h3>En auto y camion, la mejor opción nacionales e importados</h3>
                 </div>
             </div>
         </div>
@@ -126,7 +148,7 @@
 
 @section('scripts')
 <script>
-    $('#mdNewsletter').modal('show');
+    //$('#mdNewsletter').modal('show');
 </script>
 @endsection
 

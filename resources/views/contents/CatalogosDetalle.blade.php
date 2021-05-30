@@ -7,7 +7,7 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-md-10 text-center text-md-left">
                         <h1 class="text-uppercase mb-md-0">{{$objCategory->name}}</h1>
-                        <h4 class="text-uppercase w-lg-70">"Encuentra todo lo que necesitas en un solo lugar y al mejor precio"</h4>
+                        
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     <div class="col-12 col-md-12 col-lg-12 col-xl-12 listado-catalogos">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb px-0 mb-0">
-                            <li class="breadcrumb-item"><a href="{{URL::to('/catalogos') }}">Línea de Productos</a></li>
+                            <li class="breadcrumb-item"><a href="{{URL::to('/catalogos') }}">Catálogos</a></li>
                             <li class="breadcrumb-item"><a href="#">{{$objCategory->name}}</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Catálogos</li>
                             </ol>
@@ -31,7 +31,7 @@
                             @foreach ($lstCatalogs as $item)
                                 <div class="col-12 col-md-4 col-lg-4 text-center m30">
                                     <div class="bg bg-size-contain mx-auto m20" style="background-image: url({{Storage::url($item->file)}})">
-                                        <img src="https://www.fernandez.com.mx/images/catalogo/1.jpg" alt="Catálogo de productos marca Cadena">
+                                        <img src="https://www.mad/images/catalogo/1.jpg" alt="Catálogo de productos marca Cadena">
                                     </div>
                                     <h3 class="text-uppercase m20">{{$item->name}}</h3>
                                     <a href="{{Storage::url($item->pdf)}}" target="_blank" class="btn btn-amarillo text-uppercase">Descargar</a>
@@ -43,6 +43,29 @@
             </div>
         </div>
     </section>
+
+    <div class="caracteristicas">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="wrapper"><img src="/images/caracteristicas/ubicacion.png" alt=""></div>
+                    <p>Con más de 40 años <br> en el mercado</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/delivery.png" alt="" class="ml-n3"></div>
+                    <p>Envíos a todo <br>el sureste</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/productos2.png" alt=""></div>
+                    <p>Forman parte de <br> nuestro inventario</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/mesa_trabajo.png" alt=""></div>
+                    <p>Catálogos en <br> línea, más rápido</p>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @include('components.Header')

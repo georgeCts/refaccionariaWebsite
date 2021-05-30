@@ -543,7 +543,7 @@ header {
   top: 0px;
   left: 0px;
   z-index: 500;
-  background-image: url("../images/bg-header.jpg");
+  /* background-image: url("../images/bg-header.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-color: #000;
@@ -1278,7 +1278,8 @@ footer .derechos h4 {
 
 .caracteristicas {
   padding: 30px 0px;
-  background-image: url("../images/bg-caracteristicas-principal.png");
+  /* background-image: url("../images/bg-caracteristicas-principal.png"); */
+  background-color: #000;
   background-repeat: repeat;
   background-position: center;
   color: #fff;
@@ -1681,7 +1682,7 @@ footer .derechos h4 {
 
 .modal .bg-metal {
   background-color: #252525;
-  background-image: url("../images/modals/bg-metal.jpg");
+  /* background-image: url("../images/modals/bg-metal.jpg"); */
   background-repeat: repeat;
   background-position: center;
   background-size: auto;
@@ -1759,5 +1760,41 @@ div.promocion-item {
 img.promocion-image {
   width: inherit;
   cursor: pointer;
+}
+
+/*-------------------------------------------------
+# Menu Dropdown
+--------------------------------------------------- */
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  padding-top: 5px;
+  padding-left: 10px;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 

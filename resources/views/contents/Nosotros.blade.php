@@ -18,7 +18,7 @@
             <div class="container-fluid w14">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-md-12 col-lg-6 text-center text-lg-left m30">
-                        <h2 class="text-uppercase">Conoce un poco de los valores con los que hemos forjado una historia, 40 años de un servicio de calidad, pasión y compromiso por brindar más que soluciones.</h2>
+                        <h2 class="text-uppercase">Conoce un poco de los valores con los que hemos forjado una historia, 40 años de un servicio de calidad, pasión y compromiso por brindar soluciones.</h2>
                     </div>
                     <div class="col-12 col-md-10 col-lg-6">
                         
@@ -28,7 +28,7 @@
                             productos nacionales e importados de gran tecnología y alta calidad a nuestros clientes.
                         </p>
                         <p>
-                            Respaldados por 40 años de experiencia en la industria y más de 30 años de presencia en el mercado, somos especialistas en el 
+                            Respaldados por 40 años de experiencia en el mercado, somos especialistas en el 
                             Automotive Aftermarket (Mercado Postventa Automotriz) y por ello buscamos satisfacer las necesidades de nuestros consumidores con 
                             gran calidad y calidez humana.
                         </p>
@@ -39,11 +39,14 @@
         </div>
 
         
-        <div class="informacion--2" style="background-image: url('/images/nosotros/bg-manchas.png')">
+        <div class="informacion--2">
             <div class="container-fluid w14">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-8 col-xl-8 text-center">
-                        <h3>Somos una empresa yucateca líder en la comercialización de Refacciones Automotrices para vehículos ligeros y de carga pesada.</h3>
+                        <h3>¿Como llegamos hasta aquí? <br>
+                            “La estabilidad de un negocio no se logra con sueños sino con realizaciones, pero tiene un costo mucho más fuerte que el dinero, el pago es; trabajo, orden, disciplina, responsabilidad y compromiso, no hay de otra manera”
+                            <br><h3 align = "right"> Luis Jorge Aranda Zavala </h3>   
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -75,6 +78,29 @@
     <div class="informacion"></div>
 
     <div class="mv"></div>
+
+    <div class="caracteristicas">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="wrapper"><img src="/images/caracteristicas/ubicacion.png" alt=""></div>
+                    <p>Con más de 40 años <br> en el mercado</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/delivery.png" alt="" class="ml-n3"></div>
+                    <p>Envíos a todo <br>el sureste</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/productos2.png" alt=""></div>
+                    <p>Forman parte de <br> nuestro inventario</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/mesa_trabajo.png" alt=""></div>
+                    <p>Catálogos en <br> línea, más rápido</p>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @include('components.Header')

@@ -17,7 +17,7 @@
                     <div class="row align-items-end">
                         <div class="col-12 col-lg-9 m20 mb-lg-0">
                             <div class="mw260 mr-auto ml-auto mr-lg-0">
-                                <h3>Secciones</h3>
+                                <h5>Links útiles</h5>
                                 <ul class="menu">
                                     <li><a href="{{URL::to('/nosotros') }}">Nosotros</a></li>
                                     <li><a href="{{URL::to('/catalogos') }}">Catálogos</a></li>
@@ -29,7 +29,7 @@
                         <div class="col-12 col-lg-3">
                             <div class="mw260 mr-auto ml-auto ml-lg-0 text-lg-left">
                                 <a href="#mdCotizaciones" data-toggle="modal" class="facturacion d-block m10">Cotizaciones</a>
-                                <a href="#" class="facturacion d-block">Facturación</a>
+                                
                             </div>
                         </div>
                     </div>

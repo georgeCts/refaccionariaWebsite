@@ -6,16 +6,16 @@
             <div class="container-fluid w12">
                 <div class="row formulario m30">
                     <div class="col-12 m15">
-                        <h3 class="text-uppercase">¿Tienes alguna duda? Contáctanos</h3>
+                        <h3 class="text-uppercase">Contáctanos</h3>
                     </div>
                     <div class="col-12 col-lg-12 m30">
-                        <form action="https://www.fernandez.com.mx/contacto/send" class="needs-validation" novalidate>
+                        <form action="/contacto-mail" class="needs-validation" novalidate>
                             <div class="row">
                                 <div class="col-12 col-lg-4 m15">
                                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" required>
                                     <input type="email" name="correo" id="correo" placeholder="Email" class="form-control" required>
                                     <input type="text" name="telefono" id="telefono" placeholder="Teléfono" class="form-control" required>
-                                    <input type="text" name="asunto" id="asunto" placeholder="Asunto" class="form-control" required>
+                                    <br>
                                     <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Mensaje" class="m20 form-control" required></textarea>
                                     <button type="submit" class="btn btn-negro">ENVIAR</button>
                                 </div>
@@ -41,6 +41,29 @@
                     <div class="col-12">
                         <div id="mapa"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="caracteristicas">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="wrapper"><img src="/images/caracteristicas/ubicacion.png" alt=""></div>
+                    <p>Con más de 40 años <br> en el mercado</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/delivery.png" alt="" class="ml-n3"></div>
+                    <p>Envíos a todo <br>el sureste</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/productos2.png" alt=""></div>
+                    <p>Forman parte de <br> nuestro inventario</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 m20 mb-lg-0">
+                    <div class="wrapper"><img src="/images/caracteristicas/mesa_trabajo.png" alt=""></div>
+                    <p>Catálogos en <br> línea, más rápido</p>
                 </div>
             </div>
         </div>
