@@ -63,6 +63,7 @@
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 order-md-first">
                                 <h4 class="text-uppercase">{{$item->name}}</h4>
+                                <p>{{$item->description}}</p>
                             </div>
                         </div>
                     </div>
