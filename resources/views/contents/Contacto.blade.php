@@ -9,7 +9,7 @@
                         <h3 class="text-uppercase">Contáctanos</h3>
                     </div>
                     <div class="col-12 col-lg-12 m30">
-                        <form action="https://www.maderorefaccionarias.com.mx" class="needs-validation" novalidate>
+                        <form action="/contacto-mail" class="needs-validation" novalidate>
                             <div class="row">
                                 <div class="col-12 col-lg-4 m15">
                                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" required>
