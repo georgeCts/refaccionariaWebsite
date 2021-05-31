@@ -43,7 +43,7 @@
             <div class="container-fluid w14">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-8 col-xl-8 text-center">
-                        <h3>¿Como llegamos hasta aquí? <br>
+                        <h3>
                             “La estabilidad de un negocio no se logra con sueños sino con realizaciones, pero tiene un costo mucho más fuerte que el dinero, el pago es; trabajo, orden, disciplina, responsabilidad y compromiso, no hay de otra manera”
                             <br><h3 align = "right"> Luis Jorge Aranda Zavala </h3>   
                         </h3>
