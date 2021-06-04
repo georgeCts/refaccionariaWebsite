@@ -74,9 +74,9 @@
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Colisión
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" role="tablist">
                     @foreach ($lstCategories as $index => $item)
-                        <a class="dropdown-item {{$index == 0 ? 'active' : ''}}" href="">{{$item->name}}</a>
+                        <a class="dropdown-item" data-toggle="tab" href="#nav-{{$item->id}}" role="tab" aria-controls="nav-{{$item->id}}">{{$item->name}}</a>
                     @endforeach
                 </div>
             </div>
