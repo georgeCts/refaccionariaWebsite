@@ -98,7 +98,7 @@
                                     <br /><br />
                                     <label for="cv_file" class="btn btn-amarillo position-relative m15">
                                         Adjuntar documento
-                                        <input type="file" name="cv_file" id="cv_file" accept=".jpg, .jpeg, .pdf" required>
+                                        <input type="file" name="cv_file" id="cv_file" accept=".jpg, .jpeg, .pdf" >
                                     </label>
                                     <p>Se admiten imagenes (.jpg, .jpeg) y PDFs (.pdf). Peso máximo del archivo: 5 mb</p>
                                     <button class="btn btn-blanco">Enviar</button>
