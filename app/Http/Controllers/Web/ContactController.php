@@ -109,7 +109,7 @@ class ContactController extends Controller
         );
        
         try{
-            $destinatarios = ['mkt@maderorefaccionarias.com.mx'];
+            $destinatarios = ['telemarketing.1@maderorefaccionarias.com.mx'];
             
             if(count($destinatarios) > 0) {
                 Mail::send('email', $data, function($message) use ($destinatarios, $asunto, $request) {
