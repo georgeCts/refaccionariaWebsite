@@ -8,9 +8,11 @@
                     @foreach ($lstSliders as $item)
                         <div class="swiper-slide">
                             <div class="bg" style="background-image: url('{{Storage::url($item->file)}}')">
-                                <img src="images/blank.gif" alt="Mascara movil" class="d-sm-none">
-                                <img src="images/blank-rect.png" alt="Mascara tablet" class="d-none d-sm-block d-lg-none">
-                                <img src="images/blank-slide-principal.png" alt="Mascara desk" class="d-none d-lg-block">
+                                <a href="{{$item->url_redirect != null ? $item->url_redirect : '#'}}">
+                                    <img src="images/blank-slide-movil.png" alt="Mascara movil" class="d-sm-none" />
+                                    <img src="images/blank-rect.png" alt="Mascara tablet" class="d-none d-sm-block d-lg-none" />
+                                    <img src="images/blank-slide-principal.png" alt="Mascara desk" class="d-none d-lg-block" />
+                                </a>
                             </div>
                         </div>
                     @endforeach
