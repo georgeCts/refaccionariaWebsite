@@ -5,7 +5,7 @@
                 <div class="row align-items-center">
                     <div class="col-8">
                         <a href="{{URL::to('/') }}">
-                            <img src="{{ asset('images/logo/logo_horizontal.png') }}" alt="Madero Refaccionaria" class="w-100 logo" />
+                            <img src="{{ asset('images/logo/logo-slogan.png') }}" alt="Madero Refaccionaria" class="w-100 logo" />
                         </a>
                     </div>
                     <div class="col-4 text-right">
@@ -39,7 +39,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3">
                         <a href="{{URL::to('/') }}">
-                            <img src="{{ asset('images/logo/logo_horizontal.png') }}" alt="Madero Refaccionarias" class="w-100 logo">
+                            <img src="{{ asset('images/logo/logo-slogan.png') }}" alt="Madero Refaccionarias" class="w-100 logo">
                         </a>
                     </div>
                     <div class="col-lg-9">
