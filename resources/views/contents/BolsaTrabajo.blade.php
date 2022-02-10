@@ -40,6 +40,7 @@
                                 <p>{{$item->requirement}}</p>
                             </div>
                             <div class="col-12 col-md-6 col-lg-6 col-xl-6 descripciones">
+                                <p>Ofrecemos:</p>
                                 <p>{{$item->offer}}</p>
                             </div>
                             <div class="col-12">
