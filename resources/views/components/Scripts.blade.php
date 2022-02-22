@@ -31,13 +31,44 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '627457085087476');
+        fbq('init', '292407784694219');
         fbq('track', 'PageView');
     </script>
     <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=627457085087476&ev=PageView&noscript=1"/>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=292407784694219&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
+
+    <!-- Global site tag (gtag.js) - Google Ads: 10856335765 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10856335765"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-10856335765');
+    </script>
+
+        <!-- Event snippet for Website traffic conversion page -->
+        <script>
+            gtag('event', 'conversion', {'send_to': 'AW-10856335765/X8JsCIKM96IDEJWT2rgo'});
+        </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MDZR5WW');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDZR5WW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     @yield('scripts')
 @endsection
